@@ -10,7 +10,8 @@ export default {
   getters,
   state: {
     drawer: false,
-    showMini: true
+    showMini: true,
+    isMobile: false
   },
   mutations: mutations.default
 }

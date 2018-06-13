@@ -6,6 +6,7 @@
         light
         :mini-variant="mini"
         disable-route-watcher
+        v-resize="onResize"
         >
         <div class="ml-5 mt-3">
           <img src="../../assets/logo-top.png" width="200" height="112" />
@@ -77,10 +78,24 @@ export default {
       right: null
     }
   },
+
+  created () {
+    if (this.$vuetify.breakpoint.mdAndDown) {
+      this.setMobile(true)
+    }
+  },
+
   methods: {
     ...mapActions('base', [
-      'setDrawer'
-    ])
+      'setDrawer',
+      'setMobile'
+    ]),
+
+    onResize () {
+      this.$vuetify.breakpoint.mdAndDown
+        ? this.setMobile(true)
+        : this.setMobile(false)
+    }
   },
   computed: {
     drawer: {

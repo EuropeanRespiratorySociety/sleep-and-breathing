@@ -22,5 +22,9 @@ export default {
 
   [types.SET_OFFLINE] (state) {
     state.offline = true
+  },
+
+  [types.SET_MOBILE] (state, data) {
+    state.isMobile = data
   }
 }

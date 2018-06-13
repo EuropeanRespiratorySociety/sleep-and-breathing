@@ -25,7 +25,7 @@ export const getNews = ({ commit, dispatch }, payload) => {
   })
 }
 
-export const getCategory = ({ commit, dispatch }, payload) => {
+export const getCategory = ({ commit, dispatch, rootState }, payload) => {
   let data = {skip: 0, pageNumber: 1}
   const qname = payload.request === 'programme'
     ? 'o:f730239a8b20c4024d7f'
@@ -36,46 +36,51 @@ export const getCategory = ({ commit, dispatch }, payload) => {
   const route = `sleepandbreathing?qname=${qname}`
 
   HTTP
-  .get(route)
-  .then(response => {
-    data.items = response.data.data
-    data.category = response.data.category[0]
-    data.skip = response.data._sys.skip
-
-    dispatch('pageNumber', data.pageNumber)
-    dispatch('setOnline')
-    commit(types.SET_CATEGORY, data, err => { console.log(err) })
-  })
-  .catch(e => {
-    if (window.localStorage.getItem('vuex')) {
-      const restored = JSON.parse(window.localStorage.getItem('vuex'))
-      dispatch('setOffline')
-      commit(types.RESTORE_MUTATION, restored, err => { console.log(err) })
-    }
-  })
+    .get(route)
+    .then(response => {
+      data.items = response.data.data
+      data.category = response.data.category[0]
+      data.skip = response.data._sys.skip
+      if (rootState.base.isMobile) {
+        dispatch('base/setDrawer', false, { root: true })
+      }
+      dispatch('pageNumber', data.pageNumber)
+      dispatch('base/setOnline', null, { root: true })
+      commit(types.SET_CATEGORY, data, err => { console.log(err) })
+    })
+    .catch(e => {
+      if (window.localStorage.getItem('vuex')) {
+        const restored = JSON.parse(window.localStorage.getItem('vuex'))
+        dispatch('setOffline')
+        commit(types.RESTORE_MUTATION, restored, err => { console.log(err) })
+      }
+    })
 }
 
-export const getArticle = ({ commit, dispatch }, payload) => {
+export const getArticle = ({ commit, dispatch, rootState }, payload) => {
   return new Promise((resolve, reject) => {
     const route = `sleepandbreathing/${payload.slug}`
     let data = {}
 
     HTTP
-    .get(route)
-    .then(response => {
-      data.item = response.data
-      dispatch('setOnline')
-      commit(types.SET_ARTICLE, data, err => { console.log(err) })
-      resolve(data)
-    }).catch(e => {
-      if (window.localStorage.getItem('vuex')) {
-        const restored = JSON.parse(window.localStorage.getItem('vuex'))
-        dispatch('setOffline')
-        commit(types.RESTORE_MUTATION, restored, err => { console.log(err) })
-        resolve()
-      }
+      .get(route)
+      .then(response => {
+        data.item = response.data
+        dispatch('setOnline')
+        if (rootState.base.isMobile) {
+          dispatch('base/setDrawer', false, { root: true })
+        }
+        commit(types.SET_ARTICLE, data, err => { console.log(err) })
+        resolve(data)
+      }).catch(e => {
+        if (window.localStorage.getItem('vuex')) {
+          const restored = JSON.parse(window.localStorage.getItem('vuex'))
+          dispatch('setOffline')
+          commit(types.RESTORE_MUTATION, restored, err => { console.log(err) })
+          resolve()
+        }
+      })
     })
-  })
 }
 
 export const getHome = ({ commit, dispatch }, payload) => {

@@ -8,10 +8,14 @@ export const setDrawer = ({ commit }, data) => {
   commit(types.SET_DRAWER, data, err => { console.log(err) })
 }
 
-export const setOnline = ({commit}) => {
+export const setOnline = ({ commit }) => {
   commit(types.SET_ONLINE)
 }
 
-export const setOffline = ({commit}) => {
+export const setOffline = ({ commit }) => {
   commit(types.SET_OFFLINE)
+}
+
+export const setMobile = ({ commit }, data) => {
+  commit(types.SET_MOBILE, data)
 }
