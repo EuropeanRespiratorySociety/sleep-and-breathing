@@ -43,7 +43,7 @@
 
       <v-list dense class="pt-3">
 
-        <v-list-tile @click="drawer = false"
+        <v-list-tile
           v-for="item in items"
           :key="item.title"
           :to="!item.external ? item.path : null"
