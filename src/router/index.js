@@ -1,10 +1,10 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 
-const Category = () => import('@/components/widgets/Category')
-const Home = () => import('@/components/widgets/Home')
-const Article = () => import('@/components/widgets/Article')
-const P = () => import('@/components/widgets/PracticalInformation')
+const Category = () => import('@/components/pages/Category')
+const Home = () => import('@/components/pages/Home')
+const Article = () => import('@/components/pages/Article')
+const P = () => import('@/components/pages/PracticalInformation')
 
 // import store from '../vuex/store'
 

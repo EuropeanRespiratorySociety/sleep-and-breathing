@@ -19,7 +19,7 @@
 import { mapActions } from 'vuex'
 
 export default {
-  name: 'Category',
+  name: 'Article',
   data () {
     return {
       fixed: false,

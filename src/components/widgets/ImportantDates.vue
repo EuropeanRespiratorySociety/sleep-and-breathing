@@ -55,5 +55,5 @@ export default {
 </script>
 
 <style>
-  @import '../css/fonts.css';
+  @import '../../css/fonts.css';
 </style>

@@ -9,20 +9,20 @@ export const getNews = ({ commit, dispatch }, payload) => {
   }
   const route = `${payload.slug}?limit=25&skip=${data.skip}`
   HTTP
-  .get(route)
-  .then(response => {
-    data.limit = response.data._sys.limit
-    data.items = response.data.data
-    data.category = response.data.category[0]
-    data.skip = response.data._sys.skip
-    data.length = Math.ceil(response.data._sys.total / data.limit)
+    .get(route)
+    .then(response => {
+      data.limit = response.data._sys.limit
+      data.items = response.data.data
+      data.category = response.data.category[0]
+      data.skip = response.data._sys.skip
+      data.length = Math.ceil(response.data._sys.total / data.limit)
 
-    dispatch('pageNumber', data.pageNumber)
-    commit(types.SET_NEWS, data, err => { console.log(err) })
-  })
-  .catch(e => {
-    console.log(e)
-  })
+      dispatch('pageNumber', data.pageNumber)
+      commit(types.SET_NEWS, data, err => { console.log(err) })
+    })
+    .catch(e => {
+      console.log(e)
+    })
 }
 
 export const getCategory = ({ commit, dispatch, rootState }, payload) => {
@@ -30,8 +30,8 @@ export const getCategory = ({ commit, dispatch, rootState }, payload) => {
   const qname = payload.request === 'programme'
     ? 'o:f730239a8b20c4024d7f'
     : payload.request === 'practical-information'
-    ? 'o:44c0b9cc9228ca743c5a'
-    : 'o:120ab483a2d8502c4947' // home
+      ? 'o:44c0b9cc9228ca743c5a'
+      : 'o:120ab483a2d8502c4947' // home
 
   const route = `sleepandbreathing?qname=${qname}`
 
@@ -80,19 +80,19 @@ export const getArticle = ({ commit, dispatch, rootState }, payload) => {
           resolve()
         }
       })
-    })
+  })
 }
 
 export const getHome = ({ commit, dispatch }, payload) => {
   const route = `sleepandbreathing/`
   HTTP
-  .get(route)
-  .then(response => {
+    .get(route)
+    .then(response => {
     // will do something
     // commit something
-  }).catch(e => {
-    console.lof(e)
-  })
+    }).catch(e => {
+      console.lof(e)
+    })
 }
 
 export const pageNumber = ({commit}, payload) => {
