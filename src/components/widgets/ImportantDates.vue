@@ -11,7 +11,7 @@
             <v-icon color="primary">event</v-icon>
           </v-list-tile-action>
           <v-list-tile-content>
-            <v-list-tile-title>1 September 2018</v-list-tile-title>
+            <v-list-tile-title>3 September 2018</v-list-tile-title>
             <v-list-tile-sub-title>Registration opens</v-list-tile-sub-title>
           </v-list-tile-content>
       </v-list-tile>

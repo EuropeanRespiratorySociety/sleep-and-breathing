@@ -41,9 +41,6 @@ export const getCategory = ({ commit, dispatch, rootState }, payload) => {
       data.items = response.data.data
       data.category = response.data.category[0]
       data.skip = response.data._sys.skip
-      if (rootState.base.isMobile) {
-        dispatch('base/setDrawer', false, { root: true })
-      }
       dispatch('pageNumber', data.pageNumber)
       dispatch('base/setOnline', null, { root: true })
       commit(types.SET_CATEGORY, data, err => { console.log(err) })
@@ -67,9 +64,6 @@ export const getArticle = ({ commit, dispatch, rootState }, payload) => {
       .then(response => {
         data.item = response.data
         dispatch('setOnline')
-        if (rootState.base.isMobile) {
-          dispatch('base/setDrawer', false, { root: true })
-        }
         commit(types.SET_ARTICLE, data, err => { console.log(err) })
         resolve(data)
       }).catch(e => {

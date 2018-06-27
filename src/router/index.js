@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
+import store from '../vuex/store'
 
 const Category = () => import('@/components/pages/Category')
 const Home = () => import('@/components/pages/Home')
@@ -47,5 +48,11 @@ const router = new Router({
 //     vm.store.dispatch('setArticlesKey', slug)
 //   })
 // })
+
+router.afterEach((to, from) => {
+  if (store.state.base.isMobile === true) {
+    store.dispatch('base/setDrawer', false, { root: true })
+  }
+})
 
 export default router
