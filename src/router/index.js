@@ -4,8 +4,10 @@ import store from '../vuex/store'
 
 const Category = () => import('@/components/pages/Category')
 const Home = () => import('@/components/pages/Home')
+const Programme = () => import('@/components/pages/Programme')
 const Article = () => import('@/components/pages/Article')
 const P = () => import('@/components/pages/PracticalInformation')
+
 
 // import store from '../vuex/store'
 
@@ -25,8 +27,8 @@ const router = new Router({
     },
     {
       path: '/programme',
-      name: 'Programme',
-      component: Category
+      name: 'programme',
+      component: Programme
     },
     {
       path: '/articles/:slug',
