@@ -9,7 +9,7 @@
       You can access to our online programme below.
     </v-card-text>
     <v-card-actions>
-      <a target="_blank" style="text-decoration: none;"href="http://k4.ersnet.org/prod/v2/front/program/?e=114">
+      <a target="_blank" style="text-decoration: none;" href="http://k4.ersnet.org/prod/v2/front/program/?e=114">
         <v-btn color="info" class="ml-2 mb-2">Browse the Programme</v-btn>
       </a>
     </v-card-actions>
