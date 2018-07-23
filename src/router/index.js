@@ -2,10 +2,12 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import store from '../vuex/store'
 
-const Home = () => import('@/components/pages/Home')
+/* eslint-disable */
+const Home = () => import('@/components/pages/Home') // eslint-disable-line
 const Programme = () => import('@/components/pages/Programme')
 const Article = () => import('@/components/pages/Article')
 const P = () => import('@/components/pages/PracticalInformation')
+/* eslint-enable */
 
 // import store from '../vuex/store'
 
