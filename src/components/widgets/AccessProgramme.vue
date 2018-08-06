@@ -17,7 +17,7 @@
 </template>
 <script>
 export default {
-  name: 'important-dates'
+  name: 'access-programme'
 }
 </script>
 

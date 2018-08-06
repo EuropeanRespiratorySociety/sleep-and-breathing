@@ -26,6 +26,7 @@ export const getNews = ({ commit, dispatch }, payload) => {
 }
 
 export const getCategory = ({ commit, dispatch, rootState }, payload) => {
+  console.log(payload)
   let data = {skip: 0, pageNumber: 1}
   const qname = payload.request === 'programme'
     ? 'o:f730239a8b20c4024d7f'

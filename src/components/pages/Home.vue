@@ -22,8 +22,13 @@
           <important-dates />
         </v-flex>
 
-        <v-flex xs12 sm6>
-          <access-programme />
+        <v-flex  sm6>
+          <v-flex xs12>
+            <access-programme />
+          </v-flex>
+          <v-flex xs12>
+            <video-conference />
+          </v-flex>
         </v-flex>
       </v-layout>
     </v-container>
@@ -50,13 +55,13 @@
       </v-layout>
     </v-container>
 
-<v-container grid-list-md>
-<v-flex xs12 sm12 md12 lg12>
-  <organising-committee />
-</v-flex>
-</v-container>
+    <v-container grid-list-md>
+      <v-flex xs12 sm12 md12 lg12>
+        <organising-committee />
+      </v-flex>
+    </v-container>
     <ads />
-    </v-flex>
+  </v-flex>
 </template>
 
 <script>
@@ -66,6 +71,7 @@ import Ads from '../widgets/Ads'
 import OrganisingCommittee from '../widgets/OrganisingCommittee'
 import ImportantDates from '../widgets/ImportantDates'
 import AccessProgramme from '../widgets/AccessProgramme'
+import VideoConference from '../widgets/VideoConference'
 
 export default {
   name: 'Home',
@@ -125,7 +131,8 @@ export default {
     Ads,
     OrganisingCommittee,
     ImportantDates,
-    AccessProgramme
+    AccessProgramme,
+    VideoConference
   }
 
 }

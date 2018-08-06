@@ -93,4 +93,5 @@ export default {
   .card__text > span > ul {
     padding-left: 30px!important;
   }
+
 </style>

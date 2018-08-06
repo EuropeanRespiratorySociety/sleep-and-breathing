@@ -7,6 +7,7 @@ const Home = () => import('@/components/pages/Home') // eslint-disable-line
 const Programme = () => import('@/components/pages/Programme')
 const Article = () => import('@/components/pages/Article')
 const P = () => import('@/components/pages/PracticalInformation')
+const Category = () => import('@/components/pages/Category')
 /* eslint-enable */
 
 // import store from '../vuex/store'
@@ -34,6 +35,11 @@ const router = new Router({
       path: '/articles/:slug',
       name: 'Article',
       component: Article
+    },
+    {
+      path: '/registration',
+      name: 'Category',
+      component: Category
     },
     {
       path: '/practical-information',
