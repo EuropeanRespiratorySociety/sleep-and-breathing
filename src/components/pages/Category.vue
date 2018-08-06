@@ -47,6 +47,13 @@ export default {
     this.fetchData()
   },
 
+  watch: {
+    'this.$store.route' () {
+      console.log('in watch route', this.$store.route)
+      this.fetchData()
+    }
+  },
+
   computed: {
     ...mapGetters([
       'slug'
