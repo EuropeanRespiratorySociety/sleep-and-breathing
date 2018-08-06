@@ -82,7 +82,7 @@ export default {
     fetchData () {
       const payload = {
         pageNumber: parseInt(this.$route.params.id) || this.page,
-        request: this.slug,
+        request: 'practical-information',
         skip: this.$store.state.skip
       }
       this.getCategory(payload)
