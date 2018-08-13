@@ -5,7 +5,7 @@
       <a href="/"><img src="../../assets/logo-title2.png" width="38" d-flex v-if="!drawer" /></a>
       <v-toolbar-title v-if="!drawer" class="mb-1">Sleep and Breathing <span v-if="offline">currently offline</span></v-toolbar-title>
     </v-toolbar>
-    <v-parallax src='./img/background-image2.png' class="backgroundimage" height="300">
+    <v-parallax src="https://sleepandbreathing.org/img/background-image2.png" class="backgroundimage" height="300">
     </v-parallax>
   </div>
 </template>
