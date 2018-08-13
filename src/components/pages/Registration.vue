@@ -11,7 +11,7 @@
     </v-card>
     <v-container grid-list-md>
       <v-layout v-if="articles" row wrap>
-        <v-flex v-for="post of articles" xs12 sm6 :key="post.slug">
+        <v-flex v-for="post of articles" xs12 sm12 :key="post.slug">
           <v-card>
             <v-card-media v-if="post.image" :src="post.image" height="200px">
             </v-card-media>
@@ -36,7 +36,7 @@
 <script>
 import { mapActions, mapGetters } from 'vuex'
 export default {
-  name: 'Category',
+  name: 'registration',
   data () {
     return {
       fixed: false
@@ -44,7 +44,6 @@ export default {
   },
 
   created () {
-    console.log('created', this)
     this.fetchData()
   },
 
@@ -74,7 +73,7 @@ export default {
     fetchData () {
       const payload = {
         pageNumber: parseInt(this.$route.params.id) || this.page,
-        request: this.slug,
+        request: 'registration',
         skip: this.$store.state.skip
       }
       this.getCategory(payload)
@@ -94,4 +93,5 @@ export default {
   .card__text {
     min-height: 140px;
   }
+
 </style>

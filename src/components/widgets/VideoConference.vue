@@ -2,11 +2,6 @@
   <v-layout row>
     <v-flex md12>
       <v-card id="test">
-        <v-card-title primary-title>
-          <div>
-            <h3 class="headline mb-0">ERS / ESRS Sleep and Breathing Conference 2019</h3>
-          </div>
-        </v-card-title>
         <div class="videoWrapper">
           <iframe src="https://www.youtube.com/embed/WZLDc9BR17M?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
         </div>

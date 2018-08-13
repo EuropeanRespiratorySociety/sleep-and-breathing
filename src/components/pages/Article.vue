@@ -95,3 +95,66 @@ export default {
   }
 
 </style>
+
+<style>
+  table {
+    margin-top: 20px;
+    background-color: #fff;
+    color: rgba(0,0,0,0.87);
+    border-radius: 2px;
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    max-width: 100%;
+    border-color: grey;
+    display: table;
+    box-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2), 0px 1px 1px 2px rgba(0,0,0,0.14), 0px 1px 3px 0px rgba(0,0,0,0.12) !important;
+  }
+
+  thead {
+    display: table-header-group;
+    vertical-align: middle;
+    border-color: inherit;
+  }
+
+  thead tr:first-child {
+    border-bottom: 1px solid rgba(0,0,0,0.12);
+    height: 56px;
+
+  }
+
+   thead th {
+    font-weight: 500;
+    font-size: 12px;
+    transition: 0.3s cubic-bezier(0.25, 0.8, 0.5, 1);
+    white-space: nowrap;
+    text-align: center;
+    display: table-cell;
+  }
+
+  thead th:first-child {
+    padding: 0 24px;
+  }
+
+  tr {
+    height: 56px;
+    display: table-row;
+  }
+
+  tbody tr:hover {
+    background-color: #e1e1e1;
+    text-shadow: none;
+  }
+
+  tbody tr:not(:last-child) {
+    border-bottom: 1px solid rgba(0,0,0,0.12);
+  }
+
+  tbody td:first-child {
+    padding: 0 24px;
+  }
+
+  tbody td:not(:first-child) {
+    text-align: center;
+  }
+</style>

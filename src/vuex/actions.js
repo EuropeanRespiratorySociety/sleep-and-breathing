@@ -32,7 +32,9 @@ export const getCategory = ({ commit, dispatch, rootState }, payload) => {
     ? 'o:f730239a8b20c4024d7f'
     : payload.request === 'practical-information'
       ? 'o:44c0b9cc9228ca743c5a'
-      : 'o:120ab483a2d8502c4947' // home
+      : payload.request === 'registration'
+        ? 'o:37c7e9119c2c1ddc191b'
+        : 'o:120ab483a2d8502c4947' // home
 
   const route = `sleepandbreathing?qname=${qname}`
 
