@@ -30,7 +30,6 @@ export default new Vuex.Store({
   },
   state: {
     pages: keys,
-    offline: false,
     pageNumber: 1,
     skip: 0,
     limit: 25,

@@ -18,6 +18,7 @@ export default {
     state.skip = data.skip
     state.pages[path] = { category: data.category, items: data.items }
     state.pageNumber = data.pageNumber
+    state.displayOrder = data.displayOrder
     // state.news.push(data.items)
   },
 
@@ -35,13 +36,5 @@ export default {
     state.pages = data.pages
     state.article = data.article
     state.pageNumber = data.pageNumber
-  },
-
-  [types.SET_ONLINE] (state) {
-    state.offline = false
-  },
-
-  [types.SET_OFFLINE] (state) {
-    state.offline = true
   }
 }

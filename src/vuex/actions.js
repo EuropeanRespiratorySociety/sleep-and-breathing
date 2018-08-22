@@ -26,17 +26,22 @@ export const getNews = ({ commit, dispatch }, payload) => {
 }
 
 export const getCategory = ({ commit, dispatch, rootState }, payload) => {
-  console.log(payload)
   let data = {skip: 0, pageNumber: 1}
-  const qname = payload.request === 'programme'
+  const { request, sortDirection = -1, sortBy = 'displayOrder' } = payload
+  const qname = request === 'programme'
     ? 'o:f730239a8b20c4024d7f'
-    : payload.request === 'practical-information'
+    : request === 'practical-information'
       ? 'o:44c0b9cc9228ca743c5a'
-      : payload.request === 'registration'
+      : request === 'registration'
         ? 'o:37c7e9119c2c1ddc191b'
         : 'o:120ab483a2d8502c4947' // home
+  const queryParam =
+    {
+      sortDirection: sortDirection,
+      sortBy: sortBy
+    }
 
-  const route = `sleepandbreathing?qname=${qname}`
+  const route = setRoute(queryParam, qname)
 
   HTTP
     .get(route)
@@ -51,7 +56,7 @@ export const getCategory = ({ commit, dispatch, rootState }, payload) => {
     .catch(e => {
       if (window.localStorage.getItem('vuex')) {
         const restored = JSON.parse(window.localStorage.getItem('vuex'))
-        dispatch('setOffline')
+        dispatch('base/setOffline', null, { root: true })
         commit(types.RESTORE_MUTATION, restored, err => { console.log(err) })
       }
     })
@@ -66,13 +71,13 @@ export const getArticle = ({ commit, dispatch, rootState }, payload) => {
       .get(route)
       .then(response => {
         data.item = response.data
-        dispatch('setOnline')
+        dispatch('base/setOnline', null, { root: true })
         commit(types.SET_ARTICLE, data, err => { console.log(err) })
         resolve(data)
       }).catch(e => {
         if (window.localStorage.getItem('vuex')) {
           const restored = JSON.parse(window.localStorage.getItem('vuex'))
-          dispatch('setOffline')
+          dispatch('base/setOffline', null, { root: true })
           commit(types.RESTORE_MUTATION, restored, err => { console.log(err) })
           resolve()
         }
@@ -96,10 +101,25 @@ export const pageNumber = ({commit}, payload) => {
   commit(types.SET_PAGE_NUMBER, payload, err => { console.log(err) })
 }
 
-export const setOnline = ({commit}) => {
-  commit(types.SET_ONLINE)
-}
+function setRoute (queryParam, qname) {
+  let route = `sleepandbreathing?qname=${qname}`
+  const keys = Object.keys(queryParam)
+  const values = Object.values(queryParam)
 
-export const setOffline = ({commit}) => {
-  commit(types.SET_OFFLINE)
+  if (keys.length > 0) {
+    for (var i = 0; i < keys.length; i++) {
+      route += `&${keys[i]}=${values[i]}`
+    }
+  }
+  // function setRoute (queryParam, qname) {
+  //   let route = `sleepandbreathing?qname=${qname}`
+  //   const entries = Object.entries(queryParam)
+  //   console.log(entries)
+  //   const map = new Map ()
+  //   map.set(entries[0], entries[1])
+  //   console.log(map)
+  //   for (var [key, value] of map) {
+  //     route += `&${key}=${value}`
+  //   }
+  return route
 }

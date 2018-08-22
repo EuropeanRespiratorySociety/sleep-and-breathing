@@ -11,7 +11,8 @@ export default {
   state: {
     drawer: false,
     showMini: true,
-    isMobile: false
+    isMobile: false,
+    offline: false
   },
   mutations: mutations.default
 }

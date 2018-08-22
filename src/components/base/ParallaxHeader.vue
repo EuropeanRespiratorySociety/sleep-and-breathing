@@ -27,7 +27,7 @@ export default {
       'drawer'
     ]),
 
-    ...mapState([
+    ...mapState('base', [
       'offline'
     ])
   },

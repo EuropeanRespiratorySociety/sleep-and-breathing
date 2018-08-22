@@ -11,7 +11,7 @@
     </v-card>
     <v-container grid-list-md>
       <v-layout v-if="articles" row wrap>
-        <v-flex v-for="post of articles" xs12 sm12 :key="post.slug">
+        <v-flex v-for="post of articles" xs12 sm6 :key="post.slug">
           <v-card>
             <v-card-media v-if="post.image" :src="post.image" height="200px">
             </v-card-media>
@@ -69,12 +69,15 @@ export default {
     ...mapActions([
       'getCategory',
       'pageNumber'
+
     ]),
     fetchData () {
       const payload = {
         pageNumber: parseInt(this.$route.params.id) || this.page,
         request: 'registration',
-        skip: this.$store.state.skip
+        skip: this.$store.state.skip,
+        sort: true,
+        sortDirection: 1
       }
       this.getCategory(payload)
     }
