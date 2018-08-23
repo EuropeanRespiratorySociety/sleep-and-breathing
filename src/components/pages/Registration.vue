@@ -76,7 +76,6 @@ export default {
         pageNumber: parseInt(this.$route.params.id) || this.page,
         request: 'registration',
         skip: this.$store.state.skip,
-        sort: true,
         sortDirection: 1
       }
       this.getCategory(payload)
