@@ -35,13 +35,7 @@ export const getCategory = ({ commit, dispatch, rootState }, payload) => {
       : request === 'registration'
         ? 'o:37c7e9119c2c1ddc191b'
         : 'o:120ab483a2d8502c4947' // home
-  const queryParam =
-    {
-      sortDirection: sortDirection,
-      sortBy: sortBy
-    }
-
-  const route = setRoute(queryParam, qname)
+  const route = setRoute({ sortDirection, sortBy }, qname)
 
   HTTP
     .get(route)
@@ -101,25 +95,8 @@ export const pageNumber = ({commit}, payload) => {
   commit(types.SET_PAGE_NUMBER, payload, err => { console.log(err) })
 }
 
-function setRoute (queryParam, qname) {
-  let route = `sleepandbreathing?qname=${qname}`
-  const keys = Object.keys(queryParam)
-  const values = Object.values(queryParam)
-
-  if (keys.length > 0) {
-    for (var i = 0; i < keys.length; i++) {
-      route += `&${keys[i]}=${values[i]}`
-    }
-  }
-  // function setRoute (queryParam, qname) {
-  //   let route = `sleepandbreathing?qname=${qname}`
-  //   const entries = Object.entries(queryParam)
-  //   console.log(entries)
-  //   const map = new Map ()
-  //   map.set(entries[0], entries[1])
-  //   console.log(map)
-  //   for (var [key, value] of map) {
-  //     route += `&${key}=${value}`
-  //   }
-  return route
+function setRoute (queryParams, qname) {
+  return `sleepandbreathing?qname=${qname}${Object.keys(queryParams)
+    .map(i => `&${i}=${queryParams[i]}`)
+    .join('')}`
 }
