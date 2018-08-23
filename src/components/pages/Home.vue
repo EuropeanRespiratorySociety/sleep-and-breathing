@@ -26,15 +26,16 @@
           <v-flex xs12>
             <access-programme />
           </v-flex>
-          <v-flex xs12>
-            <video-conference />
-          </v-flex>
         </v-flex>
       </v-layout>
     </v-container>
 
     <v-container grid-list-md>
       <v-layout v-if="articles" row wrap>
+        <v-flex xs12 sm6>
+          <video-conference />
+        </v-flex>
+
         <v-flex v-for="post of articles" xs12 sm6 :key="post.slug">
           <v-card>
             <v-card-media v-if="post.image" :src="post.image" height="200px">

@@ -31,16 +31,6 @@
             <v-icon color="primary">event</v-icon>
           </v-list-tile-action>
           <v-list-tile-content>
-            <v-list-tile-title class="mt-1">Late August 2018</v-list-tile-title>
-            <v-list-tile-sub-title class="mb-1">abstracts submission opens</v-list-tile-sub-title>
-          </v-list-tile-content>
-        </v-list-tile>
-        <v-divider inset></v-divider>
-        <v-list-tile>
-          <v-list-tile-action>
-            <v-icon color="primary">event</v-icon>
-          </v-list-tile-action>
-          <v-list-tile-content>
             <v-list-tile-title class="mt-1">31 October 2018</v-list-tile-title>
             <v-list-tile-sub-title class="mb-1">abstracts submission deadline</v-list-tile-sub-title>
           </v-list-tile-content>
