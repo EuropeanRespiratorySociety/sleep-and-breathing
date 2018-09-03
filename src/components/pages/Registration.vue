@@ -12,7 +12,7 @@
     <v-container grid-list-md>
       <v-layout v-if="articles" row wrap>
         <v-flex v-for="post of articles" xs12 sm6 :key="post.slug">
-          <v-card>
+          <v-card  class="pb-2">
             <v-card-media v-if="post.image" :src="post.image" height="200px">
             </v-card-media>
             <v-card-title v-if="post.title" primary-title>
@@ -25,6 +25,10 @@
             </v-card-text>
             <v-card-actions>
               <v-btn :to="`articles/${post.slug}`" flat>More...</v-btn>
+              <v-spacer></v-spacer>
+              <a target="_blank" style="text-decoration: none;" href="http://registration.sleepandbreathing.org/register.aspx?e=894">
+                <v-btn color="info" v-if="post.title === 'Registration fees 2019' ">Registration</v-btn>
+              </a>
             </v-card-actions>
           </v-card>
         </v-flex>

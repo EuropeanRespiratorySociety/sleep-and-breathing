@@ -2,6 +2,26 @@
 
   <v-flex xs12 sm12 md8 lg8 offset-md2 offset-lg2>
     <v-container grid-list-md style="margin-top:-145px;">
+      <!-- temporary Alert  Registration open-->
+      <v-alert
+        class="title mb-2"
+        :value="true"
+        type="warning"
+        icon="info"
+        
+      >
+          <div style="float: left;" class="mt-3">Registration is now open.</div>
+          <a target="_blank" style="text-decoration: none;" href="http://registration.sleepandbreathing.org/register.aspx?e=894">
+            <v-btn
+              color="info"
+              style="float: right;"
+              class="subheading"
+            >
+              Registration
+            </v-btn>
+            </a>
+      </v-alert>
+
       <v-layout v-if="articles" row wrap>
         <v-flex  xs12 sm12 md12 lg12>
           <v-card id="test">
