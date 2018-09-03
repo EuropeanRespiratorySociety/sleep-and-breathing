@@ -8,7 +8,6 @@
         :value="true"
         type="warning"
         icon="info"
-        
       >
           <div style="float: left;" class="mt-3">Registration is now open.</div>
           <a target="_blank" style="text-decoration: none;" href="http://registration.sleepandbreathing.org/register.aspx?e=894">
