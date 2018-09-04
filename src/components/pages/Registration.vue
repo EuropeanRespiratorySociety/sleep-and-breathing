@@ -4,8 +4,10 @@
       <v-toolbar card class="white">
         <v-toolbar-title v-if="category" class="headline grey--text">{{category.title}}</v-toolbar-title>
         <v-spacer></v-spacer>
+        <a target="_blank" style="text-decoration: none;" href="http://registration.sleepandbreathing.org/register.aspx?e=894">
+          <v-btn color="info" v-if="category.slug === 'registration' ">Registration</v-btn>
+        </a>
       </v-toolbar>
-
       <v-divider></v-divider>
       <v-card-text v-if="category.body" v-html="category.body"></v-card-text>
     </v-card>
@@ -26,9 +28,6 @@
             <v-card-actions>
               <v-btn :to="`articles/${post.slug}`" flat>More...</v-btn>
               <v-spacer></v-spacer>
-              <a target="_blank" style="text-decoration: none;" href="http://registration.sleepandbreathing.org/register.aspx?e=894">
-                <v-btn color="info" v-if="post.title === 'Registration fees 2019' ">Registration</v-btn>
-              </a>
             </v-card-actions>
           </v-card>
         </v-flex>
