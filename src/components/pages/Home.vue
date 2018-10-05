@@ -76,7 +76,7 @@
     </v-container>
 
     <v-container grid-list-md>
-      <v-flex xs12 sm12 md12 lg12>
+      <v-flex xs12 sm8 offset-sm2>
         <organising-committee />
       </v-flex>
     </v-container>
