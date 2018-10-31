@@ -21,8 +21,8 @@
             <v-icon color="primary">event</v-icon>
           </v-list-tile-action>
           <v-list-tile-content>
-            <v-list-tile-title class="mt-1">31 October 2018</v-list-tile-title>
-            <v-list-tile-sub-title class="mb-1">abstracts submission deadline</v-list-tile-sub-title>
+            <v-list-tile-title class="mt-1">12 November 2018</v-list-tile-title>
+            <v-list-tile-sub-title class="mb-1">Abstract submission deadline extended</v-list-tile-sub-title>
           </v-list-tile-content>
         </v-list-tile>
     </v-list>
