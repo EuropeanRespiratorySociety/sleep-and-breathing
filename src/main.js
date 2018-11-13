@@ -11,11 +11,10 @@ import router from './router'
 import store from './vuex/store'
 import './registerServiceWorker'
 
-sync(store, router)
-
 Vue.use(Vuetify)
+sync(store, router)
 Vue.config.productionTip = false
-
+console.log('hello')
 /* eslint-disable no-new */
 new Vue({
   el: '#app',

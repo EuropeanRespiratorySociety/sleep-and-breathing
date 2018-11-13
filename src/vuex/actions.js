@@ -2,7 +2,7 @@ import * as types from './mutation-types'
 import { HTTP } from '../helpers/http'
 
 export const getNews = ({ commit, dispatch }, payload) => {
-  let data = {skip: 0, pageNumber: 1}
+  let data = { skip: 0, pageNumber: 1 }
   if (payload.pageNumber > 1) {
     data.pageNumber = payload.pageNumber
     data.skip = payload.limit * data.pageNumber
@@ -26,7 +26,7 @@ export const getNews = ({ commit, dispatch }, payload) => {
 }
 
 export const getCategory = ({ commit, dispatch, rootState }, payload) => {
-  let data = {skip: 0, pageNumber: 1}
+  let data = { skip: 0, pageNumber: 1 }
   const { request, sortDirection = -1, sortBy = 'displayOrder' } = payload
   const qname = request === 'programme'
     ? 'o:f730239a8b20c4024d7f'
@@ -91,7 +91,7 @@ export const getHome = ({ commit, dispatch }, payload) => {
     })
 }
 
-export const pageNumber = ({commit}, payload) => {
+export const pageNumber = ({ commit }, payload) => {
   commit(types.SET_PAGE_NUMBER, payload, err => { console.log(err) })
 }
 

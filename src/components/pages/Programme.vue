@@ -11,7 +11,7 @@
     </v-card>
     <v-container grid-list-md>
       <v-layout v-if="articles" row wrap>
-        <v-flex xs12 sm6>
+        <v-flex xs12 sm12>
           <access-programme />
         </v-flex>
         <v-flex v-for="post of articles" xs12 sm6 :key="post.slug">
