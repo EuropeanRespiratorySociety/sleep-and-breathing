@@ -8,6 +8,8 @@ const Programme = () => import('@/components/pages/Programme')
 const Article = () => import('@/components/pages/Article')
 const P = () => import('@/components/pages/PracticalInformation')
 const Registration = () => import('@/components/pages/Registration')
+const HotelAccommodation = () => import('@/components/pages/HotelAccommodation')
+
 /* eslint-enable */
 
 // import store from '../vuex/store'
@@ -45,6 +47,11 @@ const router = new Router({
       path: '/practical-information',
       name: 'practical-information',
       component: P
+    },
+    {
+      path: '/hotel-accommodation',
+      name: 'hotel-accommodation',
+      component: HotelAccommodation
     }
   ]
 })
