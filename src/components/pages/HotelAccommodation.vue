@@ -45,7 +45,7 @@
             @click="dialog = false"
             href="http://marseille-chanot.b-network.com/Index.aspx" target="_blank"
           >
-            <v-icon dark left>open_in_new</v-icon>LINK TO BOOK A ROOM
+            <v-icon dark left>open_in_new</v-icon>BOOK NOW
           </v-btn>
         </v-card-actions>
       </v-card>
