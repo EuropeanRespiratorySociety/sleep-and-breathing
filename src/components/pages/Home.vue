@@ -21,10 +21,10 @@
           <v-card id="test">
             <v-toolbar card color="white">
               <v-toolbar-title v-if="category" class="headline grey--text">{{category.title}}</v-toolbar-title>
-              <v-spacer></v-spacer>
+              <v-spacer/>
             </v-toolbar>
-            <v-divider></v-divider>
-            <v-card-text v-if="category" v-html="categoryContent"></v-card-text>
+            <v-divider/>
+            <v-card-text v-if="category" v-html="categoryContent"/>
           </v-card>
         </v-flex>
       </v-layout>
@@ -52,14 +52,14 @@
 
         <v-flex v-for="post of articles" xs12 sm6 :key="post.slug">
           <v-card>
-            <v-card-media v-if="post.image" :src="post.image" height="200px"></v-card-media>
+            <v-card-media v-if="post.image" :src="post.image" height="200px"/>
             <v-card-title primary-title>
               <div>
                 <h3 class="headline mb-0">{{post.title}}</h3>
                 <!--<span><v-icon class="published">query_builder</v-icon>{{post.createdOn}}</span>-->
               </div>
             </v-card-title>
-            <v-card-text v-html="post.shortLead"></v-card-text>
+            <v-card-text v-html="post.shortLead"/>
             <v-card-actions>
               <v-btn :to="`articles/${post.slug}`" flat>More...</v-btn>
             </v-card-actions>
@@ -69,7 +69,7 @@
     </v-container>
 
     <v-container grid-list-md>
-      <v-flex xs12 sm8 offset-sm2>
+      <v-flex xs12 sm12>
         <organising-committee/>
       </v-flex>
     </v-container>
