@@ -11,28 +11,26 @@
     </v-card>
     <v-container grid-list-md>
       <v-layout v-if="articles" row wrap>
-        <v-flex xs12 sm12>
-          <organising-committee />
-        </v-flex>
-        <v-flex xs12 sm6>
-          <important-dates />
-        </v-flex>
         <v-flex v-for="post of articles" xs12 sm6 :key="post.slug">
           <v-card>
-            <v-card-media v-if="post.image" :src="post.image" height="200px">
-            </v-card-media>
+            <v-card-media v-if="post.image" :src="post.image" height="200px"></v-card-media>
             <v-card-title v-if="post.title" primary-title>
               <div>
                 <h3 class="headline mb-0">{{post.title}}</h3>
                 <!--<span><v-icon class="published">query_builder</v-icon>{{post.createdOn}}</span>-->
               </div>
             </v-card-title>
-            <v-card-text v-if="post.shortLead" v-html="post.shortLead">
-            </v-card-text>
+            <v-card-text v-if="post.shortLead" v-html="post.shortLead"></v-card-text>
             <v-card-actions>
               <v-btn :to="`articles/${post.slug}`" flat>More...</v-btn>
             </v-card-actions>
           </v-card>
+        </v-flex>
+        <v-flex xs12 sm6>
+          <important-dates/>
+        </v-flex>
+        <v-flex xs12 sm12>
+          <organising-committee/>
         </v-flex>
       </v-layout>
     </v-container>
@@ -40,70 +38,64 @@
 </template>
 
 <script>
-import { mapActions, mapGetters } from 'vuex'
-import OrganisingCommittee from '../widgets/OrganisingCommittee'
-import ImportantDates from '../widgets/ImportantDates'
+import { mapActions, mapGetters } from "vuex";
+import OrganisingCommittee from "../widgets/OrganisingCommittee";
+import ImportantDates from "../widgets/ImportantDates";
 
 export default {
-  name: 'practical-information',
-  data () {
+  name: "practical-information",
+  data() {
     return {
       fixed: false
-    }
+    };
   },
 
-  created () {
-    this.fetchData()
+  created() {
+    this.fetchData();
   },
 
   computed: {
-    ...mapGetters([
-      'slug'
-    ]),
+    ...mapGetters(["slug"]),
 
-    path () {
-      return this.$store.state.route.path
+    path() {
+      return this.$store.state.route.path;
     },
 
-    articles () {
-      return this.$store.state.pages[this.path].items
+    articles() {
+      return this.$store.state.pages[this.path].items;
     },
 
-    category () {
-      return this.$store.state.pages[this.path].category
+    category() {
+      return this.$store.state.pages[this.path].category;
     }
   },
 
   methods: {
-    ...mapActions([
-      'getCategory',
-      'pageNumber'
-    ]),
-    fetchData () {
+    ...mapActions(["getCategory", "pageNumber"]),
+    fetchData() {
       const payload = {
         pageNumber: parseInt(this.$route.params.id) || this.page,
-        request: 'practical-information',
+        request: "practical-information",
         skip: this.$store.state.skip
-      }
-      this.getCategory(payload)
+      };
+      this.getCategory(payload);
     }
   },
   components: {
     OrganisingCommittee,
     ImportantDates
   }
-
-}
+};
 </script>
 
 <style>
-  @import '../../css/fonts.css';
-  .published {
-    font-size:18px!important;
-    padding-right:5px;
-  }
+@import "../../css/fonts.css";
+.published {
+  font-size: 18px !important;
+  padding-right: 5px;
+}
 
-  .card__text {
-    min-height: 140px;
-  }
+.card__text {
+  min-height: 140px;
+}
 </style>

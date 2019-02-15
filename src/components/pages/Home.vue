@@ -2,7 +2,7 @@
   <v-flex xs12 sm12 md8 lg8 offset-md2 offset-lg2>
     <v-container grid-list-md style="margin-top:-145px;">
       <!-- temporary Alert  Registration open-->
-      <v-alert class="title mb-1" :value="true" type="warning" icon="info">
+      <!-- <v-alert class="title mb-1" :value="true" type="warning" icon="info">
         <div style="float: left;" class="mt-1">Registration is now open.
           <br>
           <span class="body-2">early bird deadline extended to 15 February 2019</span>
@@ -14,8 +14,7 @@
         >
           <v-btn color="info" style="float: right;" class="subheading">Registration</v-btn>
         </a>
-      </v-alert>
-
+      </v-alert>-->
       <v-layout v-if="articles" row wrap>
         <v-flex xs12 sm12 md12 lg12>
           <v-card id="test">
