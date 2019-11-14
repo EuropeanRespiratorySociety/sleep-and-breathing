@@ -6,7 +6,7 @@ import store from '../vuex/store'
 const Home = () => import('@/components/pages/Home') // eslint-disable-line
 const Programme = () => import('@/components/pages/Programme')
 const Article = () => import('@/components/pages/Article')
-const P = () => import('@/components/pages/PracticalInformation')
+const PracticalInformation = () => import('@/components/pages/PracticalInformation')
 const Registration = () => import('@/components/pages/Registration')
 const HotelAccommodation = () => import('@/components/pages/HotelAccommodation')
 
@@ -18,8 +18,7 @@ Vue.use(Router)
 
 const router = new Router({
   mode: 'history',
-  routes: [
-    {
+  routes: [{
       path: '/home',
       redirect: '/'
     },
@@ -46,7 +45,7 @@ const router = new Router({
     {
       path: '/practical-information',
       name: 'practical-information',
-      component: P
+      component: PracticalInformation
     },
     {
       path: '/hotel-accommodation',
@@ -56,17 +55,11 @@ const router = new Router({
   ]
 })
 
-// router.beforeEach((to, from, next) => {
-//   next(vm => {
-//     const slug = store.getters.slug
-//     vm.store.dispatch('setCategoryKey', slug)
-//     vm.store.dispatch('setArticlesKey', slug)
-//   })
-// })
-
 router.afterEach((to, from) => {
   if (store.state.base.isMobile === true) {
-    store.dispatch('base/setDrawer', false, { root: true })
+    store.dispatch('base/setDrawer', false, {
+      root: true
+    })
   }
 })
 

@@ -55,7 +55,7 @@ export default {
   },
 
   methods: {
-    ...mapActions(["getArticle", "setArticle"]),
+    ...mapActions(["getArticle"]),
     fetchData() {
       const payload = {
         slug: this.$route.params.slug

@@ -14,7 +14,7 @@
               </div>
             </v-flex>
             <v-flex xs4>
-              <v-card-media
+              <v-img
                 src="./img/ESRS-Sleep-Medicine-Textbook_150.jpg"
                 height="215px"
                 contain
@@ -36,7 +36,7 @@
               </div>
             </v-flex>
             <v-flex xs4>
-              <v-card-media
+              <v-img
                 src="./img/sleep-handbook.jpg"
                 height="215px"
                 contain

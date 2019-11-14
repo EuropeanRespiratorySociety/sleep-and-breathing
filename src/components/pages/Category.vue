@@ -13,11 +13,10 @@
       <v-layout v-if="articles" row wrap>
         <v-flex v-for="post of articles" :key="post.slug" xs12 sm6>
           <v-card>
-            <v-card-media v-if="post.image" :src="post.image" height="200px"/>
+            <v-img v-if="post.image" :src="post.image" height="200px"/>
             <v-card-title v-if="post.title" primary-title>
               <div>
                 <h3 class="headline mb-0">{{post.title}}</h3>
-                <!--<span><v-icon class="published">query_builder</v-icon>{{post.createdOn}}</span>-->
               </div>
             </v-card-title>
             <v-card-text v-if="post.shortLead" v-html="post.shortLead"/>

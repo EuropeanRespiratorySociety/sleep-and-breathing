@@ -2,7 +2,10 @@ import * as types from "./mutation-types";
 import { HTTP } from "../helpers/http";
 
 export const getNews = ({ commit, dispatch }, payload) => {
-  let data = { skip: 0, pageNumber: 1 };
+  let data = {
+    skip: 0,
+    pageNumber: 1
+  };
   if (payload.pageNumber > 1) {
     data.pageNumber = payload.pageNumber;
     data.skip = payload.limit * data.pageNumber;
@@ -26,8 +29,11 @@ export const getNews = ({ commit, dispatch }, payload) => {
     });
 };
 
-export const getCategory = ({ commit, dispatch, rootState }, payload) => {
-  let data = { skip: 0, pageNumber: 1 };
+export const getCategory = ({ commit, dispatch }, payload) => {
+  let data = {
+    skip: 0,
+    pageNumber: 1
+  };
   const { request, sortDirection = -1, sortBy = "displayOrder" } = payload;
   const qname =
     request === "programme"
@@ -37,7 +43,13 @@ export const getCategory = ({ commit, dispatch, rootState }, payload) => {
         : request === "registration"
           ? "o:37c7e9119c2c1ddc191b"
           : "o:120ab483a2d8502c4947"; // home
-  const route = setRoute({ sortDirection, sortBy }, qname);
+  const route = setRoute(
+    {
+      sortDirection,
+      sortBy
+    },
+    qname
+  );
 
   HTTP.get(route)
     .then(response => {
@@ -45,7 +57,9 @@ export const getCategory = ({ commit, dispatch, rootState }, payload) => {
       data.category = response.data.category[0];
       data.skip = response.data._sys.skip;
       dispatch("pageNumber", data.pageNumber);
-      dispatch("base/setOnline", null, { root: true });
+      dispatch("base/setOnline", null, {
+        root: true
+      });
       commit(types.SET_CATEGORY, data, err => {
         console.log(err);
       });
@@ -53,7 +67,9 @@ export const getCategory = ({ commit, dispatch, rootState }, payload) => {
     .catch(e => {
       if (window.localStorage.getItem("vuex")) {
         const restored = JSON.parse(window.localStorage.getItem("vuex"));
-        dispatch("base/setOffline", null, { root: true });
+        dispatch("base/setOffline", null, {
+          root: true
+        });
         commit(types.RESTORE_MUTATION, restored, err => {
           console.log(err);
         });
@@ -69,7 +85,9 @@ export const getArticle = ({ commit, dispatch, rootState }, payload) => {
     HTTP.get(route)
       .then(response => {
         data.item = response.data;
-        dispatch("base/setOnline", null, { root: true });
+        dispatch("base/setOnline", null, {
+          root: true
+        });
         commit(types.SET_ARTICLE, data, err => {
           console.log(err);
         });
@@ -78,7 +96,9 @@ export const getArticle = ({ commit, dispatch, rootState }, payload) => {
       .catch(e => {
         if (window.localStorage.getItem("vuex")) {
           const restored = JSON.parse(window.localStorage.getItem("vuex"));
-          dispatch("base/setOffline", null, { root: true });
+          dispatch("base/setOffline", null, {
+            root: true
+          });
           commit(types.RESTORE_MUTATION, restored, err => {
             console.log(err);
           });
@@ -96,7 +116,7 @@ export const getHome = ({ commit, dispatch }, payload) => {
       // commit something
     })
     .catch(e => {
-      console.lof(e);
+      console.log(e);
     });
 };
 

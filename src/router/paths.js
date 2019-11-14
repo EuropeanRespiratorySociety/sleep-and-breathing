@@ -2,10 +2,8 @@ export default [
   {
     title: "Home",
     icon: "home",
-    path: "/",
-    private: true
+    path: "/"
   },
-  // { title: 'Venue', icon: 'event_seat', path: '/articles/venue' },
   {
     title: "Registration",
     icon: "payment",
