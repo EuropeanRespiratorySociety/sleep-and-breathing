@@ -2,10 +2,9 @@
   <v-flex xs12 sm12 md8 lg8 offset-md2 offset-lg2>
     <v-container grid-list-md style="margin-top:-145px;">
       <!-- temporary Alert  Registration open-->
-      <v-alert class="title mb-1" :value="true" type="warning" icon="info">
+      <v-alert :value="true" class="title mb-1" type="warning" icon="info">
         <div style="float: left;" class="mt-3">Registration is now open.
-          <!-- <br>
-          <span class="body-2">early bird deadline extended to 15 February 2019</span>-->
+          <!-- <br> <span class="body-2">early bird deadline extended to 15 February 2019</span>-->
         </div>
         <a
           target="_blank"
@@ -15,7 +14,7 @@
           <v-btn color="info" style="float: right;" class="subheading">Registration</v-btn>
         </a>
       </v-alert>
-      <v-layout v-if="articles" row wrap>
+      <v-layout row wrap>
         <v-flex xs12 sm12 md12 lg12>
           <v-card id="test">
             <v-toolbar card color="white">
@@ -29,24 +28,24 @@
       </v-layout>
     </v-container>
 
-    <v-container grid-list-md>
-      <v-layout v-if="articles" row wrap>
+    <v-container v-if="articles" grid-list-md>
+      <v-layout row wrap>
         <!-- <v-flex xs12 sm6>
           <important-dates/>
         </v-flex>-->
         <v-flex xs12 sm12>
           <access-programme/>
-        </v-flex>
+        </v-flex> 
         <v-flex xs12 sm6>
           <video-conference/>
-        </v-flex>
-        <v-flex v-for="post of articles" xs12 sm6 :key="post.slug">
+        </v-flex> 
+        <v-flex v-for="post of articles" :key="post.slug" xs12 sm6>
           <v-card>
             <v-card-media v-if="post.image" :src="post.image" height="200px"/>
             <v-card-title primary-title>
               <div>
                 <h3 class="headline mb-0">{{post.title}}</h3>
-                <!--<span><v-icon class="published">query_builder</v-icon>{{post.createdOn}}</span>-->
+                <!-- <span><v-icon class="published">query_builder</v-icon>{{post.createdOn}}</span> -->
               </div>
             </v-card-title>
             <v-card-text v-html="post.shortLead"/>
@@ -100,7 +99,12 @@ export default {
     },
 
     articles() {
-      return this.$store.state.pages[this.path].items;
+      if (
+        this.$store.state.pages[this.path].items &&
+        this.$store.state.pages[this.path].items.length > 0
+      )
+        return this.$store.state.pages[this.path].items;
+      else return false;
     },
 
     category() {

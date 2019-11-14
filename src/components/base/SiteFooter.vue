@@ -1,5 +1,5 @@
 <template>
-  <v-bottom-nav app color="primary" light :value="true" :active.sync="e1">
+  <v-bottom-nav :value="true" :active.sync="e1" app color="primary" light>
     <!--<v-btn flat color="teal" value="recent">
         <span>Recent</span>
         <v-icon>history</v-icon>
@@ -29,16 +29,16 @@
 
 <script>
 export default {
-  name: 'site-footer',
-  data () {
+  name: "site-footer",
+  data() {
     return {
-      e1: 'recent',
+      e1: "recent",
       sheet: false
-    }
+    };
   }
-}
+};
 </script>
 
 <style>
-  @import '../../css/fonts.css';
+@import "../../css/fonts.css";
 </style>

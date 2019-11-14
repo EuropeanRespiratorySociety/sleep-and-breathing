@@ -1,5 +1,8 @@
-import axios from 'axios'
+import axios from "axios";
 
 export const HTTP = axios.create({
-  baseURL: `https://api.ersnet.org/`
-})
+  baseURL: process.env.VUE_APP_ERS_API,
+  headers: {
+    "Content-Type": "application/json"
+  }
+});

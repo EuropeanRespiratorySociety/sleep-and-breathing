@@ -1,11 +1,11 @@
 module.exports = {
   presets: [
     [
-      '@vue/app',
+      "@vue/app",
       {
-        useBuiltIns: 'entry'
+        useBuiltIns: "entry"
       }
     ]
   ],
-  plugins: ['@babel/plugin-proposal-object-rest-spread']
-}
+  plugins: ["@babel/plugin-proposal-object-rest-spread"]
+};
