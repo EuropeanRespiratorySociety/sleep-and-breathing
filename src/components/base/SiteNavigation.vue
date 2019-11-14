@@ -43,12 +43,12 @@
     </v-list>
 
     <v-list dense class="pt-3">
-
       <v-list-tile
         v-for="item in items"
         :key="item.title"
         :to="!item.external ? item.path : null"
         :href="item.external ? item.path : null"
+        :target="item.external ? '_blank' : null"
       >
         <v-list-tile-action>
           <v-icon>{{ item.icon }}</v-icon>
@@ -76,22 +76,6 @@ export default {
       right: null
     };
   },
-
-  created() {
-    if (this.$vuetify.breakpoint.mdAndDown) {
-      this.setMobile(true);
-    }
-  },
-
-  methods: {
-    ...mapActions("base", ["setDrawer", "setMobile"]),
-
-    onResize() {
-      this.$vuetify.breakpoint.mdAndDown
-        ? this.setMobile(true)
-        : this.setMobile(false);
-    }
-  },
   computed: {
     drawer: {
       get: function() {
@@ -100,6 +84,21 @@ export default {
       set: function(value) {
         this.setDrawer(value);
       }
+    }
+  },
+
+  created() {
+    if (this.$vuetify.breakpoint.mdAndDown) {
+      this.setMobile(true);
+    }
+  },
+  methods: {
+    ...mapActions("base", ["setDrawer", "setMobile"]),
+
+    onResize() {
+      this.$vuetify.breakpoint.mdAndDown
+        ? this.setMobile(true)
+        : this.setMobile(false);
     }
   }
 };
