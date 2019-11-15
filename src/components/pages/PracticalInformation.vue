@@ -29,10 +29,12 @@
         <!-- <v-flex xs12 sm6>
           <important-dates/>
         </v-flex>-->
-        <v-flex xs12 sm12>
-          <organising-committee/>
-        </v-flex>
       </v-layout>
+    </v-container>
+    <v-container grid-list-md>
+      <v-flex xs12>
+        <organising-committee/>
+      </v-flex>
     </v-container>
   </v-flex>
 </template>

@@ -11,19 +11,19 @@
       </v-content>
     </transition>
     <site-navigation/>
-    <site-footer/>
+    <!-- <site-footer/> -->
   </v-app>
 </template>
 
 <script>
-import SiteFooter from "@/components/base/SiteFooter";
+// import SiteFooter from "@/components/base/SiteFooter";
 import SiteNavigation from "@/components/base/SiteNavigation";
 import ParallaxHeader from "@/components/base/ParallaxHeader";
 
 export default {
   name: "App",
   components: {
-    SiteFooter,
+    //SiteFooter,
     SiteNavigation,
     ParallaxHeader
   },

@@ -11,9 +11,9 @@
     </v-card>
     <v-container grid-list-md>
       <v-layout v-if="articles" row wrap>
-        <v-flex xs12 sm12>
+        <!-- <v-flex xs12 sm12>
           <access-programme />
-        </v-flex>
+        </v-flex> -->
         <v-flex v-for="post of articles" :key="post.slug" xs12 sm6>
           <v-card>
             <v-img v-if="post.image" :src="post.image" height="200px"/>
@@ -26,6 +26,13 @@
             <v-card-text v-if="post.shortLead" v-html="formatLinkTargetBlank(post.shortLead)"/>
             <v-card-actions>
               <v-btn :to="`articles/${post.slug}`" flat>More...</v-btn>
+              <v-spacer/>
+              <a v-if="post.slug === 'programme-2021'"
+                 style="text-decoration: none;"
+                 href="mailto:scientific@ersnet.org"
+              >
+                <v-btn color="info" class="ml-2 mb-2">Send us your ideas now</v-btn>
+              </a>
             </v-card-actions>
           </v-card>
         </v-flex>

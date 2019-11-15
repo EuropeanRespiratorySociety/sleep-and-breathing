@@ -1,6 +1,6 @@
 <template>
   <v-flex xs12 sm12 md8 lg8 offset-md2 offset-lg2>
-    <v-container grid-list-md style="margin-top:-145px;">
+    <v-container style="margin-top:-145px;">
       <!-- temporary Alert  Registration open
       <v-alert :value="true" class="title mb-1" type="warning" icon="info">
         <div style="float: left;" class="mt-3">Registration is now open.
@@ -16,7 +16,7 @@
       </v-alert>
       -->
       <v-layout row wrap>
-        <v-flex xs12 sm12 md12 lg12>
+        <v-flex xs12>
           <v-card id="test">
             <v-toolbar card color="white">
               <v-toolbar-title v-if="category" class="headline grey--text">{{category.title}}</v-toolbar-title>
@@ -29,7 +29,7 @@
       </v-layout>
     </v-container>
 
-    <v-container v-if="articles" grid-list-md>
+    <v-container v-if="articles">
       <v-layout row wrap>
         <!-- <v-flex xs12 sm6>
           <important-dates/>
@@ -52,13 +52,20 @@
             <v-card-text v-html="formatLinkTargetBlank(post.shortLead)"/>
             <v-card-actions>
               <v-btn :to="`articles/${post.slug}`" flat>More...</v-btn>
+              <v-spacer/>
+              <a v-if="post.slug === 'programme-2021'"
+                 style="text-decoration: none;"
+                 href="mailto:scientific@ersnet.org"
+              >
+                <v-btn color="info" class="ml-2 mb-2">Send us your ideas now</v-btn>
+              </a>
             </v-card-actions>
           </v-card>
         </v-flex>
       </v-layout>
     </v-container>
-    <v-container grid-list-md>
-      <v-flex xs12 sm12>
+    <v-container >
+      <v-flex xs12>
         <organising-committee/>
       </v-flex>
     </v-container>
