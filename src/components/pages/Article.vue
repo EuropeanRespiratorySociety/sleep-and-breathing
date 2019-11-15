@@ -11,8 +11,8 @@
 
       <v-divider/>
       <v-card-text>
-        <span v-if="article.leadParagraph" v-html="article.leadParagraph"/>
-        <span v-if="article.body" v-html="article.body"/>
+        <span v-if="article.leadParagraph" v-html="formatLinkTargetBlank(article.leadParagraph)"/>
+        <span v-if="article.body" v-html="formatLinkTargetBlank(article.body)"/>
       </v-card-text>
     </v-card>
   </v-flex>
@@ -20,16 +20,17 @@
 
 <script>
 import { mapActions } from "vuex";
+import { formMixin } from "@/mixins/formMixin";
 
 export default {
   name: "Article",
+  mixins: [formMixin],
   data() {
     return {
       fixed: false,
       article: this.item
     };
   },
-
   computed: {
     slug() {
       return this.$store.getters.slug;
@@ -43,17 +44,14 @@ export default {
       return this.$store.state.pages[this.path];
     }
   },
-
   watch: {
     $route() {
       this.fetchData();
     }
   },
-
   created() {
     this.fetchData();
   },
-
   methods: {
     ...mapActions(["getArticle"]),
     fetchData() {

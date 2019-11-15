@@ -7,7 +7,7 @@
       </v-toolbar>
 
       <v-divider/>
-      <v-card-text v-if="category.body" v-html="category.body"/>
+      <v-card-text v-if="category.body" v-html="formatLinkTargetBlank(category.body)"/>
     </v-card>
     <v-container grid-list-md>
       <v-layout v-if="articles" row wrap>
@@ -20,7 +20,7 @@
                 <!--<span><v-icon class="published">query_builder</v-icon>{{post.createdOn}}</span>-->
               </div>
             </v-card-title>
-            <v-card-text v-if="post.shortLead" v-html="post.shortLead"/>
+            <v-card-text v-if="post.shortLead" v-html="formatLinkTargetBlank(post.shortLead)"/>
             <v-card-actions>
               <v-btn :to="`articles/${post.slug}`" flat>More...</v-btn>
             </v-card-actions>
@@ -39,21 +39,22 @@
 
 <script>
 import { mapActions, mapGetters } from "vuex";
+import { formMixin } from "@/mixins/formMixin";
 import OrganisingCommittee from "../widgets/OrganisingCommittee";
 import ImportantDates from "../widgets/ImportantDates";
 
 export default {
   name: "practical-information",
+  components: {
+    OrganisingCommittee,
+    ImportantDates
+  },
+  mixins: [formMixin],
   data() {
     return {
       fixed: false
     };
   },
-
-  created() {
-    this.fetchData();
-  },
-
   computed: {
     ...mapGetters(["slug"]),
 
@@ -69,7 +70,9 @@ export default {
       return this.$store.state.pages[this.path].category;
     }
   },
-
+  created() {
+    this.fetchData();
+  },
   methods: {
     ...mapActions(["getCategory", "pageNumber"]),
     fetchData() {
@@ -80,10 +83,6 @@ export default {
       };
       this.getCategory(payload);
     }
-  },
-  components: {
-    OrganisingCommittee,
-    ImportantDates
   }
 };
 </script>

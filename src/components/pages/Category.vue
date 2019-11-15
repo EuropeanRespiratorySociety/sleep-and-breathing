@@ -7,7 +7,7 @@
       </v-toolbar>
 
       <v-divider/>
-      <v-card-text v-if="category.body" v-html="category.body"/>
+      <v-card-text v-if="category.body" v-html="formatLinkTargetBlank(category.body)"/>
     </v-card>
     <v-container grid-list-md>
       <v-layout v-if="articles" row wrap>
@@ -19,7 +19,7 @@
                 <h3 class="headline mb-0">{{post.title}}</h3>
               </div>
             </v-card-title>
-            <v-card-text v-if="post.shortLead" v-html="post.shortLead"/>
+            <v-card-text v-if="post.shortLead" v-html="formatLinkTargetBlank(post.shortLead)"/>
             <v-card-actions>
               <v-btn :to="`articles/${post.slug}`" flat>More...</v-btn>
             </v-card-actions>
@@ -32,8 +32,10 @@
 
 <script>
 import { mapActions, mapGetters } from "vuex";
+import { formMixin } from "@/mixins/formMixin";
 export default {
   name: "Category",
+  mixins: [formMixin],
   data() {
     return {
       fixed: false

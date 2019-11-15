@@ -23,7 +23,7 @@
               <v-spacer/>
             </v-toolbar>
             <v-divider/>
-            <v-card-text v-if="category" v-html="categoryContent"/>
+            <v-card-text v-if="category" v-html="formatLinkTargetBlank(categoryContent)"/>
           </v-card>
         </v-flex>
       </v-layout>
@@ -49,7 +49,7 @@
                 <!-- <span><v-icon class="published">query_builder</v-icon>{{post.createdOn}}</span> -->
               </div>
             </v-card-title>
-            <v-card-text v-html="post.shortLead"/>
+            <v-card-text v-html="formatLinkTargetBlank(post.shortLead)"/>
             <v-card-actions>
               <v-btn :to="`articles/${post.slug}`" flat>More...</v-btn>
             </v-card-actions>
@@ -68,7 +68,7 @@
 
 <script>
 import { mapActions } from "vuex";
-// import * as config from '../../config'
+import { formMixin } from "@/mixins/formMixin";
 import Ads from "../widgets/Ads";
 import OrganisingCommittee from "../widgets/OrganisingCommittee";
 import ImportantDates from "../widgets/ImportantDates";
@@ -84,12 +84,12 @@ export default {
     AccessProgramme,
     VideoConference
   },
+  mixins: [formMixin],
   data() {
     return {
       fixed: false
     };
   },
-
   computed: {
     slug() {
       return this.$store.getters.slug;
@@ -98,7 +98,6 @@ export default {
     path() {
       return this.$store.state.route.path;
     },
-
     articles() {
       if (
         this.$store.state.pages[this.path].items &&
@@ -107,11 +106,9 @@ export default {
         return this.$store.state.pages[this.path].items;
       else return false;
     },
-
     category() {
       return this.$store.state.pages[this.path].category;
     },
-
     categoryContent() {
       return (
         this.category.body +
@@ -123,7 +120,6 @@ export default {
       );
     }
   },
-
   created() {
     this.fetchData();
   },
