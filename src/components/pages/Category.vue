@@ -39,12 +39,6 @@ export default {
       fixed: false
     };
   },
-
-  created() {
-    console.log("created", this);
-    this.fetchData();
-  },
-
   computed: {
     ...mapGetters(["slug"]),
 
@@ -60,7 +54,10 @@ export default {
       return this.$store.state.pages[this.path].category;
     }
   },
-
+  created() {
+    console.log("created", this);
+    this.fetchData();
+  },
   methods: {
     ...mapActions(["getCategory", "pageNumber"]),
     fetchData() {

@@ -14,21 +14,21 @@ export default [
     icon: "date_range",
     path: "/programme"
   },
-  {
-    title: "Industry",
-    icon: "domain",
-    path: "/articles/industry"
-  },
+  // {
+  //   title: "Industry",
+  //   icon: "domain",
+  //   path: "/articles/industry"
+  // },
   {
     title: "Practical Information",
     icon: "info_outline",
     path: "/practical-information"
   },
-  {
-    title: "Accommodation",
-    icon: "hotel",
-    path: "/hotel-accommodation"
-  },
+  // {
+  //   title: "Accommodation",
+  //   icon: "hotel",
+  //   path: "/hotel-accommodation"
+  // },
   {
     title: "Privacy policy",
     icon: "note",

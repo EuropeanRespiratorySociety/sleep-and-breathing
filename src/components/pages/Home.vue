@@ -1,10 +1,10 @@
 <template>
   <v-flex xs12 sm12 md8 lg8 offset-md2 offset-lg2>
     <v-container grid-list-md style="margin-top:-145px;">
-      <!-- temporary Alert  Registration open-->
+      <!-- temporary Alert  Registration open
       <v-alert :value="true" class="title mb-1" type="warning" icon="info">
         <div style="float: left;" class="mt-3">Registration is now open.
-          <!-- <br> <span class="body-2">early bird deadline extended to 15 February 2019</span>-->
+          <br> <span class="body-2">early bird deadline extended to 15 February 2019</span>
         </div>
         <a
           target="_blank"
@@ -14,6 +14,7 @@
           <v-btn color="info" style="float: right;" class="subheading">Registration</v-btn>
         </a>
       </v-alert>
+      -->
       <v-layout row wrap>
         <v-flex xs12 sm12 md12 lg12>
           <v-card id="test">
@@ -33,12 +34,12 @@
         <!-- <v-flex xs12 sm6>
           <important-dates/>
         </v-flex>-->
-        <v-flex xs12 sm12>
+        <!--<v-flex xs12 sm12>
           <access-programme/>
-        </v-flex> 
-        <v-flex xs12 sm6>
+        </v-flex> -->
+        <!--<v-flex xs12 sm6>
           <video-conference/>
-        </v-flex> 
+        </v-flex> -->
         <v-flex v-for="post of articles" :key="post.slug" xs12 sm6>
           <v-card>
             <v-img v-if="post.image" :src="post.image" height="200px"/>

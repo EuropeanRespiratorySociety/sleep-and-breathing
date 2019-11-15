@@ -8,7 +8,7 @@ const Programme = () => import('@/components/pages/Programme')
 const Article = () => import('@/components/pages/Article')
 const PracticalInformation = () => import('@/components/pages/PracticalInformation')
 const Registration = () => import('@/components/pages/Registration')
-const HotelAccommodation = () => import('@/components/pages/HotelAccommodation')
+//const HotelAccommodation = () => import('@/components/pages/HotelAccommodation')
 
 /* eslint-enable */
 
@@ -46,12 +46,13 @@ const router = new Router({
       path: '/practical-information',
       name: 'practical-information',
       component: PracticalInformation
-    },
-    {
-      path: '/hotel-accommodation',
-      name: 'hotel-accommodation',
-      component: HotelAccommodation
     }
+    // ,
+    // {
+    //   path: '/hotel-accommodation',
+    //   name: 'hotel-accommodation',
+    //   component: HotelAccommodation
+    // }
   ]
 })
 
