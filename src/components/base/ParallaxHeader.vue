@@ -1,12 +1,21 @@
 <template>
   <div>
-    <v-toolbar v-scroll="onScroll" id="header-t" :class="setClass()" app fixed dark flat prominent >
-      <v-toolbar-side-icon @click.stop="toggle"/>
-      <a href="/"><img v-if="!drawer" src="../../assets/logo-title2.png" width="38" d-flex ></a>
-      <v-toolbar-title v-if="!drawer" class="mb-1">Sleep and Breathing <span v-if="offline">currently offline</span></v-toolbar-title>
+    <v-toolbar v-scroll="onScroll" id="header-t" :class="setClass()" app fixed dark flat prominent>
+      <v-toolbar-side-icon @click.stop="toggle" />
+      <a href="/">
+        <img v-if="!drawer" src="../../assets/logo-title-2021.png" width="38" d-flex />
+      </a>
+      <v-toolbar-title v-if="!drawer" class="mb-1">
+        Sleep and Breathing
+        <span v-if="offline">currently offline</span>
+      </v-toolbar-title>
     </v-toolbar>
     <!-- <v-parallax src="https://sleepandbreathing.org/img/background-image2.png" class="backgroundimage" height="300"/> -->
-    <v-parallax src="https://cdn.ersnet.org/preview/node/o:57b983ad4e5f4da2e23b?v=1" class="backgroundimage" height="300"/>
+    <v-parallax
+      src="https://cdn.ersnet.org/preview/node/o:57b983ad4e5f4da2e23b?v=1"
+      class="backgroundimage"
+      height="300"
+    />
   </div>
 </template>
 
@@ -56,6 +65,6 @@ export default {
 <style>
 .backgroundimage img {
   width: 2000px;
-  background-position: center;
+  background-position: bottom;
 }
 </style>

@@ -11,7 +11,18 @@ import router from "./router";
 import store from "./vuex/store";
 import "./registerServiceWorker";
 
-Vue.use(Vuetify);
+/* custum color setting for 2021 */
+Vue.use(Vuetify, {
+  theme: {
+    primary: {
+      base: "#1f3c73",
+      darken1: "#001646",
+      lighten1: "#5165a1"
+    },
+    accent: "#8d6fac"
+  }
+});
+
 sync(store, router);
 Vue.config.productionTip = false;
 console.log("hello");

@@ -20,10 +20,10 @@
           <v-card id="test">
             <v-toolbar card color="white">
               <v-toolbar-title v-if="category" class="headline grey--text">{{category.title}}</v-toolbar-title>
-              <v-spacer/>
+              <v-spacer />
             </v-toolbar>
-            <v-divider/>
-            <v-card-text v-if="category" v-html="formatLinkTargetBlank(categoryContent)"/>
+            <v-divider />
+            <v-card-text v-if="category" v-html="formatLinkTargetBlank(categoryContent)" />
           </v-card>
         </v-flex>
       </v-layout>
@@ -34,28 +34,29 @@
         <!-- <v-flex xs12 sm6>
           <important-dates/>
         </v-flex>-->
-        <!--<v-flex xs12 sm12>
-          <access-programme/>
-        </v-flex> -->
+        <!-- <v-flex xs12 sm12>
+          <access-programme />
+        </v-flex>-->
         <!--<v-flex xs12 sm6>
           <video-conference/>
-        </v-flex> -->
+        </v-flex>-->
         <v-flex v-for="post of articles" :key="post.slug" xs12 sm6>
           <v-card>
-            <v-img v-if="post.image" :src="post.image" height="200px"/>
+            <v-img v-if="post.image" :src="post.image" height="200px" />
             <v-card-title primary-title>
               <div>
                 <h3 class="headline mb-0">{{post.title}}</h3>
                 <!-- <span><v-icon class="published">query_builder</v-icon>{{post.createdOn}}</span> -->
               </div>
             </v-card-title>
-            <v-card-text v-html="formatLinkTargetBlank(post.shortLead)"/>
+            <v-card-text v-html="formatLinkTargetBlank(post.shortLead)" />
             <v-card-actions>
               <v-btn :to="`articles/${post.slug}`" flat>More...</v-btn>
-              <v-spacer/>
-              <a v-if="post.slug === 'programme-2021'"
-                 style="text-decoration: none;"
-                 href="mailto:scientific@ersnet.org"
+              <v-spacer />
+              <a
+                v-if="post.slug === 'programme-2021'"
+                style="text-decoration: none;"
+                href="mailto:scientific@ersnet.org"
               >
                 <v-btn color="info" class="ml-2 mb-2">Send us your ideas now</v-btn>
               </a>
@@ -64,12 +65,12 @@
         </v-flex>
       </v-layout>
     </v-container>
-    <v-container >
+    <v-container>
       <v-flex xs12>
-        <organising-committee/>
+        <organising-committee />
       </v-flex>
     </v-container>
-    <ads/>
+    <ads />
   </v-flex>
 </template>
 
