@@ -58,10 +58,6 @@ export default {
   opacity: 0;
 }
 
-.backgroundimage img {
-  width: 2000px;
-}
-
 .toolbar__title {
   margin-left: 7px !important;
 }

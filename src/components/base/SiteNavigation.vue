@@ -9,8 +9,8 @@
     disable-route-watcher
   >
     <div class="ml-5 mt-3">
-      <img src="../../assets/logo-top.png" width="200" height="112" >
-    </div>
+      <img src="../../assets/Sleep_and_breathing_2020_logo_vector_rgb.svg" width="200" height="112" >
+    </div> 
 
     <v-toolbar :style="!mini? 'margin-bottom:10px;' : ''" flat class="transparent">
       <v-list class="pa-0">
