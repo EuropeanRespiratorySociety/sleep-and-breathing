@@ -3,7 +3,7 @@
     <v-toolbar v-scroll="onScroll" id="header-t" :class="setClass()" app fixed dark flat prominent>
       <v-toolbar-side-icon @click.stop="toggle" />
       <a href="/">
-        <img v-if="!drawer" src="../../assets/logo-title-2021.png" width="38" d-flex />
+        <img v-if="!drawer" src="../../assets/logo-title-2021.png" width="38" d-flex >
       </a>
       <v-toolbar-title v-if="!drawer" class="mb-1">
         Sleep and Breathing

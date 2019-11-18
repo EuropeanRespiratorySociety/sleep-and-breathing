@@ -1,20 +1,19 @@
 <template>
   <v-flex xs12 sm12 md8 lg8 offset-md2 offset-lg2>
-    <v-container style="margin-top:-145px;">
+    <v-container grid-list-md style="margin-top:-145px;">
       <!-- temporary Alert  Registration open
-      <v-alert :value="true" class="title mb-1" type="warning" icon="info">
+      <v-alert :value="true" class="title mb-1"  icon="info">
         <div style="float: left;" class="mt-3">Registration is now open.
-          <br> <span class="body-2">early bird deadline extended to 15 February 2019</span>
+         <br> <span class="body-2">early bird deadline extended to 15 February 2019</span> 
         </div>
         <a
           target="_blank"
           style="text-decoration: none;"
           href="http://registration.sleepandbreathing.org/register.aspx?e=894"
         >
-          <v-btn color="info" style="float: right;" class="subheading">Registration</v-btn>
+          <v-btn color="accent" style="float: right;" class="subheading">Registration</v-btn>
         </a>
-      </v-alert>
-      -->
+      </v-alert>-->
       <v-layout row wrap>
         <v-flex xs12>
           <v-card id="test">
@@ -29,14 +28,14 @@
       </v-layout>
     </v-container>
 
-    <v-container v-if="articles">
+    <v-container v-if="articles" grid-list-md>
       <v-layout row wrap>
         <!-- <v-flex xs12 sm6>
           <important-dates/>
         </v-flex>-->
         <!-- <v-flex xs12 sm12>
           <access-programme />
-        </v-flex>-->
+        </v-flex> -->
         <!--<v-flex xs12 sm6>
           <video-conference/>
         </v-flex>-->
@@ -58,14 +57,14 @@
                 style="text-decoration: none;"
                 href="mailto:scientific@ersnet.org"
               >
-                <v-btn color="info" class="ml-2 mb-2">Send us your ideas now</v-btn>
+                <v-btn color="accent" class="ml-2 mb-2">Send us your ideas now</v-btn>
               </a>
             </v-card-actions>
           </v-card>
         </v-flex>
       </v-layout>
     </v-container>
-    <v-container>
+    <v-container grid-list-md>
       <v-flex xs12>
         <organising-committee />
       </v-flex>

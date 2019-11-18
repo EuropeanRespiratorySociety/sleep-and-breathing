@@ -16,7 +16,7 @@
           >
             <v-btn
               slot="activator"
-              color="info"
+              color="accent"
               dark
               right
             >
@@ -41,7 +41,7 @@
               <v-card-actions>
                 <v-spacer/>
                 <v-btn
-                  color="info"
+                  color="accent"
                   href="http://marseille-chanot.b-network.com/Index.aspx"
                   target="_blank" @click="dialog = false"
                 >

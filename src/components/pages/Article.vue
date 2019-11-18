@@ -3,10 +3,10 @@
     <v-card v-if="article" id="test" class="card--flex-toolbar">
       <v-toolbar card class="white">
         <v-toolbar-title v-if="article.title" class="headline grey--text text--darken-3">{{article.title}}</v-toolbar-title>
-        <v-spacer/>
+        <!-- <v-spacer/>
         <a target="_blank" style="text-decoration: none;" href="http://registration.sleepandbreathing.org/register.aspx?e=894">
-          <v-btn v-if="article.title === 'Registration fees 2019' " color="info">Registration</v-btn>
-        </a>
+          <v-btn color="accent">Registration</v-btn>
+        </a> -->
       </v-toolbar>
 
       <v-divider/>

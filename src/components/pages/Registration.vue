@@ -5,7 +5,7 @@
         <v-toolbar-title v-if="category" class="headline grey--text">{{category.title}}</v-toolbar-title>
         <v-spacer/>
         <!-- <a target="_blank" style="text-decoration: none;" href="http://registration.sleepandbreathing.org/register.aspx?e=894">
-          <v-btn v-if="category.slug === 'registration' " color="info">Registration</v-btn>
+          <v-btn v-if="category.slug === 'registration' " color="accent">Registration</v-btn>
         </a> -->
       </v-toolbar>
       <v-divider/>

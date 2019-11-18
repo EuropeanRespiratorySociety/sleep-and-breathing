@@ -31,7 +31,7 @@
                  style="text-decoration: none;"
                  href="mailto:scientific@ersnet.org"
               >
-                <v-btn color="info" class="ml-2 mb-2">Send us your ideas now</v-btn>
+                <v-btn color="accent" class="ml-2 mb-2">Send us your ideas now</v-btn>
               </a>
             </v-card-actions>
           </v-card>

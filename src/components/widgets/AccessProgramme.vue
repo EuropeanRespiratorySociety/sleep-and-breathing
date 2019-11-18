@@ -30,7 +30,7 @@
           <v-icon left dark>save_alt</v-icon>Download the programme in PDF
         </v-btn>
       </a>
-      <br />
+      <br >
     </div>
   </v-card>
 </template>
