@@ -1,73 +1,75 @@
-import Vue from 'vue'
-import Router from 'vue-router'
-import store from '../vuex/store'
+import Vue from "vue";
+import Router from "vue-router";
+import store from "../vuex/store";
 
 /* eslint-disable */
-const Home = () => import('@/components/pages/Home') // eslint-disable-line
-const Programme = () => import('@/components/pages/Programme')
-const Article = () => import('@/components/pages/Article')
-const P = () => import('@/components/pages/PracticalInformation')
-const Registration = () => import('@/components/pages/Registration')
-const HotelAccommodation = () => import('@/components/pages/HotelAccommodation')
+import Home from '@/components/pages/Home'
+import Programme from '@/components/pages/Programme'
+import Article from '@/components/pages/Article'
+import PracticalInformation from '@/components/pages/PracticalInformation'
+import Registration from '@/components/pages/Registration'
+
+
+// const Home = () => import('@/components/pages/Home') // eslint-disable-line
+// const Programme = () => import('@/components/pages/Programme')
+// const Article = () => import('@/components/pages/Article')
+// const PracticalInformation = () => import('@/components/pages/PracticalInformation')
+// const Registration = () => import('@/components/pages/Registration')
+//const HotelAccommodation = () => import('@/components/pages/HotelAccommodation')
 
 /* eslint-enable */
 
 // import store from '../vuex/store'
 
-Vue.use(Router)
+Vue.use(Router);
 
 const router = new Router({
-  mode: 'history',
+  mode: "history",
   routes: [
     {
-      path: '/home',
-      redirect: '/'
+      path: "/home",
+      redirect: "/"
     },
     {
-      path: '/',
-      name: 'Home',
+      path: "/",
+      name: "Home",
       component: Home
     },
     {
-      path: '/programme',
-      name: 'programme',
+      path: "/programme",
+      name: "programme",
       component: Programme
     },
     {
-      path: '/articles/:slug',
-      name: 'Article',
+      path: "/articles/:slug",
+      name: "Article",
       component: Article
     },
     {
-      path: '/registration',
-      name: 'registration',
+      path: "/registration",
+      name: "registration",
       component: Registration
     },
     {
-      path: '/practical-information',
-      name: 'practical-information',
-      component: P
-    },
-    {
-      path: '/hotel-accommodation',
-      name: 'hotel-accommodation',
-      component: HotelAccommodation
+      path: "/practical-information",
+      name: "practical-information",
+      component: PracticalInformation
     }
+    // ,
+    // {
+    //   path: '/hotel-accommodation',
+    //   name: 'hotel-accommodation',
+    //   component: HotelAccommodation
+    // }
   ]
-})
+});
 
-// router.beforeEach((to, from, next) => {
-//   next(vm => {
-//     const slug = store.getters.slug
-//     vm.store.dispatch('setCategoryKey', slug)
-//     vm.store.dispatch('setArticlesKey', slug)
-//   })
-// })
-
-router.afterEach((to, from) => {
+router.afterEach(() => {
   if (store.state.base.isMobile === true) {
-    store.dispatch('base/setDrawer', false, { root: true })
+    store.dispatch("base/setDrawer", false, {
+      root: true
+    });
   }
-})
+});
 
-export default router
+export default router;

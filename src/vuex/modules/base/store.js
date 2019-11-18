@@ -1,5 +1,5 @@
-import * as actions from './actions'
-import * as mutations from './mutations'
+import * as actions from "./actions";
+import * as mutations from "./mutations";
 // import * as getters from './getters'
 
 // create the Vuex instance by combining the state and mutations objects
@@ -15,4 +15,4 @@ export default {
     offline: false
   },
   mutations: mutations.default
-}
+};

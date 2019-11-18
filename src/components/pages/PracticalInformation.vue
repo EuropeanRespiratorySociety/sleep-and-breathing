@@ -3,24 +3,24 @@
     <v-card v-if="category" id="test" class="card--flex-toolbar">
       <v-toolbar card class="white">
         <v-toolbar-title v-if="category" class="headline grey--text">{{category.title}}</v-toolbar-title>
-        <v-spacer></v-spacer>
+        <v-spacer/>
       </v-toolbar>
 
-      <v-divider></v-divider>
-      <v-card-text v-if="category.body" v-html="category.body"></v-card-text>
+      <v-divider/>
+      <v-card-text v-if="category.body" v-html="formatLinkTargetBlank(category.body)"/>
     </v-card>
     <v-container grid-list-md>
       <v-layout v-if="articles" row wrap>
-        <v-flex v-for="post of articles" xs12 sm6 :key="post.slug">
+        <v-flex v-for="post of articles" :key="post.slug" xs12 sm6>
           <v-card>
-            <v-card-media v-if="post.image" :src="post.image" height="200px"></v-card-media>
+            <v-img v-if="post.image" :src="post.image" height="200px"/>
             <v-card-title v-if="post.title" primary-title>
               <div>
                 <h3 class="headline mb-0">{{post.title}}</h3>
                 <!--<span><v-icon class="published">query_builder</v-icon>{{post.createdOn}}</span>-->
               </div>
             </v-card-title>
-            <v-card-text v-if="post.shortLead" v-html="post.shortLead"></v-card-text>
+            <v-card-text v-if="post.shortLead" v-html="formatLinkTargetBlank(post.shortLead)"/>
             <v-card-actions>
               <v-btn :to="`articles/${post.slug}`" flat>More...</v-btn>
             </v-card-actions>
@@ -29,31 +29,34 @@
         <!-- <v-flex xs12 sm6>
           <important-dates/>
         </v-flex>-->
-        <v-flex xs12 sm12>
-          <organising-committee/>
-        </v-flex>
       </v-layout>
+    </v-container>
+    <v-container grid-list-md>
+      <v-flex xs12>
+        <organising-committee/>
+      </v-flex>
     </v-container>
   </v-flex>
 </template>
 
 <script>
 import { mapActions, mapGetters } from "vuex";
+import { formMixin } from "@/mixins/formMixin";
 import OrganisingCommittee from "../widgets/OrganisingCommittee";
 import ImportantDates from "../widgets/ImportantDates";
 
 export default {
   name: "practical-information",
+  components: {
+    OrganisingCommittee,
+    ImportantDates
+  },
+  mixins: [formMixin],
   data() {
     return {
       fixed: false
     };
   },
-
-  created() {
-    this.fetchData();
-  },
-
   computed: {
     ...mapGetters(["slug"]),
 
@@ -69,7 +72,9 @@ export default {
       return this.$store.state.pages[this.path].category;
     }
   },
-
+  created() {
+    this.fetchData();
+  },
   methods: {
     ...mapActions(["getCategory", "pageNumber"]),
     fetchData() {
@@ -80,10 +85,6 @@ export default {
       };
       this.getCategory(payload);
     }
-  },
-  components: {
-    OrganisingCommittee,
-    ImportantDates
   }
 };
 </script>

@@ -1,74 +1,81 @@
 <template>
   <v-flex xs12 sm12 md8 lg8 offset-md2 offset-lg2>
     <v-container grid-list-md style="margin-top:-145px;">
-      <!-- temporary Alert  Registration open-->
-      <v-alert class="title mb-1" :value="true" type="warning" icon="info">
+      <!-- temporary Alert  Registration open
+      <v-alert :value="true" class="title mb-1"  icon="info">
         <div style="float: left;" class="mt-3">Registration is now open.
-          <!-- <br>
-          <span class="body-2">early bird deadline extended to 15 February 2019</span>-->
+         <br> <span class="body-2">early bird deadline extended to 15 February 2019</span> 
         </div>
         <a
           target="_blank"
           style="text-decoration: none;"
           href="http://registration.sleepandbreathing.org/register.aspx?e=894"
         >
-          <v-btn color="info" style="float: right;" class="subheading">Registration</v-btn>
+          <v-btn color="accent" style="float: right;" class="subheading">Registration</v-btn>
         </a>
-      </v-alert>
-      <v-layout v-if="articles" row wrap>
-        <v-flex xs12 sm12 md12 lg12>
+      </v-alert>-->
+      <v-layout row wrap>
+        <v-flex xs12>
           <v-card id="test">
             <v-toolbar card color="white">
               <v-toolbar-title v-if="category" class="headline grey--text">{{category.title}}</v-toolbar-title>
-              <v-spacer/>
+              <v-spacer />
             </v-toolbar>
-            <v-divider/>
-            <v-card-text v-if="category" v-html="categoryContent"/>
+            <v-divider />
+            <v-card-text v-if="category" v-html="formatLinkTargetBlank(categoryContent)" />
           </v-card>
         </v-flex>
       </v-layout>
     </v-container>
 
-    <v-container grid-list-md>
-      <v-layout v-if="articles" row wrap>
+    <v-container v-if="articles" grid-list-md>
+      <v-layout row wrap>
         <!-- <v-flex xs12 sm6>
           <important-dates/>
         </v-flex>-->
-        <v-flex xs12 sm12>
-          <access-programme/>
-        </v-flex>
-        <v-flex xs12 sm6>
+        <!-- <v-flex xs12 sm12>
+          <access-programme />
+        </v-flex> -->
+        <!--<v-flex xs12 sm6>
           <video-conference/>
-        </v-flex>
-        <v-flex v-for="post of articles" xs12 sm6 :key="post.slug">
+        </v-flex>-->
+        <v-flex v-for="post of articles" :key="post.slug" xs12 sm6>
           <v-card>
-            <v-card-media v-if="post.image" :src="post.image" height="200px"/>
+            <v-img v-if="post.image" :src="post.image" height="200px" />
             <v-card-title primary-title>
               <div>
                 <h3 class="headline mb-0">{{post.title}}</h3>
-                <!--<span><v-icon class="published">query_builder</v-icon>{{post.createdOn}}</span>-->
+                <!-- <span><v-icon class="published">query_builder</v-icon>{{post.createdOn}}</span> -->
               </div>
             </v-card-title>
-            <v-card-text v-html="post.shortLead"/>
+            <v-card-text v-html="formatLinkTargetBlank(post.shortLead)" />
             <v-card-actions>
               <v-btn :to="`articles/${post.slug}`" flat>More...</v-btn>
+              <v-spacer />
+              <a
+                v-if="post.slug === 'programme-2021'"
+                style="text-decoration: none;"
+                href="mailto:scientific@ersnet.org"
+              >
+                <v-btn color="accent" >Send us your ideas now</v-btn>
+              </a>
             </v-card-actions>
           </v-card>
         </v-flex>
       </v-layout>
     </v-container>
     <v-container grid-list-md>
-      <v-flex xs12 sm12>
-        <organising-committee/>
+      <v-flex xs12>
+        <organising-committee />
       </v-flex>
     </v-container>
-    <ads/>
+    <ads />
   </v-flex>
 </template>
 
 <script>
 import { mapActions } from "vuex";
-// import * as config from '../../config'
+import { formMixin } from "@/mixins/formMixin";
 import Ads from "../widgets/Ads";
 import OrganisingCommittee from "../widgets/OrganisingCommittee";
 import ImportantDates from "../widgets/ImportantDates";
@@ -84,12 +91,12 @@ export default {
     AccessProgramme,
     VideoConference
   },
+  mixins: [formMixin],
   data() {
     return {
       fixed: false
     };
   },
-
   computed: {
     slug() {
       return this.$store.getters.slug;
@@ -98,15 +105,17 @@ export default {
     path() {
       return this.$store.state.route.path;
     },
-
     articles() {
-      return this.$store.state.pages[this.path].items;
+      if (
+        this.$store.state.pages[this.path].items &&
+        this.$store.state.pages[this.path].items.length > 0
+      )
+        return this.$store.state.pages[this.path].items;
+      else return false;
     },
-
     category() {
       return this.$store.state.pages[this.path].category;
     },
-
     categoryContent() {
       return (
         this.category.body +
@@ -118,7 +127,6 @@ export default {
       );
     }
   },
-
   created() {
     this.fetchData();
   },

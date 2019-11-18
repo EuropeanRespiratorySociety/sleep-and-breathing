@@ -1,66 +1,70 @@
 <template>
   <div>
-    <v-toolbar app fixed dark flat id="header-t" :class="setClass()" v-scroll="onScroll" prominent >
-      <v-toolbar-side-icon @click.stop="toggle"></v-toolbar-side-icon>
-      <a href="/"><img src="../../assets/logo-title2.png" width="38" d-flex v-if="!drawer" /></a>
-      <v-toolbar-title v-if="!drawer" class="mb-1">Sleep and Breathing <span v-if="offline">currently offline</span></v-toolbar-title>
+    <v-toolbar v-scroll="onScroll" id="header-t" :class="setClass()" app fixed dark flat prominent>
+      <v-toolbar-side-icon @click.stop="toggle" />
+      <a href="/">
+        <img v-if="!drawer" src="../../assets/logo-title-2021.png" width="38" d-flex >
+      </a>
+      <v-toolbar-title v-if="!drawer" class="mb-1">
+        Sleep and Breathing
+        <span v-if="offline">currently offline</span>
+      </v-toolbar-title>
     </v-toolbar>
-    <v-parallax src="https://sleepandbreathing.org/img/background-image2.png" class="backgroundimage" height="300">
-    </v-parallax>
+    <!-- <v-parallax src="https://sleepandbreathing.org/img/background-image2.png" class="backgroundimage" height="300"/> -->
+    <v-parallax
+      src="https://cdn.ersnet.org/preview/node/o:57b983ad4e5f4da2e23b?v=1"
+      class="backgroundimage"
+      height="300"
+    />
   </div>
 </template>
 
 <script>
-import {
-  mapState,
-  mapActions
-} from 'vuex'
+import { mapState, mapActions } from "vuex";
 
 export default {
-  name: 'parallax-header',
-  data () {
-    return {
-    }
+  name: "parallax-header",
+  data() {
+    return {};
   },
   computed: {
-    ...mapState('base', [
-      'drawer'
-    ]),
+    ...mapState("base", ["drawer"]),
 
-    ...mapState('base', [
-      'offline'
-    ])
+    ...mapState("base", ["offline"])
   },
 
   methods: {
-    ...mapActions('base', [
-      'toggleDrawer'
-    ]),
-    setClass () {
+    ...mapActions("base", ["toggleDrawer"]),
+    setClass() {
       if (this.offline) {
-        return 'error elevation-0'
+        return "error elevation-0";
       }
-      return 'primary transparent elevation-0'
+      return "primary transparent elevation-0";
     },
-    toggle () {
-      this.toggleDrawer()
+    toggle() {
+      this.toggleDrawer();
     },
-    onScroll (e) {
-      let container = document.getElementById('header-t')
-      this.offsetTop = window.pageYOffset || document.documentElement.scrollTop
+    onScroll() {
+      let container = document.getElementById("header-t");
+      this.offsetTop = window.pageYOffset || document.documentElement.scrollTop;
 
       if (this.offsetTop > 100 && !this.offline) {
-        container.classList.add('primary')
-        container.classList.remove('transparent')
+        container.classList.add("primary");
+        container.classList.remove("transparent");
       }
 
       if (this.offsetTop < 100 && !this.offline) {
-        container.classList.add('transparent')
-        container.classList.remove('primary')
+        container.classList.add("transparent");
+        container.classList.remove("primary");
       }
     }
   }
-
-}
-
+};
 </script>
+
+<style>
+.backgroundimage img {
+  width: 2000px;
+  background-position: bottom;
+}
+</style>

@@ -3,7 +3,6 @@
     <v-card-title primary-title>
       <div>
         <h3 class="headline mb-0">Organising Committee</h3>
-        <!--<span><v-icon class="published">query_builder</v-icon>{{post.createdOn}}</span>-->
       </div>
     </v-card-title>
     <v-container grid-list-md>
@@ -55,13 +54,13 @@
             </h6>
             <v-list-tile>
               <v-list-tile-content>
-                <v-list-tile-title>Tiina Paunio</v-list-tile-title>
+                <v-list-tile-title>Pierre-Hervé Luppi</v-list-tile-title>
               </v-list-tile-content>
             </v-list-tile>
             <v-divider/>
             <v-list-tile>
               <v-list-tile-content>
-                <v-list-tile-title>Jean-Louis Pépin</v-list-tile-title>
+                <v-list-tile-title>Tiina Paunio</v-list-tile-title>
               </v-list-tile-content>
             </v-list-tile>
             <v-divider/>
@@ -79,7 +78,7 @@
             <v-divider/>
             <v-list-tile>
               <v-list-tile-content>
-                <v-list-tile-title>Johan Verbraecken</v-list-tile-title>
+                <v-list-tile-title>Milan Sova</v-list-tile-title>
               </v-list-tile-content>
             </v-list-tile>
           </v-list>
