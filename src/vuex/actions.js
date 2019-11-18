@@ -64,7 +64,7 @@ export const getCategory = ({ commit, dispatch }, payload) => {
         console.log(err);
       });
     })
-    .catch(e => {
+    .catch(() => {
       if (window.localStorage.getItem("vuex")) {
         const restored = JSON.parse(window.localStorage.getItem("vuex"));
         dispatch("base/setOffline", null, {
@@ -77,8 +77,8 @@ export const getCategory = ({ commit, dispatch }, payload) => {
     });
 };
 
-export const getArticle = ({ commit, dispatch, rootState }, payload) => {
-  return new Promise((resolve, reject) => {
+export const getArticle = ({ commit, dispatch }, payload) => {
+  return new Promise(resolve => {
     const route = `sleepandbreathing/${payload.slug}`;
     let data = {};
 
@@ -93,7 +93,7 @@ export const getArticle = ({ commit, dispatch, rootState }, payload) => {
         });
         resolve(data);
       })
-      .catch(e => {
+      .catch(() => {
         if (window.localStorage.getItem("vuex")) {
           const restored = JSON.parse(window.localStorage.getItem("vuex"));
           dispatch("base/setOffline", null, {
@@ -106,18 +106,6 @@ export const getArticle = ({ commit, dispatch, rootState }, payload) => {
         }
       });
   });
-};
-
-export const getHome = ({ commit, dispatch }, payload) => {
-  const route = `sleepandbreathing/`;
-  HTTP.get(route)
-    .then(response => {
-      // will do something
-      // commit something
-    })
-    .catch(e => {
-      console.log(e);
-    });
 };
 
 export const pageNumber = ({ commit }, payload) => {

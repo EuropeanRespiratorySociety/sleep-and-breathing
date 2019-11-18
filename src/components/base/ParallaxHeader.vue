@@ -44,7 +44,7 @@ export default {
     toggle() {
       this.toggleDrawer();
     },
-    onScroll(e) {
+    onScroll() {
       let container = document.getElementById("header-t");
       this.offsetTop = window.pageYOffset || document.documentElement.scrollTop;
 
