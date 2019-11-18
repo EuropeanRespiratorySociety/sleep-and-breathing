@@ -14,6 +14,16 @@
         <span v-if="article.leadParagraph" v-html="formatLinkTargetBlank(article.leadParagraph)"/>
         <span v-if="article.body" v-html="formatLinkTargetBlank(article.body)"/>
       </v-card-text>
+      <v-divider/>
+      <v-card-actions v-if="article.slug === 'programme-2021'">
+        <v-spacer />
+        <a
+          style="text-decoration: none;"
+          href="mailto:scientific@ersnet.org"
+        >
+          <v-btn color="accent">Send us your ideas now</v-btn>
+        </a>
+      </v-card-actions>
     </v-card>
   </v-flex>
 </template>
