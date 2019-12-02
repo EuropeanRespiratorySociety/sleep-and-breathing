@@ -136,7 +136,8 @@ export default {
       const payload = {
         pageNumber: parseInt(this.$route.params.id) || this.page,
         request: "home",
-        skip: this.$store.state.skip
+        skip: this.$store.state.skip,
+        sortDirection: 1
       };
       this.getCategory(payload);
     }

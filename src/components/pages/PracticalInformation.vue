@@ -81,7 +81,8 @@ export default {
       const payload = {
         pageNumber: parseInt(this.$route.params.id) || this.page,
         request: "practical-information",
-        skip: this.$store.state.skip
+        skip: this.$store.state.skip,
+        sortDirection: 1
       };
       this.getCategory(payload);
     }
