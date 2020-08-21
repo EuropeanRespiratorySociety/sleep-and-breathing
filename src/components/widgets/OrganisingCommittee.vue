@@ -17,13 +17,13 @@
                 <v-list-tile-title>Maria Bonsignore</v-list-tile-title>
               </v-list-tile-content>
             </v-list-tile>
-            <v-divider/>
+            <v-divider />
             <v-list-tile>
               <v-list-tile-content>
                 <v-list-tile-title>Walter McNicholas</v-list-tile-title>
               </v-list-tile-content>
             </v-list-tile>
-            <v-divider/>
+            <v-divider />
           </v-list>
         </v-flex>
 
@@ -37,13 +37,13 @@
                 <v-list-tile-title>Lino Nobili</v-list-tile-title>
               </v-list-tile-content>
             </v-list-tile>
-            <v-divider/>
+            <v-divider />
             <v-list-tile>
               <v-list-tile-content>
                 <v-list-tile-title>Anita Simonds</v-list-tile-title>
               </v-list-tile-content>
             </v-list-tile>
-            <v-divider/>
+            <v-divider />
           </v-list>
         </v-flex>
 
@@ -57,28 +57,46 @@
                 <v-list-tile-title>Pierre-Hervé Luppi</v-list-tile-title>
               </v-list-tile-content>
             </v-list-tile>
-            <v-divider/>
+            <v-divider />
             <v-list-tile>
               <v-list-tile-content>
                 <v-list-tile-title>Tiina Paunio</v-list-tile-title>
               </v-list-tile-content>
             </v-list-tile>
-            <v-divider/>
+            <v-divider />
             <v-list-tile>
               <v-list-tile-content>
                 <v-list-tile-title>Winfried Randerath</v-list-tile-title>
               </v-list-tile-content>
             </v-list-tile>
-            <v-divider/>
+            <v-divider />
             <v-list-tile>
               <v-list-tile-content>
                 <v-list-tile-title>Sophia E. Schiza</v-list-tile-title>
               </v-list-tile-content>
             </v-list-tile>
-            <v-divider/>
+            <v-divider />
             <v-list-tile>
               <v-list-tile-content>
                 <v-list-tile-title>Milan Sova</v-list-tile-title>
+              </v-list-tile-content>
+            </v-list-tile>
+            <v-divider />
+            <v-list-tile>
+              <v-list-tile-content>
+                <v-list-tile-title>Elizabeth Hill</v-list-tile-title>
+              </v-list-tile-content>
+            </v-list-tile>
+            <v-divider />
+            <v-list-tile>
+              <v-list-tile-content>
+                <v-list-tile-title>Erna Sif Arnardottir</v-list-tile-title>
+              </v-list-tile-content>
+            </v-list-tile>
+            <v-divider />
+            <v-list-tile>
+              <v-list-tile-content>
+                <v-list-tile-title>Andrea Crespo Sedano</v-list-tile-title>
               </v-list-tile-content>
             </v-list-tile>
           </v-list>
@@ -89,7 +107,7 @@
 </template>
 <script>
 export default {
-  name: "organising-committee"
+  name: "organising-committee",
 };
 </script>
 
