@@ -35,7 +35,7 @@
         </v-flex>-->
         <!-- <v-flex xs12 sm12>
           <access-programme />
-        </v-flex> -->
+        </v-flex>-->
         <!--<v-flex xs12 sm6>
           <video-conference/>
         </v-flex>-->
@@ -52,13 +52,13 @@
             <v-card-actions>
               <v-btn :to="`articles/${post.slug}`" flat>More...</v-btn>
               <v-spacer />
-              <a
+              <!-- <a
                 v-if="post.slug === 'programme-2021'"
                 style="text-decoration: none;"
                 href="mailto:scientific@ersnet.org"
               >
                 <v-btn color="accent" >Send us your ideas now</v-btn>
-              </a>
+              </a>-->
             </v-card-actions>
           </v-card>
         </v-flex>
@@ -89,12 +89,12 @@ export default {
     OrganisingCommittee,
     ImportantDates,
     AccessProgramme,
-    VideoConference
+    VideoConference,
   },
   mixins: [formMixin],
   data() {
     return {
-      fixed: false
+      fixed: false,
     };
   },
   computed: {
@@ -125,7 +125,7 @@ export default {
           class="sponsors"
         >`
       );
-    }
+    },
   },
   created() {
     this.fetchData();
@@ -137,11 +137,11 @@ export default {
         pageNumber: parseInt(this.$route.params.id) || this.page,
         request: "home",
         skip: this.$store.state.skip,
-        sortDirection: 1
+        sortDirection: 1,
       };
       this.getCategory(payload);
-    }
-  }
+    },
+  },
 };
 </script>
 

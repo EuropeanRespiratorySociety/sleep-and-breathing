@@ -2,20 +2,23 @@
   <v-flex xs12 sm12 md8 lg8 offset-md2 offset-lg2>
     <v-card v-if="article" id="test" class="card--flex-toolbar">
       <v-toolbar card class="white">
-        <v-toolbar-title v-if="article.title" class="headline grey--text text--darken-3">{{article.title}}</v-toolbar-title>
+        <v-toolbar-title
+          v-if="article.title"
+          class="headline grey--text text--darken-3"
+        >{{article.title}}</v-toolbar-title>
         <!-- <v-spacer/>
         <a target="_blank" style="text-decoration: none;" href="http://registration.sleepandbreathing.org/register.aspx?e=894">
           <v-btn color="accent">Registration</v-btn>
-        </a> -->
+        </a>-->
       </v-toolbar>
 
-      <v-divider/>
+      <v-divider />
       <v-card-text>
-        <span v-if="article.leadParagraph" v-html="formatLinkTargetBlank(article.leadParagraph)"/>
-        <span v-if="article.body" v-html="formatLinkTargetBlank(article.body)"/>
+        <span v-if="article.leadParagraph" v-html="formatLinkTargetBlank(article.leadParagraph)" />
+        <span v-if="article.body" v-html="formatLinkTargetBlank(article.body)" />
       </v-card-text>
-      <v-divider/>
-      <v-card-actions v-if="article.slug === 'programme-2021'">
+      <v-divider />
+      <!-- <v-card-actions v-if="article.slug === 'programme-2021'">
         <v-spacer />
         <a
           style="text-decoration: none;"
@@ -23,7 +26,7 @@
         >
           <v-btn color="accent">Send us your ideas now</v-btn>
         </a>
-      </v-card-actions>
+      </v-card-actions>-->
     </v-card>
   </v-flex>
 </template>
@@ -38,7 +41,7 @@ export default {
   data() {
     return {
       fixed: false,
-      article: this.item
+      article: this.item,
     };
   },
   computed: {
@@ -52,12 +55,12 @@ export default {
 
     item() {
       return this.$store.state.pages[this.path];
-    }
+    },
   },
   watch: {
     $route() {
       this.fetchData();
-    }
+    },
   },
   created() {
     this.fetchData();
@@ -66,17 +69,17 @@ export default {
     ...mapActions(["getArticle"]),
     fetchData() {
       const payload = {
-        slug: this.$route.params.slug
+        slug: this.$route.params.slug,
       };
-      this.getArticle(payload).then(res => {
+      this.getArticle(payload).then((res) => {
         if (res !== undefined) {
           this.article = res.item.data;
         } else {
           this.article = this.$store.state.pages[this.path];
         }
       });
-    }
-  }
+    },
+  },
 };
 </script>
 
