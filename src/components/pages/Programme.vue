@@ -27,12 +27,15 @@
             <v-card-actions>
               <v-btn :to="`articles/${post.slug}`" flat>More...</v-btn>
               <v-spacer />
-              <!-- <a v-if="post.slug === 'programme-2021'"
-                 style="text-decoration: none;"
-                 href="mailto:scientific@ersnet.org"
+              <a
+                v-if="post.slug === 'programme-2021'"
+                style="text-decoration: none;"
+                href="https://k4.ersnet.org/prod/v2/front/program/?e=270"
+                target="_blank"
+                rel="noopener"
               >
-                <v-btn color="accent">Send us your ideas now</v-btn>
-              </a>-->
+                <v-btn color="accent">Online programme</v-btn>
+              </a>
             </v-card-actions>
           </v-card>
         </v-flex>

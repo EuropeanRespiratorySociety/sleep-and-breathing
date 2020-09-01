@@ -18,15 +18,17 @@
         <span v-if="article.body" v-html="formatLinkTargetBlank(article.body)" />
       </v-card-text>
       <v-divider />
-      <!-- <v-card-actions v-if="article.slug === 'programme-2021'">
+      <v-card-actions v-if="article.slug === 'programme-2021'">
         <v-spacer />
         <a
           style="text-decoration: none;"
-          href="mailto:scientific@ersnet.org"
+          href="https://k4.ersnet.org/prod/v2/front/program/?e=270"
+          target="_blank"
+          rel="noopener"
         >
-          <v-btn color="accent">Send us your ideas now</v-btn>
+          <v-btn color="accent">Online programme</v-btn>
         </a>
-      </v-card-actions>-->
+      </v-card-actions>
     </v-card>
   </v-flex>
 </template>
