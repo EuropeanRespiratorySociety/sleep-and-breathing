@@ -2,7 +2,7 @@
   <v-card id="test">
     <v-card-title primary-title>
       <div>
-        <h3 class="headline mb-0">Access Programme 2019</h3>
+        <h3 class="headline mb-0">Access Programme 2021</h3>
       </div>
     </v-card-title>
     <v-card-text>
@@ -17,26 +17,27 @@
       <a
         target="_blank"
         style="text-decoration: none;"
-        href="http://k4.ersnet.org/prod/v2/front/program/?e=114"
+        href="https://k4.ersnet.org/prod/v2/front/program/?e=270"
       >
         <v-btn color="accent" class="ml-2 mb-2">Browse the online programme</v-btn>
       </a>
       <a
         target="_blank"
+        rel="noopener noreferrer"
         style="text-decoration: none;"
-        href="https://ers.box.com/shared/static/h73cc6rm9pdc5j4hao8e7qgk0506jz2a.pdf"
+        href="https://ers.box.com/s/4y4qvt27tse41iehpkgy3fip1lbirgg8"
       >
         <v-btn flat color="accent" class="ml-2 mb-2">
           <v-icon left dark>save_alt</v-icon>Download the programme in PDF
         </v-btn>
       </a>
-      <br >
+      <br />
     </div>
   </v-card>
 </template>
 <script>
 export default {
-  name: "access-programme"
+  name: "access-programme",
 };
 </script>
 

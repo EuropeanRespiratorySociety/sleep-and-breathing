@@ -33,9 +33,9 @@
         <!-- <v-flex xs12 sm6>
           <important-dates/>
         </v-flex>-->
-        <!-- <v-flex xs12 sm12>
+        <v-flex xs12 sm12>
           <access-programme />
-        </v-flex>-->
+        </v-flex>
         <!--<v-flex xs12 sm6>
           <video-conference/>
         </v-flex>-->

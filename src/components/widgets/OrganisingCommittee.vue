@@ -96,7 +96,7 @@
             <v-divider />
             <v-list-tile>
               <v-list-tile-content>
-                <v-list-tile-title>Andrea Crespo Sedano</v-list-tile-title>
+                <v-list-tile-title>Isaac Almendros Lopez</v-list-tile-title>
               </v-list-tile-content>
             </v-list-tile>
           </v-list>
