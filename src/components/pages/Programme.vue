@@ -14,7 +14,7 @@
         <v-flex xs12 sm12>
           <access-programme />
         </v-flex>
-        <v-flex v-for="post of articles" :key="post.slug" xs12 sm6>
+        <v-flex v-for="post of articles" :key="post.slug" xs12 sm12>
           <v-card>
             <v-img v-if="post.image" :src="post.image" height="200px" />
             <v-card-title v-if="post.title" primary-title>
@@ -27,6 +27,15 @@
             <v-card-actions>
               <v-btn :to="`articles/${post.slug}`" flat>More...</v-btn>
               <v-spacer />
+              <a
+                v-if="post.slug === 'abstract-submission' && hasSubmitAbstractOption()"
+                style="text-decoration: none;"
+                href="https://my.ersnet.org/AbstractsSubmission/Main/SLBSubmission"
+                target="_blank"
+                rel="noopener"
+              >
+                <v-btn color="accent">Submit your abstract</v-btn>
+              </a>
               <a
                 v-if="post.slug === 'programme-2021'"
                 style="text-decoration: none;"

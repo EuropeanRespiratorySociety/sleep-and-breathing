@@ -18,6 +18,17 @@
         <span v-if="article.body" v-html="formatLinkTargetBlank(article.body)" />
       </v-card-text>
       <v-divider />
+      <v-card-actions v-if="article.slug === 'abstract-submission' && hasSubmitAbstractOption()">
+        <v-spacer />
+        <a
+          style="text-decoration: none;"
+          href="https://my.ersnet.org/AbstractsSubmission/Main/SLBSubmission"
+          target="_blank"
+          rel="noopener"
+        >
+          <v-btn color="accent">Submit your abstract</v-btn>
+        </a>
+      </v-card-actions>
       <v-card-actions v-if="article.slug === 'programme-2021'">
         <v-spacer />
         <a
