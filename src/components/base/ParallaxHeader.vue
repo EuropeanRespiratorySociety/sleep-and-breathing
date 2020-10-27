@@ -12,7 +12,7 @@
     </v-toolbar>
     <!-- <v-parallax src="https://sleepandbreathing.org/img/background-image2.png" class="backgroundimage" height="300"/> -->
     <v-parallax
-      src="https://cdn.ersnet.org/preview/node/o:22b5fa445a50b82bc447"
+      src="https://cdn.ersnet.org/preview/node/o:e3fd2dc6c38bc908acf5"
       class="backgroundimage"
       height="300"
     />
@@ -64,7 +64,7 @@ export default {
 
 <style>
 .backgroundimage img {
-  width: 2100px;
+  width: 2000px;
   background-position: bottom;
 }
 </style>
