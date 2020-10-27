@@ -6,7 +6,7 @@
       </div>
     </v-card-title>
     <v-card-text>
-      Please use one of the button below to access our programme.
+      Please be aware that the programme is currently being reviewed in order to better fit the virtual format of the conference. The new version will be available by the end of November. However, you can still access the previous version of the programme below.
       <!-- <br>
       <span class="caption">
         &nbsp;(PDF document : Last updated on

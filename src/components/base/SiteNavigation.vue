@@ -9,7 +9,9 @@
     disable-route-watcher
   >
     <div class="ml-5 mt-4">
+      <router-link :to="{ name: 'Home'}">
       <img src="../../assets/Sleep_and_breathing_virtual_2021_logo_vector_rgb.svg" width="200" height="112" >
+      </router-link>
     </div> 
 
     <v-toolbar :style="!mini? 'margin-bottom:10px;' : ''" flat class="transparent">
