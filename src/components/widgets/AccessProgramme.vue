@@ -26,7 +26,7 @@
         target="_blank"
         rel="noopener noreferrer"
         style="text-decoration: none;"
-        href="https://ers.box.com/s/4y4qvt27tse41iehpkgy3fip1lbirgg8"
+        href="https://ers.box.com/s/bzcmoxjmp6ffaw0056ojf4lr2dd4lcua"
       >
         <v-btn flat color="accent" class="ml-2 mb-2">
           <v-icon left dark>save_alt</v-icon>Download the programme in PDF
