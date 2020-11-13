@@ -1,5 +1,5 @@
 <template>
-  <v-flex xs12 sm12 md8 lg8 offset-md2 offset-lg2>
+  <v-flex xs12 sm6 md8 lg8 offset-md2 offset-lg2>
     <v-card v-if="category" id="test" class="card--flex-toolbar">
       <v-toolbar card class="white">
         <v-toolbar-title v-if="category" class="headline grey--text">{{category.title}}</v-toolbar-title>
@@ -39,7 +39,7 @@
               <a
                 v-if="post.slug === 'programme-2021'"
                 style="text-decoration: none;"
-                href="https://k4.ersnet.org/prod/v2/front/program/?e=270"
+                href="https://k4.ersnet.org/prod/v2/front/program/?e=327"
                 target="_blank"
                 rel="noopener"
               >
