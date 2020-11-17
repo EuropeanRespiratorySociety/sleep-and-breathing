@@ -4,7 +4,9 @@
       <v-card
         color="rgba(141,111,172,0.8)"
         class="white--text"
-        href="http://www.ers-education.org/publications/handbook-series/ers-handbook-of-respiratory-sleep-medicine.aspx"
+        href="https://esrs.eu/esrs-sleep-medicine-textbook/"
+        target="_blank"
+        rel="noopener noreferrer"
       >
         <v-container fluid grid-list-lg>
           <v-layout row>
@@ -16,7 +18,8 @@
                   Based on the
                   <a
                     target="_blank"
-                    href="http://onlinelibrary.wiley.com/doi/10.1111/jsr.12095/abstract"
+                    href="https://onlinelibrary.wiley.com/doi/full/10.1111/jsr.12095"
+                    rel="noopener noreferrer"
                   >Catalogue of knowledge and skills for sleep medicine</a>
                 </p>
               </div>
@@ -32,7 +35,9 @@
       <v-card
         color="rgba(141,111,172,0.8)"
         class="white--text"
-        href="http://www.ers-education.org/publications/handbook-series/ers-handbook-of-respiratory-sleep-medicine.aspx"
+        href="https://books.ersjournals.com/content/ers-handbook-of-respiratory-sleep-medicine"
+        target="_blank"
+        rel="noopener noreferrer"
       >
         <v-container fluid grid-list-lg>
           <v-layout row>
