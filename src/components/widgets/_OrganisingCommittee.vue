@@ -14,7 +14,7 @@
             </h6>
             <v-list-tile>
               <v-list-tile-content>
-                <v-list-tile-title>Maria Bonsignore</v-list-tile-title>
+                <v-list-tile-title>Marisa Bonsignore</v-list-tile-title>
               </v-list-tile-content>
             </v-list-tile>
             <v-divider />
