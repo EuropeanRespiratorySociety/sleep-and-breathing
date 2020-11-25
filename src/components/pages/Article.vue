@@ -49,7 +49,7 @@ import { mapActions } from "vuex";
 import { formMixin } from "@/mixins/formMixin";
 
 export default {
-  name: "Article",
+  name: "",
   mixins: [formMixin],
   data() {
     return {

@@ -31,24 +31,24 @@
         </v-flex>-->
       </v-layout>
     </v-container>
-    <v-container grid-list-md>
+    <!-- <v-container grid-list-md>
       <v-flex xs12>
         <organising-committee/>
       </v-flex>
-    </v-container>
+    </v-container> -->
   </v-flex>
 </template>
 
 <script>
 import { mapActions, mapGetters } from "vuex";
 import { formMixin } from "@/mixins/formMixin";
-import OrganisingCommittee from "../widgets/OrganisingCommittee";
+import OrganisingCommitteePage from "./OrganisingCommitteePage";
 import ImportantDates from "../widgets/ImportantDates";
 
 export default {
   name: "practical-information",
   components: {
-    OrganisingCommittee,
+    OrganisingCommitteePage,
     ImportantDates
   },
   mixins: [formMixin],

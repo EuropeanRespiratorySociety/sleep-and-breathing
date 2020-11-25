@@ -8,6 +8,7 @@ import Programme from '@/components/pages/Programme'
 import Article from '@/components/pages/Article'
 import PracticalInformation from '@/components/pages/PracticalInformation'
 import Registration from '@/components/pages/Registration'
+import OrganisingCommitteePage from '@/components/pages/OrganisingCommitteePage'
 
 
 // const Home = () => import('@/components/pages/Home') // eslint-disable-line
@@ -54,7 +55,13 @@ const router = new Router({
       path: "/practical-information",
       name: "practical-information",
       component: PracticalInformation
+    },
+    {
+      path: "/programme/organising-committee",
+      name: "organising-committee-page",
+      component: OrganisingCommitteePage
     }
+    
     // ,
     // {
     //   path: '/hotel-accommodation',

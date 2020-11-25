@@ -14,6 +14,28 @@
         <v-flex xs12 sm12>
           <access-programme />
         </v-flex>
+
+        <!-- <v-flex xs12 sm12>
+          <organising-committee-page />
+        </v-flex> -->
+
+        <v-flex xs12 sm12>
+          <v-card>
+            <v-card-title  primary-title>
+              <div>
+                <h3 class="headline mb-0">Organising Committee</h3>
+              </div>
+            </v-card-title>
+            <v-card-text>The 2021 S&B organising committee brings perspectives from all over Europe, and a range of different roles in patient care.</v-card-text>
+            <v-card-actions>
+              <v-btn to="/programme/organising-committee" flat>More...</v-btn>
+              <v-spacer />
+              
+            </v-card-actions>
+          </v-card>
+        </v-flex>
+
+
         <v-flex v-for="post of articles" :key="post.slug" xs12 sm12>
           <v-card>
             <v-img v-if="post.image" :src="post.image" height="200px" />
@@ -57,11 +79,14 @@
 import { mapActions, mapGetters } from "vuex";
 import { formMixin } from "@/mixins/formMixin";
 import AccessProgramme from "../widgets/AccessProgramme";
+import OrganisingCommitteePage from "./OrganisingCommitteePage";
+
 
 export default {
   name: "programme",
   components: {
     AccessProgramme,
+    OrganisingCommitteePage
   },
   mixins: [formMixin],
   data() {

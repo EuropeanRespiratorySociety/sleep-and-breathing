@@ -75,13 +75,34 @@
           </v-card>
         </v-flex>
       </v-layout>
-    </v-container>
-    <v-container grid-list-md>
+     </v-container>
+    <!--<v-container grid-list-md>
       <v-flex xs12>
-        <organising-committee />
+        <organising-committee-page />
       </v-flex>
+    </v-container> -->
+    <v-container grid-list-md style="padding-top: 0;">
+      <v-layout row wrap >
+        <v-flex xs12 sm12>
+          <v-card>
+            <v-card-title  primary-title>
+              <div>
+                <h3 class="headline mb-0">Organising Committee</h3>
+              </div>
+            </v-card-title>
+            <v-card-text>The 2021 S&B organising committee brings perspectives from all over Europe, and a range of different roles in patient care.</v-card-text>
+            <v-card-actions>
+              <v-btn to="/programme/organising-committee" flat>More...</v-btn>
+              <v-spacer />
+              
+            </v-card-actions>
+          </v-card>
+        </v-flex>
+      </v-layout>
     </v-container>
+
     <ads />
+
   </v-flex>
 </template>
 
@@ -89,7 +110,7 @@
 import { mapActions } from "vuex";
 import { formMixin } from "@/mixins/formMixin";
 import Ads from "../widgets/Ads";
-import OrganisingCommittee from "../widgets/OrganisingCommittee";
+import OrganisingCommitteePage from "./OrganisingCommitteePage";
 import ImportantDates from "../widgets/ImportantDates";
 import AccessProgramme from "../widgets/AccessProgramme";
 import VideoConference from "../widgets/VideoConference";
@@ -98,7 +119,7 @@ export default {
   name: "Home",
   components: {
     Ads,
-    OrganisingCommittee,
+    OrganisingCommitteePage,
     ImportantDates,
     AccessProgramme,
     VideoConference,
