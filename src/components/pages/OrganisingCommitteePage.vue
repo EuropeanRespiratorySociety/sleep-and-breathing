@@ -103,7 +103,7 @@ export default {
         { header: 'CHAIRS' },
         {
           avatar: '../img/people/image-Maria-Bonsignore.png',
-          title: 'Maria Bonsignore',
+          title: 'Marisa Bonsignore',
           subtitle: "<p>Researcher and Professor of sleep and breathing disorders, including obstructive sleep apnoea (OSA) at the University of Palermo, Italy.</p>"
         },
         {
