@@ -229,11 +229,4 @@ h3 {
   padding-top: 16px;
 }
 
-.v-list--two-line .v-list__tile{
-  height:90px;
-}
-.v-list__tile__content{
- justify-content: start;
-
-}
 </style>
