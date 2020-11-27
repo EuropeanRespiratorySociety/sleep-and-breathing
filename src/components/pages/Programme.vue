@@ -15,11 +15,11 @@
           <access-programme />
         </v-flex>
 
-        <!-- <v-flex xs12 sm12>
-          <organising-committee-page />
-        </v-flex> -->
-
         <v-flex xs12 sm12>
+          <organising-committee />
+        </v-flex>
+
+        <!-- <v-flex xs12 sm12>
           <v-card>
             <v-card-title  primary-title>
               <div>
@@ -33,7 +33,7 @@
               
             </v-card-actions>
           </v-card>
-        </v-flex>
+        </v-flex> -->
 
 
         <v-flex v-for="post of articles" :key="post.slug" xs12 sm12>
@@ -79,14 +79,13 @@
 import { mapActions, mapGetters } from "vuex";
 import { formMixin } from "@/mixins/formMixin";
 import AccessProgramme from "../widgets/AccessProgramme";
-import OrganisingCommitteePage from "./OrganisingCommitteePage";
-
+import OrganisingCommittee from "../widgets/OrganisingCommittee";
 
 export default {
   name: "programme",
   components: {
     AccessProgramme,
-    OrganisingCommitteePage
+    OrganisingCommittee
   },
   mixins: [formMixin],
   data() {

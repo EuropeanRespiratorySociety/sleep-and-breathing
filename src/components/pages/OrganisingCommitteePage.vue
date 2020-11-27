@@ -4,28 +4,28 @@
       <v-toolbar card class="white">
         <v-toolbar-title
           class="headline grey--text text--darken-3"
-        >Organising Committee</v-toolbar-title>
+        >{{ organisingCommitteeTitle() }}</v-toolbar-title>
       </v-toolbar>
       <v-divider />
       <v-card-text>
-        <p v-html="lead" ></p>
+        <p>{{ organisingCommitteeLead() }}</p>
         <v-container grid-list-lg>
           <v-layout  wrap >
-            <template v-for="(item, index) in items">
-              <v-flex lg12 xl12 v-if="item.header" :key="item.header">
-                <h3 class="mb-4">{{ item.header }}</h3>
+            <template v-for="(committee, index) in committees">
+              <v-flex lg12 xl12 v-if="committee.header" :key="committee.header">
+                <h3 class="mb-4">{{ committee.header }}</h3>
               </v-flex>
-              <v-flex lg12 xl12 xs12  v-if="item.divider" :key="index">
+              <v-flex lg12 xl12 xs12  v-if="committee.divider" :key="index">
                 <v-divider></v-divider>
               </v-flex>
 
-            <v-flex v-if="item.title" :key="index" xl6  >
+            <v-flex v-if="committee.title" :key="index" xl6  >
               <v-card flat>
                 <v-layout row>
                   <v-flex shrink>
-                      <v-avatar v-if="item.avatar" :key="item.avatar" size="100px">
+                      <v-avatar v-if="committee.avatar" :key="committee.avatar" size="100px">
                         <img
-                          :src="item.avatar"
+                          :src="committee.avatar"
                           contain
                             />
                       </v-avatar>
@@ -33,9 +33,9 @@
                   <v-flex >
                     <v-card-title primary-title>
                       <div>
-                        <div v-if="item.title"
-                          :key="item.title" class="title"> {{ item.title }}</div>
-                        <div v-if="item.subtitle" :key="item.subtitle" v-html="item.subtitle" class="mt-2"></div>
+                        <div v-if="committee.title"
+                          :key="committee.title" class="title"> {{ committee.title }}</div>
+                        <div v-if="committee.subtitle" :key="committee.subtitle" v-html="committee.subtitle" class="mt-2"></div>
                       </div>
                     </v-card-title>
                   </v-flex>
@@ -44,42 +44,6 @@
             </v-flex>
             </template>
           </v-layout>
-
-          <!-- <v-layout  wrap>
-            <template v-for="(items, index) in items">
-              <v-flex lg12 xl6>
-                <h3 v-if="item.header"
-                      :key="item.header" class="mb-4">{{ item.header }}</h3>
-              </v-flex>
-            <v-flex lg12 xl6>
-              <v-divider
-                v-if="item.divider"
-                :key="index"
-              ></v-divider>
-              <v-card flat>
-                <v-layout row>
-                  <v-flex shrink>
-                      <v-avatar v-if="item.avatar" :key="item.avatar" size="100px" class="pr-2">
-                        <img
-                          :src="item.avatar"
-                          contain
-                            />
-                      </v-avatar>
-                  </v-flex>
-                  <v-flex >
-                    <v-card-title primary-title>
-                      <div>
-                        <div v-if="item.title"
-                          :key="item.title" class="title"> {{ item.title }}</div>
-                        <div v-if="item.subtitle" :key="item.subtitle" v-html="item.subtitle" class="mt-2"></div>
-                      </div>
-                    </v-card-title>
-                  </v-flex>
-                </v-layout>
-              </v-card>
-              </v-flex>
-            </template>
-          </v-layout> -->
 
 
         </v-container>
@@ -98,8 +62,7 @@ export default {
   data() {
     return {
       fixed: false,
-      lead: "The 2021 S&B organising committee brings perspectives from all over Europe, and a range of different roles in patient care.",
-      items: [
+      committees: [
         { header: 'CHAIRS' },
         {
           avatar: '../img/people/image-Maria-Bonsignore.png',

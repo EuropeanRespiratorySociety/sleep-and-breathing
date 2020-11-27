@@ -13,6 +13,12 @@ export const formMixin = {
         return true;
       }
       return false;
+    },
+    organisingCommitteeTitle(){
+      return "Organising Committee"
+    },
+    organisingCommitteeLead(){
+      return "The 2021 S&B organising committee brings perspectives from all over Europe, and a range of different roles in patient care."
     }
   }
 };
