@@ -36,9 +36,9 @@
         <v-flex xs12 sm12>
           <access-programme />
         </v-flex>
-        <!--<v-flex xs12 sm6>
+        <!-- <v-flex xs12 sm12>
           <video-conference/>
-        </v-flex>-->
+        </v-flex> -->
         <v-flex v-for="post of articles" :key="post.slug" xs12 sm12>
           <v-card>
             <v-img v-if="post.image" :src="post.image" height="200px" />
@@ -70,6 +70,16 @@
                 rel="noopener"
               >
                 <v-btn color="accent">Online programme</v-btn>
+              </a>
+
+              <a
+                v-if="post.slug === 'case-submission-2021'"
+                style="text-decoration: none;"
+                href="https://ers.app.box.com/f/3ce19a0fcbaf4de983a28506a04a0635"
+                target="_blank"
+                rel="noopener"
+              >
+                <v-btn color="accent">Submit your case</v-btn>
               </a>
             </v-card-actions>
           </v-card>

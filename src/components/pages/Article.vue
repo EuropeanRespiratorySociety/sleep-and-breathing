@@ -40,6 +40,17 @@
           <v-btn color="accent">Online programme</v-btn>
         </a>
       </v-card-actions>
+      <v-card-actions v-if="article.slug === 'case-submission-2021'">
+        <v-spacer />
+        <a
+          style="text-decoration: none;"
+          href="https://ers.box.com/s/6zengr4nee0lq7aqm05z0622jge5atvw"
+          target="_blank"
+          rel="noopener"
+        >
+          <v-btn color="accent">Submit your case</v-btn>
+        </a>
+      </v-card-actions>
     </v-card>
   </v-flex>
 </template>
