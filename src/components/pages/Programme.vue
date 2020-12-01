@@ -67,6 +67,15 @@
               >
                 <v-btn color="accent">Online programme</v-btn>
               </a>
+              <a
+                v-if="post.slug === 'case-submission-2021'"
+                style="text-decoration: none;"
+                href="https://ers.app.box.com/f/3ce19a0fcbaf4de983a28506a04a0635"
+                target="_blank"
+                rel="noopener"
+              >
+                <v-btn color="accent">Submit your case</v-btn>
+              </a>
             </v-card-actions>
           </v-card>
         </v-flex>
