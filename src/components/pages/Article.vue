@@ -44,7 +44,7 @@
         <v-spacer />
         <a
           style="text-decoration: none;"
-          href="https://ers.box.com/s/6zengr4nee0lq7aqm05z0622jge5atvw"
+          href="https://ers.app.box.com/f/3ce19a0fcbaf4de983a28506a04a0635"
           target="_blank"
           rel="noopener"
         >
