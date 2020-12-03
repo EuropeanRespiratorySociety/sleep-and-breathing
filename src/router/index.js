@@ -9,6 +9,7 @@ import Article from '@/components/pages/Article'
 import PracticalInformation from '@/components/pages/PracticalInformation'
 import Registration from '@/components/pages/Registration'
 import OrganisingCommitteePage from '@/components/pages/OrganisingCommitteePage'
+import TestCategory from '@/components/pages/TestCategory'
 
 
 // const Home = () => import('@/components/pages/Home') // eslint-disable-line
@@ -60,8 +61,12 @@ const router = new Router({
       path: "/programme/organising-committee",
       name: "organising-committee-page",
       component: OrganisingCommitteePage
+    },
+    {
+      path: "/test-category",
+      name: "test-category",
+      component: TestCategory
     }
-    
     // ,
     // {
     //   path: '/hotel-accommodation',

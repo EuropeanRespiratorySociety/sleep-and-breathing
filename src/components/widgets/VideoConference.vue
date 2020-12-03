@@ -1,5 +1,5 @@
 <template>
-  <v-layout row>
+  <!-- <v-layout row>
     <v-flex md12>
       <v-card id="test">
         <div class="videoWrapper">
@@ -8,7 +8,27 @@
       </v-card>
 
     </v-flex>
+  </v-layout> -->
+
+  <v-layout row>
+    <v-flex md12>
+      <v-card id="test">
+      <v-card-title primary-title>
+        <div>
+          <h3 class="headline mb-0">Test Category Title</h3>
+        </div>
+      </v-card-title>
+        <div class="videoWrapper">
+          <iframe src="https://www.youtube.com/embed/WZLDc9BR17M?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen/>
+        </div>
+        <v-card-actions>
+          <v-btn to="/test-category" flat>More Videos...</v-btn>
+          <v-spacer />
+        </v-card-actions>
+      </v-card>
+    </v-flex>
   </v-layout>
+
 </template>
 <script>
 export default {
