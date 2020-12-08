@@ -15,11 +15,11 @@
       <v-card id="test">
       <v-card-title primary-title>
         <div>
-          <h3 class="headline mb-0">Test Category Title</h3>
+          <h3 class="headline mb-0">{{ videoResourse().videoNews[0].videoNewsTitle }}</h3>
         </div>
       </v-card-title>
         <div class="videoWrapper">
-          <iframe src="https://www.youtube.com/embed/WZLDc9BR17M?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen/>
+          <iframe :src="videoResourse().videoNews[0].videoNewsUrl" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen/>
         </div>
         <v-card-actions>
           <v-btn to="/test-category" flat>More Videos...</v-btn>
@@ -31,8 +31,11 @@
 
 </template>
 <script>
+import { formMixin } from "@/mixins/formMixin";
+
 export default {
-  name: "video-conference"
+  name: "video-conference",
+    mixins: [formMixin]
 };
 </script>
 

@@ -9,73 +9,23 @@
       <v-divider />
       <v-card-text v-if="category.body" v-html="formatLinkTargetBlank(category.body)" />
     </v-card>
-    <v-container grid-list-md align-center>
-      <v-layout row wrap>
-        <v-flex xs12 sm6 >
-          <v-card id="test" class="fill-height">
-            <div class="videoWrapper">
-              <iframe src="https://www.youtube.com/embed/WZLDc9BR17M?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen/>
-            </div>
-          <v-card-title >
-            <div>
-              <div>
-                <h3 class="title mb-0 mt-0">Test Category Title Test Category Title</h3>
-              </div>
-              <div class="grey--text">This is a optional subtitle</div>
-            </div>
-            <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-</div>
-          </v-card-title>
-          </v-card>
-        </v-flex>
-        <v-flex xs12 sm6 >
-          <v-card id="test" class="fill-height">
-            <div class="videoWrapper">
-              <iframe src="https://www.youtube.com/embed/WZLDc9BR17M?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen/>
-            </div>
-          <v-card-title >
-            <div>
-              <div>
-                <h3 class="title mb-0 mt-0">Test Category Title</h3>
-              </div>
-              <div class="grey--text">This is a optional subtitle</div>
-            </div>
-            <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin at nisi ac velit pretium cursus. Phasellus congue leo in dolor vehicula aliquet.
-</div>
-          </v-card-title>
-          </v-card>
-        </v-flex>
-        <v-flex xs12 sm6 >
-          <v-card id="test" class="fill-height">
-            <div class="videoWrapper">
-              <iframe src="https://www.youtube.com/embed/WZLDc9BR17M?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen/>
-            </div>
-          <v-card-title >
-            <div>
-              <div>
-                <h3 class="title mb-0 mt-0">Test Category Title</h3>
-              </div>
-              <div class="grey--text">This is a optional subtitle</div>
-            </div>
-            <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin at nisi ac velit pretium cursus. Phasellus congue leo in dolor vehicula aliquet.
-</div>
-          </v-card-title>
-          </v-card>
-        </v-flex>
 
-        <v-flex xs12 sm6 >
+    <v-container grid-list-md align-center>
+
+      <v-layout row wrap>
+        <v-flex xs12 sm6 v-for="(videoNew, index) in videoResourse().videoNews" :key="index">
           <v-card id="test" class="fill-height">
             <div class="videoWrapper">
-              <iframe src="https://www.youtube.com/embed/WZLDc9BR17M?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen/>
+              <iframe :src="videoNew.videoNewsUrl" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen/>
             </div>
           <v-card-title >
             <div>
               <div>
-                <h3 class="title mb-0 mt-0">Test Category Title</h3>
+                <h3 class="title mb-0 mt-0">{{ videoNew.videoNewsTitle }}</h3>
               </div>
-              <div class="grey--text">This is a optional subtitle</div>
+              <div v-if="videoNew.videoNewsSubTitle" class="grey--text">{{ videoNew.videoNewsSubTitle }}</div>
             </div>
-            <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin at nisi ac velit pretium cursus. Phasellus congue leo in dolor vehicula aliquet.
+            <div>{{ videoNew.videoNewsLead }}
 </div>
           </v-card-title>
           </v-card>
@@ -83,14 +33,10 @@
 
       </v-layout>
 
-
-      <v-layout v-if="articles" row wrap>
-
-
+      <v-layout row wrap>
         <v-flex xs12 sm12>
           <organising-committee />
         </v-flex>
-
 
         <v-flex v-for="post of articles" :key="post.slug" xs12 sm12>
           <v-card>
