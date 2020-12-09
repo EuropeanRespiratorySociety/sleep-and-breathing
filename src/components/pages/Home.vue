@@ -11,7 +11,7 @@
           style="text-decoration: none;"
           href="http://registration.sleepandbreathing.org/register.aspx?e=894"
         >
-          <v-btn color="accent" style="float: right;" class="subheading">Registration</v-btn>
+          <v-btn color="accent" style="float: right;" claass="subheading">Registration</v-btn>
         </a>
       </v-alert>-->
       <v-layout row wrap>
@@ -52,7 +52,7 @@
             <v-card-actions>
               <v-btn :to="`articles/${post.slug}`" flat>More...</v-btn>
               <v-spacer />
-              <a
+              <!-- <a
                 v-if="post.slug === 'abstract-submission' && hasSubmitAbstractOption()"
                 style="text-decoration: none;"
                 href="https://my.ersnet.org/AbstractsSubmission/Main/SLBSubmission"
@@ -60,7 +60,7 @@
                 rel="noopener"
               >
                 <v-btn color="accent">Submit your abstract</v-btn>
-              </a>
+              </a> -->
 
               <a
                 v-if="post.slug === 'programme-2021'"

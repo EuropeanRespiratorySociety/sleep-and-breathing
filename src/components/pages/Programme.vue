@@ -49,7 +49,7 @@
             <v-card-actions>
               <v-btn :to="`articles/${post.slug}`" flat>More...</v-btn>
               <v-spacer />
-              <a
+              <!-- <a
                 v-if="post.slug === 'abstract-submission' && hasSubmitAbstractOption()"
                 style="text-decoration: none;"
                 href="https://my.ersnet.org/AbstractsSubmission/Main/SLBSubmission"
@@ -57,7 +57,7 @@
                 rel="noopener"
               >
                 <v-btn color="accent">Submit your abstract</v-btn>
-              </a>
+              </a> -->
               <a
                 v-if="post.slug === 'programme-2021'"
                 style="text-decoration: none;"

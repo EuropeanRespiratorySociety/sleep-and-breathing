@@ -14,11 +14,11 @@ export default [
     icon: "date_range",
     path: "/programme"
   },
-  // {
-  //   title: "Industry",
-  //   icon: "domain",
-  //   path: "/articles/industry"
-  // },
+  {
+    title: "Industry",
+    icon: "domain",
+    path: "/articles/industry"
+  },
   {
     title: "Practical Information",
     icon: "info_outline",
