@@ -3,7 +3,8 @@
     <v-container grid-list-md style="margin-top:-145px;">
       <!-- temporary Alert  Registration open -->
       <v-alert :value="true" class="title mb-1"  icon="info" color="orange">
-        <div style="float: left;" class="mt-3">Registration is now open.
+        <div style="display: flex; align-items: center; justify-content:space-between;">
+        <div >Registration is now open.
          <!-- <br> <span class="body-2">early bird deadline extended to 15 February 2019</span>  -->
         </div>
         <a
@@ -11,9 +12,11 @@
           style="text-decoration: none;"
           href="https://my.ersnet.org/SleepAndBreathing/Main/DisplayEvent"
         >
-          <v-btn color="accent" style="float: right;" claass="subheading">Register now</v-btn>
+          <v-btn color="accent">Register now</v-btn>
         </a>
+        </div>
       </v-alert>
+
       <v-layout row wrap>
         <v-flex xs12>
           <v-card id="test">
