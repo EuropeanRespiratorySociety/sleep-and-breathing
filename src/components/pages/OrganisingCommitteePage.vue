@@ -63,73 +63,84 @@ export default {
     return {
       fixed: false,
       committees: [
-        { header: 'CHAIRS' },
+        { header: "CHAIRS" },
         {
-          avatar: '../img/people/image-Maria-Bonsignore.png',
-          title: 'Marisa Bonsignore',
-          subtitle: "<p>Researcher and Professor of sleep and breathing disorders, including obstructive sleep apnoea (OSA) at the University of Palermo, Italy.</p>"
+          avatar: "../img/people/image-Maria-Bonsignore.png",
+          title: "Marisa Bonsignore",
+          subtitle:
+            "<p>Researcher and Professor of sleep and breathing disorders, including obstructive sleep apnoea (OSA) at the University of Palermo, Italy.</p>"
         },
         {
-          avatar: '../img/people/img-Walter-McNicholas.png',
-          title: 'Walter McNicholas',
-          subtitle: "<p>Consultant in Respiratory and Sleep Medicine at St. Vincent's Hospital Group, Dublin, Ireland.<br />Newman Clinical Research Professor at UCD and a Principal Clinical Investigator at the UCD Conway Institute.<br />Former President of the European Sleep Research Society (ESRS) and the European Respiratory Society (ERS).</p>"
+          avatar: "../img/people/img-Walter-McNicholas.png",
+          title: "Walter McNicholas",
+          subtitle:
+            "<p>Consultant in Respiratory and Sleep Medicine at St. Vincent's Hospital Group, Dublin, Ireland.<br />Newman Clinical Research Professor at UCD and a Principal Clinical Investigator at the UCD Conway Institute.<br />Former President of the European Sleep Research Society (ESRS) and the European Respiratory Society (ERS).</p>"
         },
-        { divider: true},
-        { header: 'VICE CHAIRS' },
+        { divider: true },
+        { header: "VICE CHAIRS" },
         {
-          avatar: '../img/people/img-Lino-Nobili.png',
-          title: 'Lino Nobili',
-          subtitle: "<p>Chief of the Centre of Sleep Medicine of the Department of Neuroscience of the Niguarda Hospital in Milan, and part of the “C. Munari” Epilepsy Surgery Centre, Italy.<br />Assistant Secretary of the ESRS.</p>"
-        },
-        {
-          avatar: '../img/people/img-Anita-Simonds.png',
-          title: 'Anita Simonds',
-          subtitle: "<p>ERS President. Consultant in respiratory and sleep medicine. Professor of respiratory and sleep medicine.<br />National Heart and Lung Institute, Imperial College London, United Kingdom</p>"
-        },
-        { divider: true},
-        { header: 'MEMBERS'},
-        {
-          avatar: '../img/people/img-Pierre-Herve-Luppi.png',
-          title: 'Pierre-Hervé Luppi',
-          subtitle: "<p>Research Director at the CNRS.<br />Head of the team “Physiopathologie des réseaux neuronaux du cycle veille-sommeil” of the centre of Neuroscience of Lyon, at the University Claude Bernard Lyon, France.<br />President of the European Sleep Research Society.<br />Fellow of the “Société de Neuroscience”, Society For Neuroscience, IBRO, “Société Française de Recherche sur le Sommeil (SFRS)”, European Sleep Research Society and the Sleep Research Society.</p>"
+          avatar: "../img/people/img-Lino-Nobili.png",
+          title: "Lino Nobili",
+          subtitle:
+            "<p>Chief of the Centre of Sleep Medicine of the Department of Neuroscience of the Niguarda Hospital in Milan, and part of the “C. Munari” Epilepsy Surgery Centre, Italy.<br />Assistant Secretary of the ESRS.</p>"
         },
         {
-          avatar: '../img/people/img-Tiina-Paunio.png',
-          title: 'Tiina Paunio',
-          subtitle: "<p>Research Professor and Vice Dean of Education at Faculty of Medicine, UH.<br />Vice President (Clinical) and Chair of the Education Committee and Somnologist examination of European Sleep Research Society.<br />Deputy Editor for Journal of Sleep Research.</p>"
+          avatar: "../img/people/img-Anita-Simonds.png",
+          title: "Anita Simonds",
+          subtitle:
+            "<p>ERS President. Consultant in respiratory and sleep medicine. Professor of respiratory and sleep medicine.<br />National Heart and Lung Institute, Imperial College London, United Kingdom</p>"
+        },
+        { divider: true },
+        { header: "MEMBERS" },
+        {
+          avatar: "../img/people/img-Pierre-Herve-Luppi.png",
+          title: "Pierre-Hervé Luppi",
+          subtitle:
+            "<p>Research Director at the CNRS.<br />Head of the team “Physiopathologie des réseaux neuronaux du cycle veille-sommeil” of the centre of Neuroscience of Lyon, at the University Claude Bernard Lyon, France.<br />President of the European Sleep Research Society.<br />Fellow of the “Société de Neuroscience”, Society For Neuroscience, IBRO, “Société Française de Recherche sur le Sommeil (SFRS)”, European Sleep Research Society and the Sleep Research Society.</p>"
         },
         {
-          avatar: '../img/people/img-Winfried-Randerath.png',
-          title: 'Winfried Randerath',
-          subtitle: "<p>Chief physician and medical director<br />Bethanien Hospital, Clinic for Pneumology and Allergology, Center for Sleep Medicine and Respiratory Care Institute for Pneumology at the University of Cologne, Germany</p>"
+          avatar: "../img/people/img-Tiina-Paunio.png",
+          title: "Tiina Paunio",
+          subtitle:
+            "<p>Research Professor and Vice Dean of Education at Faculty of Medicine, UH.<br />Vice President (Clinical) and Chair of the Education Committee and Somnologist examination of European Sleep Research Society.<br />Deputy Editor for Journal of Sleep Research.</p>"
         },
         {
-          avatar: '../img/people/img-Sophia-E-Schiza.png',
-          title: 'Sophia E. Schiza',
-          subtitle: "<p>Head of Sleep Disorders Unit, Associate Professor of Respiratory Medicine<br />University of Crete Medical School, Greece.</p>"
+          avatar: "../img/people/img-Winfried-Randerath.png",
+          title: "Winfried Randerath",
+          subtitle:
+            "<p>Chief physician and medical director<br />Bethanien Hospital, Clinic for Pneumology and Allergology, Center for Sleep Medicine and Respiratory Care Institute for Pneumology at the University of Cologne, Germany</p>"
         },
         {
-          avatar: '../img/people/img-Milan-Sova.png',
-          title: 'Milan Sova',
-          subtitle: "<p>Adult Pulmonologist/Clinician, Department of Pulmonary Diseases and TB, Olomouc University Hospital</p>"
+          avatar: "../img/people/img-Sophia-E-Schiza.png",
+          title: "Sophia E. Schiza",
+          subtitle:
+            "<p>Head of Sleep Disorders Unit, Associate Professor of Respiratory Medicine<br />University of Crete Medical School, Greece.</p>"
         },
         {
-          avatar: '../img/people/img-Elizabeth-Hill.png',
-          title: 'Elizabeth Hill',
-          subtitle: "<p>President of the European Society of Sleep Technologists, a member of the European Sleep Research Society exam subcommittee and part of the British Sleep Society Executive Committee.<br />Sleep Research Fellow, Centre for Clinical Brain Sciences, Sleep Research Unit</p>"
+          avatar: "../img/people/img-Milan-Sova.png",
+          title: "Milan Sova",
+          subtitle:
+            "<p>Adult Pulmonologist/Clinician, Department of Pulmonary Diseases and TB, Olomouc University Hospital</p>"
         },
         {
-          avatar: '../img/people/img-Erna-Sif-Arnardottir.png',
-          title: 'Erna Sif Arnardottir',
-          subtitle: "<p>Director of the Reykjavik University Sleep Institute and Assistant Professor, Reykjavik University.<br />Secretary of the European Sleep Research Society.<br />President of the Icelandic Sleep Research Society.<br />Chair of the Assembly of National Sleep Societies and European Sleep Research Society (ANSS-ESRS) &ldquo;Beyond the AHI&rdquo; task force.</p>"
+          avatar: "../img/people/img-Elizabeth-Hill-02.png",
+          title: "Elizabeth Hill",
+          subtitle:
+            "<p>Lecturer in Sleep Medicine, Oxford Online Programme in Sleep Medicine, University of Oxford.<br />President of the European Society of Sleep Technologists.<br />Education Lead of the British Sleep Society.<br />Member of the European Sleep Research Society Examination Subcommittee.</p>"
         },
         {
-          avatar: '../img/people/img-Isaac-Almendros-Lo.png',
-          title: 'Isaac Almendros Lo',
-          subtitle: "<p>Assistant professor, School of Medicine, University of Barcelona, Spain.<br /Member of the College of Experts of European Respiratory Society.<br />Member of the Early Career Network of American Journal of Respiratory and Critical Care of Medicine.</p>"
+          avatar: "../img/people/img-Erna-Sif-Arnardottir.png",
+          title: "Erna Sif Arnardottir",
+          subtitle:
+            "<p>Director of the Reykjavik University Sleep Institute and Assistant Professor, Reykjavik University.<br />Secretary of the European Sleep Research Society.<br />President of the Icelandic Sleep Research Society.<br />Chair of the Assembly of National Sleep Societies and European Sleep Research Society (ANSS-ESRS) &ldquo;Beyond the AHI&rdquo; task force.</p>"
+        },
+        {
+          avatar: "../img/people/img-Isaac-Almendros-Lo.png",
+          title: "Isaac Almendros Lo",
+          subtitle:
+            "<p>Assistant professor, School of Medicine, University of Barcelona, Spain.<br /Member of the College of Experts of European Respiratory Society.<br />Member of the Early Career Network of American Journal of Respiratory and Critical Care of Medicine.</p>"
         }
       ]
-
     };
   },
 
@@ -144,12 +155,12 @@ export default {
 
     item() {
       return this.$store.state.pages[this.path];
-    },
+    }
   },
   watch: {
     $route() {
       this.fetchData();
-    },
+    }
   },
   created() {
     this.fetchData();
@@ -158,17 +169,17 @@ export default {
     ...mapActions(["getArticle"]),
     fetchData() {
       const payload = {
-        slug: this.$route.params.slug,
+        slug: this.$route.params.slug
       };
-      this.getArticle(payload).then((res) => {
+      this.getArticle(payload).then(res => {
         if (res !== undefined) {
           this.article = res.item.data;
         } else {
           this.article = this.$store.state.pages[this.path];
         }
       });
-    },
-  },
+    }
+  }
 };
 </script>
 
@@ -188,8 +199,7 @@ h3 {
   margin: 20px 0 4px 0 !important;
 }
 
-.v-card__title--primary{
+.v-card__title--primary {
   padding-top: 16px;
 }
-
 </style>
