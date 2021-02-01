@@ -51,7 +51,7 @@
                 <!-- <span><v-icon class="published">query_builder</v-icon>{{post.createdOn}}</span> -->
               </div>
             </v-card-title>
-            <v-card-text v-html="formatLinkTargetBlank(post.shortLead)" />
+            <v-card-text v-if="post.shortLead" v-html="formatLinkTargetBlank(post.shortLead)" />
             <v-card-actions>
               <v-btn :to="`articles/${post.slug}`" flat>More...</v-btn>
               <v-spacer />

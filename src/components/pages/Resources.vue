@@ -11,8 +11,8 @@
     </v-card>
 
     <v-container grid-list-md align-center>
-
-      <v-layout row wrap>
+      <!-- To display the video info start-->
+      <!-- <v-layout row wrap>
         <v-flex xs12 sm6 v-for="(videoNew, index) in videoResourse().videoNews" :key="index">
           <v-card id="test" class="fill-height">
             <div class="videoWrapper">
@@ -25,18 +25,18 @@
               </div>
               <div v-if="videoNew.videoNewsSubTitle" class="grey--text">{{ videoNew.videoNewsSubTitle }}</div>
             </div>
-            <div>{{ videoNew.videoNewsLead }}
-</div>
+            <div>{{ videoNew.videoNewsLead }}</div>
           </v-card-title>
           </v-card>
         </v-flex>
 
-      </v-layout>
+      </v-layout> -->
+      <!-- To display the video info end-->
 
       <v-layout row wrap>
-        <v-flex xs12 sm12>
+        <!-- <v-flex xs12 sm12>
           <organising-committee />
-        </v-flex>
+        </v-flex> -->
 
         <v-flex v-for="post of articles" :key="post.slug" xs12 sm12>
           <v-card>
@@ -81,6 +81,7 @@
             </v-card-actions>
           </v-card>
         </v-flex>
+        <ads />
       </v-layout>
     </v-container>
   </v-flex>
@@ -91,12 +92,14 @@ import { mapActions, mapGetters } from "vuex";
 import { formMixin } from "@/mixins/formMixin";
 import AccessProgramme from "../widgets/AccessProgramme";
 import OrganisingCommittee from "../widgets/OrganisingCommittee";
+import Ads from "../widgets/Ads";
 
 export default {
-  name: "test-category",
+  name: "resources",
   components: {
     AccessProgramme,
-    OrganisingCommittee
+    OrganisingCommittee,
+    Ads
   },
   mixins: [formMixin],
   data() {
@@ -127,7 +130,7 @@ export default {
     fetchData() {
       const payload = {
         pageNumber: parseInt(this.$route.params.id) || this.page,
-        request: "test-category",
+        request: "resources",
         skip: this.$store.state.skip,
         sortDirection: 1,
       };

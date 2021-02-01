@@ -15,6 +15,11 @@ export default [
     path: "/programme"
   },
   {
+    title: "Resources",
+    icon: "library_books",
+    path: "/resources"
+  },
+  {
     title: "Industry",
     icon: "domain",
     path: "/articles/industry"

@@ -40,7 +40,7 @@ export const getCategory = ({ commit, dispatch }, payload) => {
       ? "o:f730239a8b20c4024d7f"
       : request === "practical-information"
         ? "o:44c0b9cc9228ca743c5a"
-        : request === "test-category"
+        : request === "resources"
         ? "o:15183fc487884e7fe0cf"
           : request === "registration"
             ? "o:37c7e9119c2c1ddc191b"

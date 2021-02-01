@@ -22,7 +22,7 @@
           <iframe :src="videoResourse().videoNews[0].videoNewsUrl" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen/>
         </div>
         <v-card-actions>
-          <v-btn to="/test-category" flat>More Videos...</v-btn>
+          <v-btn to="/resources" flat>More Videos...</v-btn>
           <v-spacer />
         </v-card-actions>
       </v-card>
