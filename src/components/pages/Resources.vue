@@ -12,8 +12,8 @@
 
     <v-container grid-list-md align-center>
       <!-- To display the video info start-->
-      <!-- <v-layout row wrap>
-        <v-flex xs12 sm6 v-for="(videoNew, index) in videoResourse().videoNews" :key="index">
+      <v-layout row wrap>
+        <v-flex xs12 sm12 v-for="(videoNew, index) in videoResourse().videoNews" :key="index">
           <v-card id="test" class="fill-height">
             <div class="videoWrapper">
               <iframe :src="videoNew.videoNewsUrl" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen/>
@@ -30,7 +30,7 @@
           </v-card>
         </v-flex>
 
-      </v-layout> -->
+      </v-layout>
       <!-- To display the video info end-->
 
       <v-layout row wrap>

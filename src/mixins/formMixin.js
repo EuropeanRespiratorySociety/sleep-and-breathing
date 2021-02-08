@@ -24,17 +24,17 @@ export const formMixin = {
       return {
         videoNews: [
           {
-            videoNewsUrl: 'https://www.youtube.com/embed/WZLDc9BR17M?rel=0',
-            videoNewsTitle: 'ERS/ ESRS Sleep and Breathing Conference 2019',
-            videoNewsSubTitle: 'Video News Subtitle',
-            videoNewsLead: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin at nisi ac velit pretium cursus. Phasellus congue leo in dolor vehicula aliquet.'
-          },
-          {
-            videoNewsUrl: 'https://www.youtube.com/embed/ddSHD-arwC4',
-            videoNewsTitle: 'Air pollution and COVID-19 - Clearing the air and charting a post-pandemic course',
+            videoNewsUrl: 'https://www.youtube-nocookie.com/embed/zJG1toNLn5U?rel=0',
+            videoNewsTitle: 'Sleep and Breathing 2021',
             videoNewsSubTitle: '',
-            videoNewsLead: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
-        },
+            videoNewsLead: 'Taking place online from 16–17 April, 2021, the Sleep and Breathing conference offers an integrated approach to the investigation and treatment of sleep disorders and will focus on professional development and education. The conference is organised by the European Respiratory Society (ERS) and the European Sleep Research Society (ESRS).'
+          },
+        //   {
+        //     videoNewsUrl: 'https://www.youtube.com/embed/ddSHD-arwC4',
+        //     videoNewsTitle: 'Air pollution and COVID-19 - Clearing the air and charting a post-pandemic course',
+        //     videoNewsSubTitle: '',
+        //     videoNewsLead: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+        // },
         ]
       }
     },
