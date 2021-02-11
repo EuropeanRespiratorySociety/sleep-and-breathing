@@ -36,6 +36,9 @@
         <!-- <v-flex xs12 sm6>
           <important-dates/>
         </v-flex>-->
+        <v-flex xs12 sm12>
+          <video-conference/>
+        </v-flex>
         <v-flex v-for="post of articles" :key="post.slug" xs12 sm12>
           <v-card>
             <v-img v-if="post.image" :src="post.image" height="200px" />
@@ -80,9 +83,6 @@
               </a>
             </v-card-actions>
           </v-card>
-        </v-flex>
-        <v-flex xs12 sm12>
-          <video-conference/>
         </v-flex>
         <v-flex xs12 sm12>
           <access-programme />
