@@ -7,6 +7,7 @@
     </v-card-title>
     <v-card-text>
       Explore the 2021 Virtual Programme, this year you will find a range of exciting formats from hot topics to skills labs, with world renown experts from ERS and ESRS providing you scientific updates, as well as giving you insights from some of the most advanced sleep centres in Europe.
+      <br />The programme is accredited and offers participants 12 CME points.
 
       <!-- <br>
       <span class="caption">
