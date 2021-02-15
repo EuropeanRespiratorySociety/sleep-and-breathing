@@ -35,12 +35,7 @@ export const formMixin = {
           //   videoNewsSubTitle: '',
           //   videoNewsLead: 'Tiina Andersen (Bergen, Norway). Cough assistance and secretion management in neuromuscular disease.'
           // },
-        //   {
-        //     videoNewsUrl: 'https://www.youtube.com/embed/ddSHD-arwC4',
-        //     videoNewsTitle: 'Air pollution and COVID-19 - Clearing the air and charting a post-pandemic course',
-        //     videoNewsSubTitle: '',
-        //     videoNewsLead: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
-        // },
+
         ]
       }
     },
