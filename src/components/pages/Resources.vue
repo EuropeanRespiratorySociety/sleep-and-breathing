@@ -12,8 +12,9 @@
 
     <v-container grid-list-md align-center>
       <!-- To display the video info start-->
+
       <v-layout row wrap>
-        <v-flex xs12 sm12 v-for="(videoNew, index) in videoResourse().videoNews" :key="index">
+        <!-- <v-flex xs12 sm12 v-for="(videoNew, index) in videoResourse().videoNews" :key="index">
           <v-card id="test" class="fill-height">
             <div class="videoWrapper">
               <iframe :src="videoNew.videoNewsUrl" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen/>
@@ -27,6 +28,23 @@
             </div>
             <div>{{ videoNew.videoNewsLead }}</div>
           </v-card-title>
+          </v-card>
+        </v-flex> -->
+        <v-flex xs12 sm6 v-for="(videoNew, index) in videoResourse().videoNews" :key="index" >
+          <v-card id="test">
+              <vue-plyr v-if="videoNew.providerType === 'youtube'">
+                <div data-plyr-provider="youtube" :data-plyr-embed-id="videoNew.videoNewsId"></div>
+              </vue-plyr>
+              <vue-plyr v-if="videoNew.providerType === 'vimeo'">
+                <div data-plyr-provider="vimeo" :data-plyr-embed-id="videoNew.videoNewsId"></div>
+              </vue-plyr>
+            <v-card-text style="min-height: 210px;">
+                <div>
+                  <h3 class="title mb-2 mt-0">{{ videoNew.videoNewsTitle }}</h3>
+                </div>
+                <div v-if="videoNew.videoNewsSubTitle" class="grey--text">{{ videoNew.videoNewsSubTitle }}</div>
+               <div>{{ videoNew.videoNewsLead }}</div>
+          </v-card-text>
           </v-card>
         </v-flex>
 
@@ -121,6 +139,9 @@ export default {
     category() {
       return this.$store.state.pages[this.path].category;
     },
+    player() {
+          return this.$refs.plyr.player;
+        },
   },
   created() {
     this.fetchData();

@@ -5,6 +5,8 @@ import Vue from "vue";
 import { sync } from "vuex-router-sync";
 import Vuetify from "vuetify";
 import "vuetify/dist/vuetify.min.css";
+import VuePlyr from "vue-plyr";
+import "vue-plyr/dist/vue-plyr.css";
 
 import App from "./App.vue";
 import router from "./router";
@@ -22,6 +24,10 @@ Vue.use(Vuetify, {
     accent: "#8d6fac"
   }
 });
+
+Vue.use(VuePlyr, {
+  plyr: {}
+})
 
 sync(store, router);
 Vue.config.productionTip = false;

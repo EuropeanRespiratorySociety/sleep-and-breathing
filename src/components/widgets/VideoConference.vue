@@ -11,7 +11,7 @@
   </v-layout> -->
 
   <v-layout row>
-    <v-flex md12>
+    <!-- <v-flex md12>
       <v-card id="test">
       <v-card-title primary-title>
         <div>
@@ -21,6 +21,25 @@
         <div class="videoWrapper">
           <iframe :src="videoResourse().videoNews[0].videoNewsUrl" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen/>
         </div>
+        <v-card-actions>
+          <v-btn to="/resources" flat>More Videos...</v-btn>
+          <v-spacer />
+        </v-card-actions>
+      </v-card>
+    </v-flex> -->
+    <v-flex md12>
+      <v-card id="test">
+      <v-card-title primary-title>
+        <div>
+          <h3 class="headline mb-0 mt-1">{{ videoResourse().videoNews[0].videoNewsTitle }}</h3>
+        </div>
+      </v-card-title>
+          <vue-plyr v-if="videoResourse().videoNews[0].providerType === 'youtube'">
+            <div data-plyr-provider="youtube" :data-plyr-embed-id="videoResourse().videoNews[0].videoNewsId"></div>
+          </vue-plyr>
+          <vue-plyr v-if="videoResourse().videoNews[0].providerType === 'vimeo'">
+            <div data-plyr-provider="vimeo" :data-plyr-embed-id="videoResourse().videoNews[0].videoNewsId"></div>
+          </vue-plyr>
         <v-card-actions>
           <v-btn to="/resources" flat>More Videos...</v-btn>
           <v-spacer />
