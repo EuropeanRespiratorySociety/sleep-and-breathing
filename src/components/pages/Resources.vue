@@ -34,7 +34,7 @@
         <v-flex xs12 sm6 v-for="(videoNew, index) in videoResourse().videoNews" :key="index" >
           <v-card id="test">
               <vue-plyr v-if="videoNew.providerType === 'vimeo' && videoNew.videoNewsId==='511570665'">
-                <iframe src="https://player.vimeo.com/video/511570665?title=0&byline=0&portrait=0&transparent=0"   width="100%" background-color="#000000" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                <iframe src="https://player.vimeo.com/video/511570665?title=0&byline=0&portrait=0&transparent=0" width="100%" background-color="#000000" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
               </vue-plyr>
               <vue-plyr v-if="videoNew.providerType === 'youtube'">
                 <div data-plyr-provider="youtube" :data-plyr-embed-id="videoNew.videoNewsId"></div>
