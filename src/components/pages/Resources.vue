@@ -30,20 +30,25 @@
           </v-card-title>
           </v-card>
         </v-flex> -->
+
         <v-flex xs12 sm6 v-for="(videoNew, index) in videoResourse().videoNews" :key="index" >
           <v-card id="test">
+              <vue-plyr v-if="videoNew.providerType === 'vimeo' && videoNew.videoNewsId==='511570665'">
+                <iframe src="https://player.vimeo.com/video/511570665?title=0&byline=0&portrait=0&transparent=0"   width="100%" background-color="#000000" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+              </vue-plyr>
               <vue-plyr v-if="videoNew.providerType === 'youtube'">
                 <div data-plyr-provider="youtube" :data-plyr-embed-id="videoNew.videoNewsId"></div>
               </vue-plyr>
-              <vue-plyr v-if="videoNew.providerType === 'vimeo'">
+              <vue-plyr v-if="videoNew.providerType === 'vimeo' && videoNew.videoNewsId !=='511570665'">
                 <div data-plyr-provider="vimeo" :data-plyr-embed-id="videoNew.videoNewsId"></div>
               </vue-plyr>
+
             <v-card-text style="min-height: 210px;">
                 <div>
                   <h3 class="title mb-2 mt-0">{{ videoNew.videoNewsTitle }}</h3>
                 </div>
                 <div v-if="videoNew.videoNewsSubTitle" class="grey--text">{{ videoNew.videoNewsSubTitle }}</div>
-               <div>{{ videoNew.videoNewsLead }}</div>
+                <div>{{ videoNew.videoNewsLead }}</div>
           </v-card-text>
           </v-card>
         </v-flex>
@@ -104,6 +109,7 @@
     </v-container>
   </v-flex>
 </template>
+
 
 <script>
 import { mapActions, mapGetters } from "vuex";
@@ -170,5 +176,20 @@ export default {
 
 .card__text {
   min-height: 140px;
+}
+
+.vimeo {
+  position: relative;
+  height: 0;
+  padding: 0 0 56.25%;
+  overflow: hidden;
+}
+
+.vimeo iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 </style>

@@ -11,23 +11,27 @@
   </v-layout> -->
 
   <v-layout row>
-    <!-- <v-flex md12>
+    <v-flex md12>
       <v-card id="test">
       <v-card-title primary-title>
         <div>
-          <h3 class="headline mb-0">{{ videoResourse().videoNews[0].videoNewsTitle }}</h3>
+          <h3 class="headline mb-0 mt-1">{{filterVideos.videoNewsTitle}}</h3>
         </div>
       </v-card-title>
-        <div class="videoWrapper">
-          <iframe :src="videoResourse().videoNews[0].videoNewsUrl" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen/>
-        </div>
+          <vue-plyr v-if="filterVideos.providerType === 'youtube'">
+            <div data-plyr-provider="youtube" :data-plyr-embed-id="filterVideos.videoNewsId"></div>
+          </vue-plyr>
+          <vue-plyr v-if="filterVideos.providerType === 'vimeo'">
+            <div data-plyr-provider="vimeo" :data-plyr-embed-id="filterVideos.videoNewsId"></div>
+          </vue-plyr>
+
         <v-card-actions>
           <v-btn to="/resources" flat>More Videos...</v-btn>
           <v-spacer />
         </v-card-actions>
       </v-card>
-    </v-flex> -->
-    <v-flex md12>
+    </v-flex>
+    <!-- <v-flex md12>
       <v-card id="test">
       <v-card-title primary-title>
         <div>
@@ -45,7 +49,7 @@
           <v-spacer />
         </v-card-actions>
       </v-card>
-    </v-flex>
+    </v-flex> -->
   </v-layout>
 
 </template>
@@ -54,7 +58,14 @@ import { formMixin } from "@/mixins/formMixin";
 
 export default {
   name: "video-conference",
-    mixins: [formMixin]
+  mixins: [formMixin],
+  computed: {
+  filterVideos() {
+    const showOnHome = this.videoResourse().videoNews;
+    const result = showOnHome.find(x => x.showVideoOnHome);
+    return result;
+  }
+}
 };
 </script>
 
