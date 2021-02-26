@@ -26,7 +26,7 @@
           </vue-plyr>
 
         <v-card-actions>
-          <v-btn to="/resources" flat>More Videos...</v-btn>
+          <v-btn href="/resources" flat>More Videos...</v-btn>
           <v-spacer />
         </v-card-actions>
       </v-card>
