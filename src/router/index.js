@@ -66,14 +66,17 @@ const router = new Router({
       path: "/resources",
       name: "resources",
       component: Resources
-    }
+    },
     // ,
     // {
     //   path: '/hotel-accommodation',
     //   name: 'hotel-accommodation',
     //   component: HotelAccommodation
     // }
-  ]
+  ],
+  scrollBehavior (to, from, savedPosition) {
+    return { x: 0, y: 0 }
+  }
 });
 
 router.afterEach(() => {
