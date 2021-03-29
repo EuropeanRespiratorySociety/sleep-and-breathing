@@ -40,7 +40,7 @@
           <v-btn color="accent">Online programme</v-btn>
         </a>
       </v-card-actions>
-      <v-card-actions v-if="article.slug === 'case-submission-2021'">
+      <!-- <v-card-actions v-if="article.slug === 'case-submission-2021'">
         <v-spacer />
         <a
           style="text-decoration: none;"
@@ -50,7 +50,7 @@
         >
           <v-btn color="accent">Submit your case</v-btn>
         </a>
-      </v-card-actions>
+      </v-card-actions> -->
     </v-card>
   </v-flex>
 </template>
