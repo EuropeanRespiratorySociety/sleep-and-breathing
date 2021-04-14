@@ -1,6 +1,6 @@
 <template>
   <v-flex xs12 sm12 md8 lg8 offset-md2 offset-lg2>
-    <v-container grid-list-md style="margin-top:-190px;">
+    <v-container grid-list-md style="margin-top:-190px;"> <!-- -190px for two banners instead of -145px -->
       <v-alert :value="true" class="title mb-1"  icon="info" color="orange" style="padding: 8px 16px;">
         <div style="display: flex; align-items: center; justify-content:space-between;">
         <div >Already registered?
