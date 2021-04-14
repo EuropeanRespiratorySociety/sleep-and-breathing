@@ -1,5 +1,6 @@
 <template>
   <v-flex xs12 sm12 md8 lg8 offset-md2 offset-lg2>
+   <v-container grid-list-md >
     <v-card v-if="article" id="test" class="card--flex-toolbar">
       <v-toolbar card class="white">
         <v-toolbar-title
@@ -52,6 +53,7 @@
         </a>
       </v-card-actions> -->
     </v-card>
+   </v-container>
   </v-flex>
 </template>
 

@@ -1,17 +1,49 @@
 <template>
   <v-flex xs12 sm12 md8 lg8 offset-md2 offset-lg2>
-    <v-card v-if="category" id="test" class="card--flex-toolbar">
-      <v-toolbar card class="white">
-        <v-toolbar-title v-if="category" class="headline grey--text">{{category.title}}</v-toolbar-title>
-        <v-spacer/>
-        <a target="_blank" style="text-decoration: none;" href="https://my.ersnet.org/SleepAndBreathing/Main/DisplayEvent">
-          <v-btn v-if="category.slug === 'registration' " color="accent">Register now</v-btn>
+    <v-container grid-list-md style="margin-top:-190px;">
+      <v-alert :value="true" class="title mb-1"  icon="info" color="orange" style="padding: 8px 16px;">
+        <div style="display: flex; align-items: center; justify-content:space-between;">
+        <div >Already registered?
+         <!-- <br> <span class="body-2">early bird deadline extended to 15 February 2019</span>  -->
+        </div>
+        <a
+          target="_blank"
+          style="text-decoration: none;"
+          href="https://live.sleepandbreathing.org/user/login"
+        >
+          <v-btn color="accent">Access the conference here</v-btn>
         </a>
-      </v-toolbar>
-      <v-divider/>
-      <v-card-text v-if="category.body" v-html="formatLinkTargetBlank(category.body)"/>
-    </v-card>
-    <v-container grid-list-md>
+        </div>
+      </v-alert>
+      <v-alert :value="true" class="title mb-1"  icon="info" color="deep-orange lighten-1" style="padding: 8px 16px;">
+        <div style="display: flex; align-items: center; justify-content:space-between;">
+        <div >Not registered?
+         <!-- <br> <span class="body-2">early bird deadline extended to 15 February 2019</span>  -->
+        </div>
+        <a
+          target="_blank"
+          style="text-decoration: none;"
+          href="https://my.ersnet.org/SleepAndBreathing/Main/DisplayEvent"
+        >
+          <v-btn color="accent">Register now</v-btn>
+        </a>
+        </div>
+      </v-alert>
+        <v-layout row wrap>
+        <v-flex xs12>
+          <v-card v-if="category" id="test">
+            <v-toolbar card class="white">
+              <v-toolbar-title v-if="category" class="headline grey--text">{{category.title}}</v-toolbar-title>
+              <v-spacer/>
+              <!-- <a target="_blank" style="text-decoration: none;" href="https://my.ersnet.org/SleepAndBreathing/Main/DisplayEvent">
+                <v-btn v-if="category.slug === 'registration' " color="accent">Register now</v-btn>
+              </a> -->
+            </v-toolbar>
+            <v-divider/>
+            <v-card-text v-if="category.body" v-html="formatLinkTargetBlank(category.body)"/>
+          </v-card>
+        </v-flex>
+      </v-layout>
       <v-layout v-if="articles" row wrap>
         <v-flex v-for="post of articles" :key="post.slug" xs12 sm6>
           <v-card  class="pb-2">
