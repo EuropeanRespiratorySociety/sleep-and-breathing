@@ -45,14 +45,14 @@
       </v-layout>
     </v-container>
 
-    <v-container v-if="articles" grid-list-md>
-      <v-layout row wrap>
+    <v-container  grid-list-md>
+      <v-layout  v-if="articles" row wrap>
         <!-- <v-flex xs12 sm6>
           <important-dates/>
         </v-flex>-->
-        <v-flex xs12 sm12>
+        <!-- <v-flex xs12 sm12>
           <video-conference/>
-        </v-flex>
+        </v-flex> -->
         <v-flex v-for="post of articles" :key="post.slug" xs12 sm12>
           <v-card>
             <v-img v-if="post.image" :src="post.image" height="200px" />
@@ -76,7 +76,7 @@
                 <v-btn color="accent">Submit your abstract</v-btn>
               </a> -->
 
-              <a
+              <!-- <a
                 v-if="post.slug === 'programme-2021'"
                 style="text-decoration: none;"
                 href="https://k4.ersnet.org/prod/v2/front/program/?e=270"
@@ -84,7 +84,7 @@
                 rel="noopener"
               >
                 <v-btn color="accent">Online programme</v-btn>
-              </a>
+              </a> -->
 
               <!-- <a
                 v-if="post.slug === 'case-submission-2021'"
@@ -98,14 +98,17 @@
             </v-card-actions>
           </v-card>
         </v-flex>
-        <v-flex xs12 sm12>
+        <!-- <v-flex xs12 sm12>
           <access-programme />
-        </v-flex>
-        <v-flex xs12>
+        </v-flex> -->
+      </v-layout>
+      <v-layout row wrap>
+        <v-flex xs12 sm12>
           <organising-committee />
         </v-flex>
       </v-layout>
-     </v-container>
+
+    </v-container>
 
 
     <ads />

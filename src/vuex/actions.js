@@ -37,7 +37,7 @@ export const getCategory = ({ commit, dispatch }, payload) => {
   const { request, sortDirection = -1, sortBy = "displayOrder" } = payload;
   const qname =
     request === "programme"
-      ? "o:f730239a8b20c4024d7f"
+      ? "o:fe7297e8278e339825d8"
       : request === "practical-information"
         ? "o:44c0b9cc9228ca743c5a"
         : request === "resources"
