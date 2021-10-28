@@ -16,10 +16,10 @@
         </a>
         </div>
       </v-alert> -->
-      <v-alert :value="true" class="title mb-1"  icon="info" color="orange" style="padding: 8px 16px;">
+      <!-- <v-alert :value="true" class="title mb-1"  icon="info" color="orange" style="padding: 8px 16px;">
         <div style="display: flex; align-items: center; justify-content:space-between;">
         <div >The conference replay is available
-         <!-- <br> <span class="body-2">early bird deadline extended to 15 February 2019</span>  -->
+         <br> <span class="body-2">early bird deadline extended to 15 February 2019</span> 
         </div>
         <a
           target="_blank"
@@ -29,8 +29,7 @@
           <v-btn color="accent">Access the conference</v-btn>
         </a>
         </div>
-      </v-alert>
-
+      </v-alert> -->
 
       <v-layout row wrap>
         <v-flex xs12>
@@ -135,7 +134,7 @@ export default {
   mixins: [formMixin],
   data() {
     return {
-      fixed: false,
+      fixed: false
     };
   },
   computed: {
@@ -166,7 +165,7 @@ export default {
           class="sponsors"
         >`
       );
-    },
+    }
   },
   created() {
     this.fetchData();
@@ -178,11 +177,11 @@ export default {
         pageNumber: parseInt(this.$route.params.id) || this.page,
         request: "home",
         skip: this.$store.state.skip,
-        sortDirection: 1,
+        sortDirection: 1
       };
       this.getCategory(payload);
-    },
-  },
+    }
+  }
 };
 </script>
 
