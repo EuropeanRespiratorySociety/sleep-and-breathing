@@ -11,9 +11,9 @@
     </v-card>
     <v-container grid-list-md>
       <v-layout v-if="articles" row wrap>
-        <v-flex xs12 sm12>
+        <!-- <v-flex xs12 sm12>
           <access-programme />
-        </v-flex>
+        </v-flex> -->
 
         <v-flex xs12 sm12>
           <organising-committee />
@@ -99,7 +99,7 @@ export default {
   mixins: [formMixin],
   data() {
     return {
-      fixed: false,
+      fixed: false
     };
   },
   computed: {
@@ -115,7 +115,7 @@ export default {
 
     category() {
       return this.$store.state.pages[this.path].category;
-    },
+    }
   },
   created() {
     this.fetchData();
@@ -127,11 +127,11 @@ export default {
         pageNumber: parseInt(this.$route.params.id) || this.page,
         request: "programme",
         skip: this.$store.state.skip,
-        sortDirection: 1,
+        sortDirection: 1
       };
       this.getCategory(payload);
-    },
-  },
+    }
+  }
 };
 </script>
 

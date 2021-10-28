@@ -104,6 +104,9 @@
       </v-layout>
       <v-layout row wrap>
         <v-flex xs12 sm12>
+          <programme />
+        </v-flex>
+        <v-flex xs12 sm12>
           <organising-committee />
         </v-flex>
       </v-layout>
