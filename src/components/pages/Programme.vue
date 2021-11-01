@@ -10,6 +10,21 @@
       <v-card-text v-if="category.body" v-html="formatLinkTargetBlank(category.body)" />
     </v-card>
     <v-container grid-list-md>
+      <v-layout row wrap>
+        <v-card>
+          <v-card-text>The aim of the Sleep and Breathing Conference is to support the exchange of knowledge among the international scientifi ccommunity. Writing an abstract for this conference is an important way for you to communicate your scientifi c research or clinicalpractice with your peers.
+            <ol>
+              <li>An abstract is a summary of a research publication. The study and results reported should be novel and not simply an extensionof previously published work.</li>
+
+              <li>Accepted abstracts will be presented by the presenting author in Thematic Poster sessions.</li>
+              <li>Accepted abstracts will be published in the <a href="https://openres.ersjournals.com/" target="_blank">ERJ Open Research</a>.</li>
+            </ol>
+            <br>
+            <br>
+            <p>We look forward to receiving your abstracts!</p>
+          </v-card-text>
+        </v-card>
+      </v-layout>
       <v-layout v-if="articles" row wrap>
         <!-- <v-flex xs12 sm12>
           <access-programme />

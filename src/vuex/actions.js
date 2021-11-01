@@ -39,11 +39,11 @@ export const getCategory = ({ commit, dispatch }, payload) => {
     request === "programme"
       ? "o:fe7297e8278e339825d8"
       : request === "practical-information"
-        ? "o:44c0b9cc9228ca743c5a"
+        ? "o:d70b605c0c4624343490"
         : request === "resources"
           ? "o:15183fc487884e7fe0cf"
           : request === "registration"
-            ? "o:37c7e9119c2c1ddc191b"
+            ? "o:76b90ecda2fcdcf1c33e"
             : "o:65dced25916434011926"; // home
   const route = setRoute(
     {
