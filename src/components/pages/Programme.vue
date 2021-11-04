@@ -12,16 +12,38 @@
     <v-container grid-list-md>
       <v-layout row wrap>
         <v-card>
-          <v-card-text>The aim of the Sleep and Breathing Conference is to support the exchange of knowledge among the international scientifi ccommunity. Writing an abstract for this conference is an important way for you to communicate your scientifi c research or clinicalpractice with your peers.
-            <ol>
-              <li>An abstract is a summary of a research publication. The study and results reported should be novel and not simply an extensionof previously published work.</li>
+          <v-card-text>
+            <p class="mt-3">Please take a few moments to share your topics suggestions with us and help us to build a highly relevant and educational programme for all. You can do this easily by sending us an email (to <a href="mailto:programme@ersnet.org">programme@ersnet.org</a>) with topic ideas based on the following themes:</p>
 
-              <li>Accepted abstracts will be presented by the presenting author in Thematic Poster sessions.</li>
-              <li>Accepted abstracts will be published in the <a href="https://openres.ersjournals.com/" target="_blank">ERJ Open Research</a>.</li>
-            </ol>
-            <br>
-            <br>
-            <p>We look forward to receiving your abstracts!</p>
+            <h3 class="mb-2">Respiratory sleep conditions/diseases:</h3>
+            <ul>
+              <li>Obstructive sleep apnoea</li> 
+              <li>Central sleep apnoea</li> 
+              <li>Nocturnal hypoventilation</li> 
+              <li>Dental aspects of Sleep-Disordered Breathing</li> 
+              <li>Obesity hypoventilation syndrome</li> 
+            </ul>
+            <h3 class="mb-2">Diagnostic techniques:</h3>
+            <ul>
+              <li>Polysomnography and assessment of daytime sleepiness</li> 
+              <li>Telemonitoring</li>
+            </ul>
+            <h3 class="mb-2">Clinical assessment/examination:</h3>
+            <ul>
+              <li>Differential diagnosis</li>
+              <li>Comorbidity assessment</li>
+              <li>ENT (Ears, Nose and Throat) aspects of sleep-disordered breathing</li>
+            </ul>
+
+            <h3 class="mb-2">Treatment:</h3>
+            <ul>
+              <li>Obstructive sleep apnoea</li>
+              <li>Positive airway pressure/continuous airway pressure</li>
+              <li>Hypoventilation</li>
+            </ul>
+            <p>&nbsp;</p>
+            <p class="mb-1">We encourage submitters to include paediatric topics in their proposal.</p>
+            <p>The deadline to submit your proposal is <strong>Friday, 14 January 2022</strong></p>
           </v-card-text>
         </v-card>
       </v-layout>
