@@ -25,14 +25,13 @@
           </v-card-text>
         </v-card>
       </v-layout>
+
       <v-layout v-if="articles" row wrap>
         <!-- <v-flex xs12 sm12>
           <access-programme />
         </v-flex> -->
 
-        <v-flex xs12 sm12>
-          <organising-committee />
-        </v-flex>
+
 
         <!-- <v-flex xs12 sm12>
           <v-card>
@@ -93,6 +92,11 @@
               </a> -->
             </v-card-actions>
           </v-card>
+        </v-flex>
+      </v-layout>
+      <v-layout>
+        <v-flex xs12 sm12>
+          <organising-committee />
         </v-flex>
       </v-layout>
     </v-container>

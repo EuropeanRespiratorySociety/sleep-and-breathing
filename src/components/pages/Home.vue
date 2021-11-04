@@ -104,7 +104,7 @@
       </v-layout>
       <v-layout row wrap>
         <v-flex xs12 sm12>
-          <programme />
+          <programme-card />
         </v-flex>
         <v-flex xs12 sm12>
           <organising-committee />
@@ -127,6 +127,7 @@ import ImportantDates from "../widgets/ImportantDates";
 import AccessProgramme from "../widgets/AccessProgramme";
 import VideoConference from "../widgets/VideoConference";
 import OrganisingCommittee from "../widgets/OrganisingCommittee";
+import ProgrammeCard from "../widgets/ProgrammeCard";
 
 export default {
   name: "Home",
@@ -135,7 +136,8 @@ export default {
     ImportantDates,
     AccessProgramme,
     VideoConference,
-    OrganisingCommittee
+    OrganisingCommittee,
+    ProgrammeCard
   },
   mixins: [formMixin],
   data() {
