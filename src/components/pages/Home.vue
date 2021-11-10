@@ -16,10 +16,10 @@
         </a>
         </div>
       </v-alert> -->
-      <v-alert :value="true" class="title mb-1"  icon="info" color="orange" style="padding: 8px 16px;">
+      <!-- <v-alert :value="true" class="title mb-1"  icon="info" color="orange" style="padding: 8px 16px;">
         <div style="display: flex; align-items: center; justify-content:space-between;">
         <div >The conference replay is available
-         <!-- <br> <span class="body-2">early bird deadline extended to 15 February 2019</span>  -->
+         <br> <span class="body-2">early bird deadline extended to 15 February 2019</span> 
         </div>
         <a
           target="_blank"
@@ -29,8 +29,7 @@
           <v-btn color="accent">Access the conference</v-btn>
         </a>
         </div>
-      </v-alert>
-
+      </v-alert> -->
 
       <v-layout row wrap>
         <v-flex xs12>
@@ -46,14 +45,14 @@
       </v-layout>
     </v-container>
 
-    <v-container v-if="articles" grid-list-md>
-      <v-layout row wrap>
+    <v-container  grid-list-md>
+      <v-layout  v-if="articles" row wrap>
         <!-- <v-flex xs12 sm6>
           <important-dates/>
         </v-flex>-->
-        <v-flex xs12 sm12>
+        <!-- <v-flex xs12 sm12>
           <video-conference/>
-        </v-flex>
+        </v-flex> -->
         <v-flex v-for="post of articles" :key="post.slug" xs12 sm12>
           <v-card>
             <v-img v-if="post.image" :src="post.image" height="200px" />
@@ -77,7 +76,7 @@
                 <v-btn color="accent">Submit your abstract</v-btn>
               </a> -->
 
-              <a
+              <!-- <a
                 v-if="post.slug === 'programme-2021'"
                 style="text-decoration: none;"
                 href="https://k4.ersnet.org/prod/v2/front/program/?e=270"
@@ -85,7 +84,7 @@
                 rel="noopener"
               >
                 <v-btn color="accent">Online programme</v-btn>
-              </a>
+              </a> -->
 
               <!-- <a
                 v-if="post.slug === 'case-submission-2021'"
@@ -99,14 +98,20 @@
             </v-card-actions>
           </v-card>
         </v-flex>
-        <v-flex xs12 sm12>
+        <!-- <v-flex xs12 sm12>
           <access-programme />
+        </v-flex> -->
+      </v-layout>
+      <v-layout row wrap>
+        <v-flex xs12 sm12>
+          <programme-card />
         </v-flex>
-        <v-flex xs12>
+        <v-flex xs12 sm12>
           <organising-committee />
         </v-flex>
       </v-layout>
-     </v-container>
+
+    </v-container>
 
 
     <ads />
@@ -122,6 +127,7 @@ import ImportantDates from "../widgets/ImportantDates";
 import AccessProgramme from "../widgets/AccessProgramme";
 import VideoConference from "../widgets/VideoConference";
 import OrganisingCommittee from "../widgets/OrganisingCommittee";
+import ProgrammeCard from "../widgets/ProgrammeCard";
 
 export default {
   name: "Home",
@@ -130,12 +136,13 @@ export default {
     ImportantDates,
     AccessProgramme,
     VideoConference,
-    OrganisingCommittee
+    OrganisingCommittee,
+    ProgrammeCard
   },
   mixins: [formMixin],
   data() {
     return {
-      fixed: false,
+      fixed: false
     };
   },
   computed: {
@@ -166,7 +173,7 @@ export default {
           class="sponsors"
         >`
       );
-    },
+    }
   },
   created() {
     this.fetchData();
@@ -178,11 +185,11 @@ export default {
         pageNumber: parseInt(this.$route.params.id) || this.page,
         request: "home",
         skip: this.$store.state.skip,
-        sortDirection: 1,
+        sortDirection: 1
       };
       this.getCategory(payload);
-    },
-  },
+    }
+  }
 };
 </script>
 

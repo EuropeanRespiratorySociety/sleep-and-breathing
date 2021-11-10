@@ -71,38 +71,38 @@ export default {
             "<p>Researcher and Professor of sleep and breathing disorders, including obstructive sleep apnoea (OSA) at the University of Palermo, Italy.</p>"
         },
         {
-          avatar: "../img/people/img-Walter-McNicholas.png",
-          title: "Walter McNicholas",
+          avatar: "../img/people/img-Dirk-Pevernagie.png",
+          title: "Dirk Pevernagie",
           subtitle:
-            "<p>Consultant in Respiratory and Sleep Medicine at St. Vincent's Hospital Group, Dublin, Ireland.<br />Newman Clinical Research Professor at UCD and a Principal Clinical Investigator at the UCD Conway Institute.<br />Former President of the European Sleep Research Society (ESRS) and the European Respiratory Society (ERS).</p>"
+            "<p>Dirk Pevernagie is a pulmonologist and ESRS certifi ed somnologist who is currently working at the Ghent University and GhentUniversity Hospital.Vice-President of the ESRS.</p>"
         },
         { divider: true },
         { header: "VICE CHAIRS" },
         {
-          avatar: "../img/people/img-Lino-Nobili.png",
-          title: "Lino Nobili",
+          avatar: "../img/people/img-Giuseppe-Plazzi.png",
+          title: "Giuseppe Plazzi",
           subtitle:
-            "<p>Chief of the Centre of Sleep Medicine of the Department of Neuroscience of the Niguarda Hospital in Milan, and part of the “C. Munari” Epilepsy Surgery Centre, Italy.<br />Assistant Secretary of the ESRS.</p>"
+            "<p>Giuseppe Plazzi, MD and PhD, is a neurologist, chair of child neurology at the University of Modena and Reggio Emilia and director ofthe Sleep Disorders, Narcolepsy and CNS Hypersomnias Center of the IRCCS - Istituto delle Scienze Neurologiche di Bologna. Heserves as president of the Italian Sleep Society (AIMS), vice-president of the EU-Narcolepsy Network (EU-NN), board member of theEuropean Sleep Research Society (ESRS) and co-chair of the rare neurological diseases panel of the European Academy ofNeurology (EAN).</p>"
         },
         {
           avatar: "../img/people/img-Anita-Simonds.png",
           title: "Anita Simonds",
           subtitle:
-            "<p>ERS President. Consultant in respiratory and sleep medicine. Professor of respiratory and sleep medicine.<br />National Heart and Lung Institute, Imperial College London, United Kingdom</p>"
+            "<p>ERS President. Consultant in respiratory and sleep medicine. Professor of respiratory and sleep medicine. National Heart and Lung Institute, Imperial College London, United Kingdom.</p>"
         },
         { divider: true },
         { header: "MEMBERS" },
         {
-          avatar: "../img/people/img-Pierre-Herve-Luppi.png",
-          title: "Pierre-Hervé Luppi",
+          avatar: "../img/people/img-Erna-Sif-Arnardottir.png",
+          title: "Erna Sif Arnardottir",
           subtitle:
-            "<p>Research Director at the CNRS.<br />Head of the team “Physiopathologie des réseaux neuronaux du cycle veille-sommeil” of the centre of Neuroscience of Lyon, at the University Claude Bernard Lyon, France.<br />President of the European Sleep Research Society.<br />Fellow of the “Société de Neuroscience”, Society For Neuroscience, IBRO, “Société Française de Recherche sur le Sommeil (SFRS)”, European Sleep Research Society and the Sleep Research Society.</p>"
+            "<p>Director of the Reykjavik University Sleep Institute and Assistant Professor, Reykjavik University.<br />Secretary of the European Sleep Research Society.<br />President of the Icelandic Sleep Research Society.<br />Chair of the Assembly of National Sleep Societies and European Sleep Research Society (ANSS-ESRS) &ldquo;Beyond the AHI&rdquo; task force.</p>"
         },
         {
-          avatar: "../img/people/img-Tiina-Paunio.png",
-          title: "Tiina Paunio",
+          avatar: "../img/people/img-Walter-McNicholas.png",
+          title: "Walter McNicholas",
           subtitle:
-            "<p>Research Professor and Vice Dean of Education at Faculty of Medicine, UH.<br />Vice President (Clinical) and Chair of the Education Committee and Somnologist examination of European Sleep Research Society.<br />Deputy Editor for Journal of Sleep Research.</p>"
+            "<p>Consultant in Respiratory and Sleep Medicine at St. Vincent's Hospital Group, Dublin, Ireland. Newman Clinical Research Professor at UCD and a Principal Clinical Investigator at the UCD Conway Institute. Former President of the European Sleep Research Society (ESRS) and the European Respiratory Society (ERS).</p>"
         },
         {
           avatar: "../img/people/img-Winfried-Randerath.png",
@@ -121,24 +121,6 @@ export default {
           title: "Milan Sova",
           subtitle:
             "<p>Adult Pulmonologist/Clinician, Department of Pulmonary Diseases and TB, Olomouc University Hospital</p>"
-        },
-        {
-          avatar: "../img/people/img-Elizabeth-Hill-02.png",
-          title: "Elizabeth Hill",
-          subtitle:
-            "<p>Lecturer in Sleep Medicine, Oxford Online Programme in Sleep Medicine, University of Oxford.<br />President of the European Society of Sleep Technologists.<br />Education Lead of the British Sleep Society.<br />Member of the European Sleep Research Society Examination Subcommittee.</p>"
-        },
-        {
-          avatar: "../img/people/img-Erna-Sif-Arnardottir.png",
-          title: "Erna Sif Arnardottir",
-          subtitle:
-            "<p>Director of the Reykjavik University Sleep Institute and Assistant Professor, Reykjavik University.<br />Secretary of the European Sleep Research Society.<br />President of the Icelandic Sleep Research Society.<br />Chair of the Assembly of National Sleep Societies and European Sleep Research Society (ANSS-ESRS) &ldquo;Beyond the AHI&rdquo; task force.</p>"
-        },
-        {
-          avatar: "../img/people/img-Isaac-Almendros-Lo.png",
-          title: "Isaac Almendros Lo",
-          subtitle:
-            "<p>Assistant professor, School of Medicine, University of Barcelona, Spain.<br /Member of the College of Experts of European Respiratory Society.<br />Member of the Early Career Network of American Journal of Respiratory and Critical Care of Medicine.</p>"
         }
       ]
     };

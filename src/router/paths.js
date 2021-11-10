@@ -14,15 +14,15 @@ export default [
     icon: "date_range",
     path: "/programme"
   },
-  {
-    title: "Resources",
-    icon: "library_books",
-    path: "/resources"
-  },
+  // {
+  //   title: "Resources",
+  //   icon: "library_books",
+  //   path: "/resources"
+  // },
   {
     title: "Industry",
     icon: "domain",
-    path: "/articles/industry"
+    path: "/articles/industry-2023"
   },
   {
     title: "Practical Information",

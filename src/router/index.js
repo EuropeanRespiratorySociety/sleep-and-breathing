@@ -3,14 +3,13 @@ import Router from "vue-router";
 import store from "../vuex/store";
 
 /* eslint-disable */
-import Home from '@/components/pages/Home'
-import Programme from '@/components/pages/Programme'
-import Article from '@/components/pages/Article'
-import PracticalInformation from '@/components/pages/PracticalInformation'
-import Registration from '@/components/pages/Registration'
-import OrganisingCommitteePage from '@/components/pages/OrganisingCommitteePage'
-import Resources from '@/components/pages/Resources'
-
+import Home from "@/components/pages/Home";
+import Programme from "@/components/pages/Programme";
+import Article from "@/components/pages/Article";
+import PracticalInformation from "@/components/pages/PracticalInformation";
+import Registration from "@/components/pages/Registration";
+import OrganisingCommitteePage from "@/components/pages/OrganisingCommitteePage";
+import Resources from "@/components/pages/Resources";
 
 // const Home = () => import('@/components/pages/Home') // eslint-disable-line
 // const Programme = () => import('@/components/pages/Programme')
@@ -66,7 +65,7 @@ const router = new Router({
       path: "/resources",
       name: "resources",
       component: Resources
-    },
+    }
     // ,
     // {
     //   path: '/hotel-accommodation',
@@ -74,8 +73,8 @@ const router = new Router({
     //   component: HotelAccommodation
     // }
   ],
-  scrollBehavior (to, from, savedPosition) {
-    return { x: 0, y: 0 }
+  scrollBehavior(to, from, savedPosition) {
+    return { x: 0, y: 0 };
   }
 });
 
