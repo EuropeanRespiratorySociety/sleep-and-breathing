@@ -10,44 +10,6 @@
       <v-card-text v-if="category.body" v-html="formatLinkTargetBlank(category.body)" />
     </v-card>
     <v-container grid-list-md>
-      <v-layout row wrap>
-        <v-card>
-          <v-card-text>
-            <p class="mt-3">Please take a few moments to share your topics suggestions with us and help us to build a highly relevant and educational programme for all. You can do this easily by sending us an email (to <a href="mailto:programme@ersnet.org">programme@ersnet.org</a>) with topic ideas based on the following themes:</p>
-
-            <h3 class="mb-2">Respiratory sleep conditions/diseases:</h3>
-            <ul>
-              <li>Obstructive sleep apnoea</li> 
-              <li>Central sleep apnoea</li> 
-              <li>Nocturnal hypoventilation</li> 
-              <li>Dental aspects of Sleep-Disordered Breathing</li> 
-              <li>Obesity hypoventilation syndrome</li> 
-            </ul>
-            <h3 class="mb-2">Diagnostic techniques:</h3>
-            <ul>
-              <li>Polysomnography and assessment of daytime sleepiness</li> 
-              <li>Telemonitoring</li>
-            </ul>
-            <h3 class="mb-2">Clinical assessment/examination:</h3>
-            <ul>
-              <li>Differential diagnosis</li>
-              <li>Comorbidity assessment</li>
-              <li>ENT (Ears, Nose and Throat) aspects of sleep-disordered breathing</li>
-            </ul>
-
-            <h3 class="mb-2">Treatment:</h3>
-            <ul>
-              <li>Obstructive sleep apnoea</li>
-              <li>Positive airway pressure/continuous airway pressure</li>
-              <li>Hypoventilation</li>
-            </ul>
-            <p>&nbsp;</p>
-            <p class="mb-1">We encourage submitters to include paediatric topics in their proposal.</p>
-            <p>The deadline to submit your proposal is <strong>Friday, 14 January 2022</strong></p>
-          </v-card-text>
-        </v-card>
-      </v-layout>
-
       <v-layout v-if="articles" row wrap>
         <!-- <v-flex xs12 sm12>
           <access-programme />
