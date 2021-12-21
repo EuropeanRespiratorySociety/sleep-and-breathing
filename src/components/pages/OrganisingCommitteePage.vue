@@ -121,6 +121,18 @@ export default {
           title: "Milan Sova",
           subtitle:
             "<p>Adult Pulmonologist/Clinician, Department of Pulmonary Diseases and TB, Olomouc University Hospital</p>"
+        },
+        {
+          avatar: "../img/people/img-Matteo-Bradicich.png",
+          title: "Matteo Bradicich",
+          subtitle:
+            "<p>ECM representative of ERS Assembly 4 (Sleep disordered breathing). He is currently working as resident physician at Department of Internal Medicine of Spital Zollikerberg (Switzerland), in the framework of the specialisation programme in internal medicine and pulmonology. His main research topics in the field of sleep medicine are obstructive sleep apnoea-related cardiovascular pathophysiology, domotics applied to sleep disordered breathing and obstructive sleep apnoea diagnostics.</p>"
+        },
+        {
+          avatar: "../img/people/img-Refika-Hamutcu-Ersu.jpg",
+          title: "Refika Hamutcu Ersu",
+          subtitle:
+            "<p>Professor of pediatrics at the University of Ottawa, Canada and director of sleep laboratory and home ventilation program at Children’s Hospital of Eastern Ontario, Division of Pediatric Respirology. She is specialized in pediatric respirology and sleep medicine. Her research mainly focuses on the epidemiology and diagnosis of sleep-disordered breathing in children. She is the past chair elect of European Respiratory Respiratory Pediatric Physiology and Sleep Group and current member of European Respiratory.</p>"
         }
       ]
     };
