@@ -133,6 +133,12 @@ export default {
           title: "Refika Hamutcu Ersu",
           subtitle:
             "<p>Professor of pediatrics at the University of Ottawa, Canada and director of sleep laboratory and home ventilation program at Children’s Hospital of Eastern Ontario, Division of Pediatric Respirology. She is specialized in pediatric respirology and sleep medicine. Her research mainly focuses on the epidemiology and diagnosis of sleep-disordered breathing in children. She is the past chair elect of European Respiratory Respiratory Pediatric Physiology and Sleep Group and current member of European Respiratory.</p>"
+        },
+        {
+          avatar: "../img/people/img-Sebastien-Baillieul.jpg",
+          title: "Sébastien Baillieul",
+          subtitle:
+            "<p>ECM representative of the ESRS. He is a sleep physician and assistant professor, working in the Sleep Laboratory of the Grenoble Alpes University Hospital (Head: Prof. Renaud Tamisier) and is affiliated to the HP2 Laboratory (Hypoxia-Physiopathology Laboratory, Head: Prof. Jean-Louis Pépin) – INSERM U1300 and Grenoble Alpes University, France. His research is focused on sleep and sleep disordered breathing in the aftermath of stroke, and on the impact of sleep disturbances on neurological recovery.</p>"
         }
       ]
     };
