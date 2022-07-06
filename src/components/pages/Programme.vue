@@ -11,9 +11,10 @@
     </v-card>
     <v-container grid-list-md>
       <v-layout v-if="articles" row wrap>
-        <!-- <v-flex xs12 sm12>
+        <v-flex xs12 sm12>
           <access-programme />
-        </v-flex> -->
+          <!-- The title is now Access Preliminary Programme -->
+        </v-flex>
 
 
 

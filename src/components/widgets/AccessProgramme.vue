@@ -2,12 +2,11 @@
   <v-card id="test">
     <v-card-title primary-title>
       <div>
-        <h3 class="headline mb-0">Access Virtual Programme</h3>
+        <h3 class="headline mb-0">Access Preliminary Programme</h3>
       </div>
     </v-card-title>
     <v-card-text>
-      Explore the 2021 Virtual Programme, this year you will find a range of exciting formats from hot topics to skills labs, with world renown experts from ERS and ESRS providing you scientific updates, as well as giving you insights from some of the most advanced sleep centres in Europe.
-      <br />The programme is accredited and offers participants 12 CME points.
+      Explore the 2023 preliminary programme, this year you will find a range of exciting formats from hot topics to round table, with world renown experts from ERS and ESRS providing you scientific updates, as well as giving you insights from some of the most advanced sleep centres in Europe.
 
       <!-- <br>
       <span class="caption">
@@ -19,7 +18,7 @@
       <a
         target="_blank"
         style="text-decoration: none;"
-        href="https://k4.ersnet.org/prod/v2/front/program/?e=327"
+        href="https://k4.ersnet.org/prod/v2/front/program/?e=448"
       >
         <v-btn color="accent" class="ml-2 mb-2">Browse the online programme</v-btn>
       </a>
@@ -27,7 +26,7 @@
         target="_blank"
         rel="noopener noreferrer"
         style="text-decoration: none;"
-        href="https://ers.box.com/s/6zengr4nee0lq7aqm05z0622jge5atvw"
+        href="https://ers.box.com/s/gof0ux4cviixfmbv26u2vbjdqtfb79dy"
       >
         <v-btn flat color="accent" class="ml-2 mb-2">
           <v-icon left dark>save_alt</v-icon>Download the programme in PDF
@@ -39,7 +38,7 @@
 </template>
 <script>
 export default {
-  name: "access-programme",
+  name: "access-programme"
 };
 </script>
 
