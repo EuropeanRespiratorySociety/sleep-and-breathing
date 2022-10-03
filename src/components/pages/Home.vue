@@ -98,13 +98,10 @@
             </v-card-actions>
           </v-card>
         </v-flex>
-        <!-- <v-flex xs12 sm12>
-          <access-programme />
-        </v-flex> -->
       </v-layout>
       <v-layout row wrap>
         <v-flex xs12 sm12>
-          <programme-card />
+          <access-programme />
         </v-flex>
         <v-flex xs12 sm12>
           <organising-committee />
