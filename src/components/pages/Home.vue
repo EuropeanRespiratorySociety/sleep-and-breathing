@@ -2,10 +2,22 @@
   <v-flex xs12 sm12 md8 lg8 offset-md2 offset-lg2>
     <v-container grid-list-md style="margin-top:-145px;"><!-- -190px for two banners instead of -145px -->
       <!-- temporary Alert  Registration open -->
-       <!-- <v-alert :value="true" class="title mb-1"  icon="info" color="orange">
+      <v-alert :value="true" class="title mb-1"  icon="info" color="orange">
+        <div style="display: flex; align-items: center; justify-content:space-between;">
+          <div >Registration is now open</div>
+          <a
+            target="_blank"
+            style="text-decoration: none;"
+            href="https://my.ersnet.org/SleepAndBreathing/Main"
+          >
+            <v-btn color="accent">Register now</v-btn>
+          </a>
+        </div>
+      </v-alert>
+      <!-- <v-alert :value="true" class="title mb-1"  icon="info" color="orange">
         <div style="display: flex; align-items: center; justify-content:space-between;">
         <div >Already registered?
-         <br> <span class="body-2">early bird deadline extended to 15 February 2019</span> 
+        <br> <span class="body-2">early bird deadline extended to 15 February 2019</span> 
         </div>
         <a
           target="_blank"

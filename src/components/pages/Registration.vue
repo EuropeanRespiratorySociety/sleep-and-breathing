@@ -15,15 +15,17 @@
         </a>
         </div>
       </v-alert> -->
-        <v-layout row wrap>
+      <v-layout row wrap>
         <v-flex xs12>
           <v-card v-if="category" id="test">
             <v-toolbar card class="white">
               <v-toolbar-title v-if="category" class="headline grey--text">{{category.title}}</v-toolbar-title>
               <v-spacer/>
-              <!-- <a target="_blank" style="text-decoration: none;" href="https://my.ersnet.org/SleepAndBreathing/Main/DisplayEvent">
-                <v-btn v-if="category.slug === 'registration' " color="accent">Register now</v-btn>
-              </a> -->
+              <!-- Regsiter Button Start -->
+              <a target="_blank" style="text-decoration: none;" href="https://my.ersnet.org/SleepAndBreathing/Main">
+                <v-btn v-if="category.slug === 'registration-2023' " color="accent">Register now</v-btn>
+              </a>
+              <!-- Regsiter Button End -->
             </v-toolbar>
             <v-divider/>
             <v-card-text v-if="category.body" v-html="formatLinkTargetBlank(category.body)"/>
