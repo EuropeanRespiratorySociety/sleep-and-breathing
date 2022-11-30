@@ -26,6 +26,9 @@
             </v-card-actions>
           </v-card>
         </v-flex>
+        <v-flex xs12 sm12>
+          <hotel-booking/>
+        </v-flex>
         <!-- <v-flex xs12 sm6>
           <important-dates/>
         </v-flex>-->
@@ -44,12 +47,14 @@ import { mapActions, mapGetters } from "vuex";
 import { formMixin } from "@/mixins/formMixin";
 import OrganisingCommitteePage from "./OrganisingCommitteePage";
 import ImportantDates from "../widgets/ImportantDates";
+import HotelBooking from "../widgets/HotelBooking";
 
 export default {
   name: "practical-information",
   components: {
     OrganisingCommitteePage,
-    ImportantDates
+    ImportantDates,
+    HotelBooking
   },
   mixins: [formMixin],
   data() {
