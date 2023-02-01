@@ -2,7 +2,7 @@
   <v-card id="test">
     <v-card-title primary-title>
       <div>
-        <h3 class="headline mb-0">Access Preliminary Programme</h3>
+        <h3 class="headline mb-0">Access Programme</h3>
       </div>
     </v-card-title>
     <v-card-text>
