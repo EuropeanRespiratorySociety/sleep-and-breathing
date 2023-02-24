@@ -16,7 +16,10 @@
           <!-- The title is now Access Preliminary Programme -->
         </v-flex>
 
-
+        <v-flex xs12 sm12>
+          <video-satellites />
+          <!-- The title is now Access Preliminary Programme -->
+        </v-flex>
 
         <!-- <v-flex xs12 sm12>
           <v-card>
@@ -93,12 +96,15 @@ import { mapActions, mapGetters } from "vuex";
 import { formMixin } from "@/mixins/formMixin";
 import AccessProgramme from "../widgets/AccessProgramme";
 import OrganisingCommittee from "../widgets/OrganisingCommittee";
+import VideoSatellites from "../widgets/VideoSatellites";
+
 
 export default {
   name: "programme",
   components: {
     AccessProgramme,
-    OrganisingCommittee
+    OrganisingCommittee,
+    VideoSatellites
   },
   mixins: [formMixin],
   data() {

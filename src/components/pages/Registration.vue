@@ -48,6 +48,13 @@
             </v-card-actions>
           </v-card>
         </v-flex>
+
+
+        <v-flex xs12 sm12>
+          <video-satellites />
+          <!-- The title is now Access Preliminary Programme -->
+        </v-flex>
+
       </v-layout>
     </v-container>
   </v-flex>
@@ -56,8 +63,13 @@
 <script>
 import { mapActions, mapGetters } from "vuex";
 import { formMixin } from "@/mixins/formMixin";
+import VideoSatellites from "../widgets/VideoSatellites";
+
 export default {
   name: "registration",
+  components: {
+    VideoSatellites
+  },
   mixins: [formMixin],
   data() {
     return {
