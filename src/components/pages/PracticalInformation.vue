@@ -11,6 +11,9 @@
     </v-card>
     <v-container grid-list-md>
       <v-layout v-if="articles" row wrap>
+        <v-flex xs12 sm12>
+          <hotel-booking/>
+        </v-flex>
         <v-flex v-for="post of articles" :key="post.slug" xs12 sm12>
           <v-card>
             <v-img v-if="post.image" :src="post.image" height="200px"/>
@@ -26,9 +29,7 @@
             </v-card-actions>
           </v-card>
         </v-flex>
-        <v-flex xs12 sm12>
-          <hotel-booking/>
-        </v-flex>
+
         <!-- <v-flex xs12 sm6>
           <important-dates/>
         </v-flex>-->
