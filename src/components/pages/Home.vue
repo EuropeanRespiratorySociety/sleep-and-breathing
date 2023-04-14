@@ -4,6 +4,19 @@
       <!-- temporary Alert  Registration open -->
       <v-alert :value="true" class="title mb-1"  icon="info" color="orange">
         <div style="display: flex; align-items: center; justify-content:space-between;">
+          <div >Access the S&B 2023 virtual platform</div>
+          <a
+            target="_blank"
+            style="text-decoration: none;"
+            href="https://sleepandbreathing2023.key4.live/"
+          >
+            <v-btn color="accent">Virtual platform</v-btn>
+          </a>
+        </div>
+      </v-alert>
+<!-- 
+      <v-alert :value="true" class="title mb-1"  icon="info" color="orange">
+        <div style="display: flex; align-items: center; justify-content:space-between;">
           <div >Registration is now open</div>
           <a
             target="_blank"
@@ -13,7 +26,7 @@
             <v-btn color="accent">Register now</v-btn>
           </a>
         </div>
-      </v-alert>
+      </v-alert> -->
       <!-- <v-alert :value="true" class="title mb-1"  icon="info" color="orange">
         <div style="display: flex; align-items: center; justify-content:space-between;">
         <div >Already registered?
@@ -58,6 +71,18 @@
     </v-container>
 
     <v-container  grid-list-md>
+      <v-layout row wrap>
+        <v-flex xs12 sm12>
+          <access-programme />
+        </v-flex>
+        <v-flex xs12 sm12>
+          <faq/>
+        </v-flex>
+        <v-flex xs12 sm12>
+          <organising-committee />
+        </v-flex>
+ 
+      </v-layout>
       <v-layout  v-if="articles" row wrap>
         <!-- <v-flex xs12 sm6>
           <important-dates/>
@@ -111,14 +136,7 @@
           </v-card>
         </v-flex>
       </v-layout>
-      <v-layout row wrap>
-        <v-flex xs12 sm12>
-          <access-programme />
-        </v-flex>
-        <v-flex xs12 sm12>
-          <organising-committee />
-        </v-flex>
-      </v-layout>
+
 
     </v-container>
 
@@ -137,6 +155,8 @@ import AccessProgramme from "../widgets/AccessProgramme";
 import VideoConference from "../widgets/VideoConference";
 import OrganisingCommittee from "../widgets/OrganisingCommittee";
 import ProgrammeCard from "../widgets/ProgrammeCard";
+import Faq from "../widgets/Faq";
+
 
 export default {
   name: "Home",
@@ -146,7 +166,8 @@ export default {
     AccessProgramme,
     VideoConference,
     OrganisingCommittee,
-    ProgrammeCard
+    ProgrammeCard,
+    Faq
   },
   mixins: [formMixin],
   data() {

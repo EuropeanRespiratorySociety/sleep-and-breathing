@@ -6,7 +6,7 @@
       </div>
     </v-card-title>
     <v-card-text>
-      Explore the 2023 preliminary programme, this year you will find a range of exciting formats from hot topics to round table, with world renown experts from ERS and ESRS providing you scientific updates, as well as giving you insights from some of the most advanced sleep centres in Europe.
+      Explore the 2023 programme, this year you will find a range of exciting formats from hot topics to round table, with world renown experts from ERS and ESRS providing you scientific updates, as well as giving you insights from some of the most advanced sleep centres in Europe.
 
       <!-- <br>
       <span class="caption">
