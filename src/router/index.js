@@ -10,6 +10,8 @@ import PracticalInformation from "@/components/pages/PracticalInformation";
 import Registration from "@/components/pages/Registration";
 import OrganisingCommitteePage from "@/components/pages/OrganisingCommitteePage";
 import Resources from "@/components/pages/Resources";
+import FaqPage from "@/components/pages/FaqPage";
+
 
 // const Home = () => import('@/components/pages/Home') // eslint-disable-line
 // const Programme = () => import('@/components/pages/Programme')
@@ -26,8 +28,7 @@ Vue.use(Router);
 
 const router = new Router({
   mode: "history",
-  routes: [
-    {
+  routes: [{
       path: "/home",
       redirect: "/"
     },
@@ -65,6 +66,11 @@ const router = new Router({
       path: "/resources",
       name: "resources",
       component: Resources
+    },
+    {
+      path: "/practical-information/faq",
+      name: "faq-page",
+      component: FaqPage
     }
     // ,
     // {
@@ -74,7 +80,10 @@ const router = new Router({
     // }
   ],
   scrollBehavior(to, from, savedPosition) {
-    return { x: 0, y: 0 };
+    return {
+      x: 0,
+      y: 0
+    };
   }
 });
 

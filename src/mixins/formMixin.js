@@ -14,6 +14,9 @@ export const formMixin = {
       }
       return false;
     },
+    faqTitle() {
+      return "FAQ";
+    },
     organisingCommitteeTitle() {
       return "Organising Committee";
     },
@@ -22,8 +25,7 @@ export const formMixin = {
     },
     videoResourse() {
       return {
-        videoNews: [
-          {
+        videoNews: [{
             videoNewsId: "516310166",
             videoNewsTitle: "Sleep and Breathing 2021: Tracheostomy home care",
             videoNewsLead: "",
@@ -39,18 +41,15 @@ export const formMixin = {
           },
           {
             videoNewsId: "510715784",
-            videoNewsTitle:
-              "Cough assistance and secretion management in neuromuscular disease",
-            videoNewsLead:
-              "Tiina Andersen (Bergen, Norway). Cough assistance and secretion management in neuromuscular disease.",
+            videoNewsTitle: "Cough assistance and secretion management in neuromuscular disease",
+            videoNewsLead: "Tiina Andersen (Bergen, Norway). Cough assistance and secretion management in neuromuscular disease.",
             providerType: "vimeo",
             showVideoOnHome: true
           },
           {
             videoNewsId: "zJG1toNLn5U",
             videoNewsTitle: "Sleep and Breathing 2021",
-            videoNewsLead:
-              "Taking place online from 16–17 April, 2021, the Sleep and Breathing conference offers an integrated approach to the investigation and treatment of sleep disorders and will focus on professional development and education. The conference is organised by the European Respiratory Society (ERS) and the European Sleep Research Society (ESRS).",
+            videoNewsLead: "Taking place online from 16–17 April, 2021, the Sleep and Breathing conference offers an integrated approach to the investigation and treatment of sleep disorders and will focus on professional development and education. The conference is organised by the European Respiratory Society (ERS) and the European Sleep Research Society (ESRS).",
             providerType: "youtube",
             showVideoOnHome: false
           }

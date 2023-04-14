@@ -29,6 +29,9 @@
             </v-card-actions>
           </v-card>
         </v-flex>
+        <v-flex xs12 sm12>
+          <faq/>
+        </v-flex>
 
         <!-- <v-flex xs12 sm6>
           <important-dates/>
@@ -49,13 +52,15 @@ import { formMixin } from "@/mixins/formMixin";
 import OrganisingCommitteePage from "./OrganisingCommitteePage";
 import ImportantDates from "../widgets/ImportantDates";
 import HotelBooking from "../widgets/HotelBooking";
+import Faq from "../widgets/Faq";
 
 export default {
   name: "practical-information",
   components: {
     OrganisingCommitteePage,
     ImportantDates,
-    HotelBooking
+    HotelBooking,
+    Faq
   },
   mixins: [formMixin],
   data() {
