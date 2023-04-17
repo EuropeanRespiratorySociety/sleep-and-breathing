@@ -14,6 +14,20 @@
           </a>
         </div>
       </v-alert>
+
+      <v-alert :value="true" class="title mb-1"  icon="info" color="green">
+        <div style="display: flex; align-items: center; justify-content:space-between;">
+          <div >Onsite registration - FULLY BOOKED</div>
+          <a
+            target="_blank"
+            style="text-decoration: none;"
+            href="https://my.ersnet.org/SleepAndBreathing/Main"
+          >
+            <v-btn color="accent">Register to the live stream</v-btn>
+          </a>
+        </div>
+      </v-alert>
+
 <!-- 
       <v-alert :value="true" class="title mb-1"  icon="info" color="orange">
         <div style="display: flex; align-items: center; justify-content:space-between;">
