@@ -1,6 +1,20 @@
 <template>
   <v-flex xs12 sm12 md8 lg8 offset-md2 offset-lg2>
     <v-container grid-list-md style="margin-top:-145px;"> <!-- -190px for two banners instead of -145px -->
+
+      <v-alert :value="true" class="title mb-1"  icon="info" color="green" style="padding: 8px 16px;">
+        <div style="display: flex; align-items: center; justify-content:space-between;">
+         <div >Onsite registration - FULLY BOOKED</div>
+          <a
+            target="_blank"
+            style="text-decoration: none;"
+            href="https://my.ersnet.org/SleepAndBreathing/Main"
+          >
+            <v-btn color="accent">Register to the live stream</v-btn>
+          </a>
+        </div>
+      </v-alert>
+
       <!-- <v-alert :value="true" class="title mb-1"  icon="info" color="orange" style="padding: 8px 16px;">
         <div style="display: flex; align-items: center; justify-content:space-between;">
         <div >The conference replay is available
